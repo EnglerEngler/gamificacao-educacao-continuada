@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: gamificacao
+      POSTGRES_USER: gamificacao
+      POSTGRES_PASSWORD: gamificacao
+    ports: ["5432:5432"]
+    volumes: ["postgres_data:/var/lib/postgresql/data"]
+  app:
+    build: .
+    depends_on: [postgres]
+    ports: ["8080:8080"]
+volumes:
+  postgres_data:

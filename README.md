@@ -1,6 +1,12 @@
 # Aprende+ — Educação Continuada Gamificada
 
-Projeto acadêmico desenvolvido para demonstrar **ATDD**: critérios de aceitação em BDD guiando a implementação testada em TDD. A plataforma recompensa o aluno por concluir cursos, colaborar no fórum e atingir o plano Premium.
+> Projeto acadêmico — ATDD, BDD e TDD | Entrega via GitHub
+
+## Descrição do estudo de caso
+
+Uma plataforma de cursos online/EAD funciona por assinatura. O aluno inicia no plano Básico e, ao concluir um curso com média **maior que 7,0**, recebe acesso a três novos cursos. A participação de destaque no fórum rende um curso adicional ao final do mês. Ao conquistar 12 cursos, o aluno passa para o plano Premium e recebe três moedas, que poderão ser acumuladas ou convertidas em benefícios.
+
+O **Aprende+** implementa essas regras de gamificação. O projeto usa ATDD: os cenários BDD definem o comportamento esperado e os testes TDD validam as regras antes e durante a implementação.
 
 ## Integrantes e user stories
 
@@ -22,6 +28,26 @@ Critérios de aceitação (BDD), também disponíveis em [docs/gamificacao.featu
 
 Os cenários de fórum (US02) e migração Premium (US03) também foram implementados e testados no domínio.
 
+## BDD: cenários e responsáveis
+
+Os cenários estão em [docs/gamificacao.feature](docs/gamificacao.feature). A identificação a seguir atende à atribuição individual dos BDDs.
+
+| Responsável | User story | Cenários BDD redigidos |
+| --- | --- | --- |
+| João Victor Cardoso Engler Rizzi de Araujo — RA 236602 | US01 | Desbloqueio com média maior que 7; média igual a 7 não libera cursos; curso em andamento não libera cursos. |
+| Eduardo Bismara Nastri — RA 211466 | US02 | Premiação mensal para aluno mais participativo do fórum. |
+| Khevyn Henrique Guedes T. Alves — RA 223761 | US03 | Mudança para plano Premium ao atingir 12 cursos e crédito de três moedas. |
+
+Exemplo do cenário principal (US01):
+
+```gherkin
+Cenário: Desbloquear cursos após conclusão com boa média
+  Dado que o aluno possui 5 cursos disponíveis
+  Quando concluir um curso com média final 8,0
+  Então o sistema deve liberar 3 novos cursos
+  E o aluno deve visualizar 8 cursos disponíveis
+```
+
 ## Tecnologias
 
 - Java 21, Spring Boot, Spring Web, Spring Data JPA
@@ -30,6 +56,8 @@ Os cenários de fórum (US02) e migração Premium (US03) também foram implemen
 - JUnit 5 e JaCoCo
 - Vue 3 + Vite
 - Docker e Docker Compose
+
+A planilha original da atividade está preservada em [docs/ATDD-Case-AC1.xlsx](docs/ATDD-Case-AC1.xlsx).
 
 ## Estrutura e camadas
 
@@ -68,7 +96,7 @@ Execute a evidência de testes e cobertura:
 mvn clean verify
 ```
 
-O relatório fica em `target/site/jacoco/index.html`. O JaCoCo exige 100% das linhas do pacote `domain`.
+O relatório fica em `target/site/jacoco/index.html`. O JaCoCo exige 100% das linhas do pacote `domain`. Na versão atual, `mvn clean verify` executa **8 testes sem falhas** e atende a verificação de cobertura configurada.
 
 ## Executar localmente
 
@@ -123,3 +151,23 @@ Exemplo para criar aluno:
 ```json
 { "nome": "João Victor", "cursosDisponiveis": 5 }
 ```
+
+Exemplo para registrar uma conclusão com recompensa:
+
+```json
+{ "media": 8.0, "concluido": true }
+```
+
+## Evidências para a entrega
+
+| Evidência exigida | Como gerar | Situação |
+| --- | --- | --- |
+| BDD | Arquivo `docs/gamificacao.feature` e planilha anexada | Incluída no repositório |
+| RED, GREEN e BLUE | Histórico de commits/tags e screenshots da IDE | Registrar antes da postagem no Canvas |
+| Testes e cobertura | `mvn clean verify`; abrir `target/site/jacoco/index.html` | Validado localmente: 8 testes e regra de 100% do domínio atendida |
+| Swagger | Abrir `/swagger-ui.html` com a API em execução | Capturar screenshot |
+| H2 | Abrir `/h2-console` com a API em execução | Capturar screenshot |
+| PostgreSQL e pgAdmin | `mvn package` e `docker compose up --build`; abrir `localhost:5050` | Capturar screenshot quando Docker estiver disponível |
+| Frontend Vue | `cd frontend && npm run dev` | Capturar screenshot |
+
+> Não envie evidências inventadas. As capturas devem ser feitas durante a apresentação/execução do projeto e podem ser salvas em `docs/evidencias/`.

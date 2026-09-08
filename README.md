@@ -105,6 +105,8 @@ docker compose up --build
 
 O PostgreSQL estará em `localhost:5432`, com banco, usuário e senha `gamificacao`. A aplicação sobe no perfil `postgres` em `http://localhost:8080`.
 
+O pgAdmin estará em `http://localhost:5050` (login `admin@gamificacao.local`, senha `admin`). No pgAdmin, cadastre o host `postgres`, porta `5432`, usuário `gamificacao` e senha `gamificacao`.
+
 > Para a evidência, execute os dois modos (H2 local e Docker/PostgreSQL) e anexe screenshots do Swagger, console H2, containers em execução e tela do front ao envio no Canvas.
 
 ## Endpoints

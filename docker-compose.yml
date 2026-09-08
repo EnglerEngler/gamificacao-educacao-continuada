@@ -11,5 +11,12 @@ services:
     build: .
     depends_on: [postgres]
     ports: ["8080:8080"]
+  pgadmin:
+    image: dpage/pgadmin4:8
+    depends_on: [postgres]
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@gamificacao.local
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports: ["5050:80"]
 volumes:
   postgres_data:

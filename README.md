@@ -48,6 +48,8 @@ Cenário: Desbloquear cursos após conclusão com boa média
   E o aluno deve visualizar 8 cursos disponíveis
 ```
 
+Guias individuais de contribuição: [Khevyn](docs/GUIA-KHEVYN.md) e [Eduardo](docs/GUIA-EDUARDO.md).
+
 ## Tecnologias
 
 - Java 21, Spring Boot, Spring Web, Spring Data JPA

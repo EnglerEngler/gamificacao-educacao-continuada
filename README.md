@@ -96,7 +96,7 @@ Execute a evidência de testes e cobertura:
 mvn clean verify
 ```
 
-O relatório fica em `target/site/jacoco/index.html`. O JaCoCo exige 100% das linhas do pacote `domain`. Na versão atual, `mvn clean verify` executa **8 testes sem falhas** e atende a verificação de cobertura configurada.
+O relatório fica em `target/site/jacoco/index.html`. O JaCoCo exige 100% das linhas e decisões (branches) do pacote `domain`, sem itens amarelos ou vermelhos nesse relatório. Na versão atual, `mvn clean verify` executa os testes de domínio e valida essa meta automaticamente.
 
 ## Executar localmente
 

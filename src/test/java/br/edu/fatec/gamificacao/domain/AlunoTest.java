@@ -36,6 +36,9 @@ class AlunoTest {
     }
     @Test void rejeitaValoresNegativosEMediaNula() {
         assertThrows(IllegalArgumentException.class, () -> new Aluno(-1));
+        assertThrows(IllegalArgumentException.class, () -> new Aluno(1, -1, Plano.BASICO, 0));
+        assertThrows(IllegalArgumentException.class, () -> new Aluno(1, 0, Plano.BASICO, -1));
+        assertThrows(NullPointerException.class, () -> new Aluno(1, 0, null, 0));
         assertThrows(NullPointerException.class, () -> new Aluno(1).concluirCurso(null, true));
     }
 }

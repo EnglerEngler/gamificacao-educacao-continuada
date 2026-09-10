@@ -1,7 +1,7 @@
-package br.edu.fatec.gamificacao.controller;
+package br.edu.unifacens.gamificacao.controller;
 
-import br.edu.fatec.gamificacao.dto.*;
-import br.edu.fatec.gamificacao.service.AlunoService;
+import br.edu.unifacens.gamificacao.dto.*;
+import br.edu.unifacens.gamificacao.service.AlunoService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

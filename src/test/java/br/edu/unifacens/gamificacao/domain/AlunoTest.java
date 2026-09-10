@@ -1,4 +1,4 @@
-package br.edu.fatec.gamificacao.domain;
+package br.edu.unifacens.gamificacao.domain;
 
 import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;

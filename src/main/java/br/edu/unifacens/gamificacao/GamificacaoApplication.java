@@ -1,4 +1,4 @@
-package br.edu.fatec.gamificacao;
+package br.edu.unifacens.gamificacao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

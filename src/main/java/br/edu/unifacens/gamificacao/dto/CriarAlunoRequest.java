@@ -1,4 +1,4 @@
-package br.edu.fatec.gamificacao.dto;
+package br.edu.unifacens.gamificacao.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

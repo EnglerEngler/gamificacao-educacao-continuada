@@ -1,6 +1,6 @@
-package br.edu.fatec.gamificacao.entity;
+package br.edu.unifacens.gamificacao.entity;
 
-import br.edu.fatec.gamificacao.domain.Plano;
+import br.edu.unifacens.gamificacao.domain.Plano;
 import jakarta.persistence.*;
 
 @Entity @Table(name = "alunos")

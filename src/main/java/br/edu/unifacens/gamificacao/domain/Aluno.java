@@ -1,4 +1,4 @@
-package br.edu.fatec.gamificacao.domain;
+package br.edu.unifacens.gamificacao.domain;
 
 import java.math.BigDecimal;
 import java.util.Objects;

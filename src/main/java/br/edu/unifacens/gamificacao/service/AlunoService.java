@@ -1,9 +1,9 @@
-package br.edu.fatec.gamificacao.service;
+package br.edu.unifacens.gamificacao.service;
 
-import br.edu.fatec.gamificacao.domain.Aluno;
-import br.edu.fatec.gamificacao.dto.*;
-import br.edu.fatec.gamificacao.entity.AlunoEntity;
-import br.edu.fatec.gamificacao.repository.AlunoRepository;
+import br.edu.unifacens.gamificacao.domain.Aluno;
+import br.edu.unifacens.gamificacao.dto.*;
+import br.edu.unifacens.gamificacao.entity.AlunoEntity;
+import br.edu.unifacens.gamificacao.repository.AlunoRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;

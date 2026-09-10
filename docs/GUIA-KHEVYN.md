@@ -5,15 +5,15 @@
 
 ## Sua tarefa
 
-Revise e melhore a documentação do cenário Premium. A contribuição deve ser feita por você, usando sua conta do GitHub, para que a autoria apareça corretamente no histórico.
+Implemente a regra de mudança para o plano Premium e moedas. A contribuição deve ser feita por você, usando sua conta do GitHub, para que a autoria apareça corretamente no histórico.
 
 O cenário que você representa é:
 
 > Como aluno, quero ter minha assinatura atualizada para Premium ao conquistar 12 cursos para receber benefícios exclusivos e três moedas.
 
-## Alteração sugerida
+## Alteração técnica sugerida
 
-Abra `docs/gamificacao.feature` e, abaixo do cenário **Migrar aluno para Premium**, acrescente um cenário que confirme que as moedas não são duplicadas quando um aluno já Premium conclui outro curso:
+Abra `docs/gamificacao.feature` e acrescente os cenários da US03, incluindo o caso que confirma que as moedas não são duplicadas quando um aluno já Premium conclui outro curso:
 
 ```gherkin
   Cenário: Não duplicar moedas de aluno que já é Premium
@@ -23,7 +23,7 @@ Abra `docs/gamificacao.feature` e, abaixo do cenário **Migrar aluno para Premiu
     E o aluno deve continuar com 3 moedas
 ```
 
-Depois, em `README.md`, inclua uma frase no item da US03 informando que a regra impede a duplicação das moedas Premium.
+Depois, implemente os campos de plano, cursos concluídos e moedas nas camadas Domain, Entity, DTO, Service e Controller. Crie os testes correspondentes em `domain/AlunoTest.java` e atualize o README.
 
 ## Como fazer o commit
 
@@ -43,8 +43,8 @@ git checkout -b docs/us03-khevyn
 
 ```bash
 git diff
-git add docs/gamificacao.feature README.md
-git commit -m "docs: detalha cenario Premium da US03"
+git add .
+git commit -m "feat: implementa plano Premium da US03"
 git push -u origin docs/us03-khevyn
 ```
 

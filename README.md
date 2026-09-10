@@ -26,7 +26,7 @@ Critérios de aceitação (BDD), também disponíveis em [docs/gamificacao.featu
 2. A conclusão com média 7,0 ou menor não libera cursos.
 3. Um curso que ainda está em andamento não gera recompensa.
 
-Os cenários de fórum (US02) e migração Premium (US03) também foram implementados e testados no domínio.
+**Escopo implementado nesta entrega:** somente a US01. As US02 e US03 estão descritas como backlog e reservadas para implementação individual de Eduardo e Khevyn, respectivamente.
 
 ## BDD: cenários e responsáveis
 
@@ -35,8 +35,8 @@ Os cenários estão em [docs/gamificacao.feature](docs/gamificacao.feature). A i
 | Responsável | User story | Cenários BDD redigidos |
 | --- | --- | --- |
 | João Victor Cardoso Engler Rizzi de Araujo — RA 236602 | US01 | Desbloqueio com média maior que 7; média igual a 7 não libera cursos; curso em andamento não libera cursos. |
-| Eduardo Bismara Nastri — RA 211466 | US02 | Premiação mensal para aluno mais participativo do fórum. |
-| Khevyn Henrique Guedes T. Alves — RA 223761 | US03 | Mudança para plano Premium ao atingir 12 cursos e crédito de três moedas. |
+| Eduardo Bismara Nastri — RA 211466 | US02 | A redigir e implementar: premiação mensal para aluno mais participativo do fórum. |
+| Khevyn Henrique Guedes T. Alves — RA 223761 | US03 | A redigir e implementar: mudança para plano Premium ao atingir 12 cursos e crédito de três moedas. |
 
 Exemplo do cenário principal (US01):
 
@@ -79,7 +79,7 @@ O teste principal está em `src/test/java/.../domain/AlunoTest.java`.
 
 - **RED:** criar o teste `desbloqueiaTresCursosQuandoConcluiComMediaMaiorQueSete`; antes de existir `Aluno.concluirCurso`, ele falha por não haver implementação.
 - **GREEN:** implementar o mínimo em `Aluno.concluirCurso` para liberar três cursos quando a média for maior que 7,0.
-- **BLUE:** refatorar e complementar a regra (curso em andamento, média limite, fórum e Premium), mantendo todos os testes verdes e cobertura de linhas do pacote `domain` em 100%.
+- **BLUE:** refatorar a regra da US01 (curso em andamento e média limite), mantendo todos os testes verdes e cobertura de linhas do pacote `domain` em 100%.
 
 Para a evidência formal, os commits devem ser feitos nesta sequência, sem deixar falhas na branch `main`:
 
@@ -146,7 +146,6 @@ O pgAdmin estará em `http://localhost:5050` (login `admin@gamificacao.local`, s
 | POST | `/api/alunos` | Cadastra aluno |
 | GET | `/api/alunos` | Lista alunos |
 | POST | `/api/alunos/{id}/cursos/conclusao` | Registra média e conclusão do curso |
-| POST | `/api/alunos/{id}/forum/premiacao` | Concede curso por participação no fórum |
 
 Exemplo para criar aluno:
 
@@ -164,7 +163,7 @@ Exemplo para registrar uma conclusão com recompensa:
 
 | Evidência exigida | Como gerar | Situação |
 | --- | --- | --- |
-| BDD | Arquivo `docs/gamificacao.feature` e planilha anexada | Incluída no repositório |
+| BDD | Arquivo `docs/gamificacao.feature` e planilha anexada | US01 implementada; US02 e US03 aguardam os responsáveis |
 | RED, GREEN e BLUE | Histórico de commits/tags e screenshots da IDE | Registrar antes da postagem no Canvas |
 | Testes e cobertura | `mvn clean verify`; abrir `target/site/jacoco/index.html` | Validado localmente: 8 testes e regra de 100% do domínio atendida |
 | Swagger | Abrir `/swagger-ui.html` com a API em execução | Capturar screenshot |

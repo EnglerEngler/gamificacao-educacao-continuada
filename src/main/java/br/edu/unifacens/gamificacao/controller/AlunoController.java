@@ -18,6 +18,4 @@ public class AlunoController {
     public List<AlunoResponse> listar() { return service.listar(); }
     @PostMapping("/{id}/cursos/conclusao") @Operation(summary = "Registra a conclusão de curso e aplica a recompensa")
     public AlunoResponse concluir(@PathVariable Long id, @Valid @RequestBody ConcluirCursoRequest request) { return service.concluirCurso(id, request); }
-    @PostMapping("/{id}/forum/premiacao") @Operation(summary = "Premia participação de destaque no fórum")
-    public AlunoResponse premiarForum(@PathVariable Long id) { return service.premiarForum(id); }
 }

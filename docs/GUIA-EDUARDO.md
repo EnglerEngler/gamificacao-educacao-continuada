@@ -5,15 +5,15 @@
 
 ## Sua tarefa
 
-Revise e melhore a documentação do cenário de recompensa por participação no fórum. A contribuição deve ser feita por você, usando sua conta do GitHub, para que a autoria apareça corretamente no histórico.
+Implemente a regra de recompensa por participação no fórum. A contribuição deve ser feita por você, usando sua conta do GitHub, para que a autoria apareça corretamente no histórico.
 
 O cenário que você representa é:
 
 > Como aluno, quero ser recompensado pela minha participação e ajuda no fórum para ser incentivado a colaborar com outros alunos.
 
-## Alteração sugerida
+## Alteração técnica sugerida
 
-Abra `docs/gamificacao.feature` e, abaixo do cenário **Recompensar o aluno mais participativo do fórum**, acrescente um cenário que explique que somente o aluno selecionado como destaque do mês recebe a recompensa:
+Abra `docs/gamificacao.feature` e acrescente os cenários da US02, incluindo o caso em que somente o aluno selecionado como destaque do mês recebe a recompensa:
 
 ```gherkin
   Cenário: Não premiar aluno que não foi o destaque do fórum
@@ -22,7 +22,7 @@ Abra `docs/gamificacao.feature` e, abaixo do cenário **Recompensar o aluno mais
     Então o aluno não deve receber curso adicional
 ```
 
-Depois, em `README.md`, complete a linha da US02 esclarecendo que a premiação mensal concede somente um curso ao aluno de destaque.
+Depois, implemente essa regra em `domain/Aluno.java`, crie os testes correspondentes em `domain/AlunoTest.java` e exponha um endpoint no Controller. Atualize o README com o endpoint criado.
 
 ## Como fazer o commit
 
@@ -42,8 +42,8 @@ git checkout -b docs/us02-eduardo
 
 ```bash
 git diff
-git add docs/gamificacao.feature README.md
-git commit -m "docs: detalha cenario de forum da US02"
+git add .
+git commit -m "feat: implementa recompensa de forum da US02"
 git push -u origin docs/us02-eduardo
 ```
 

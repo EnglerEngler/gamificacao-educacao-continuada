@@ -17,17 +17,9 @@ public class AlunoService {
     @Transactional
     public AlunoResponse concluirCurso(Long id, ConcluirCursoRequest request) {
         AlunoEntity entity = buscar(id);
-        Aluno aluno = new Aluno(entity.getCursosDisponiveis(), entity.getCursosConcluidos(), entity.getPlano(), entity.getMoedas());
+        Aluno aluno = new Aluno(entity.getCursosDisponiveis());
         aluno.concluirCurso(request.media(), request.concluido());
-        entity.setCursosDisponiveis(aluno.getCursosDisponiveis()); entity.setCursosConcluidos(aluno.getCursosConcluidos());
-        entity.setPlano(aluno.getPlano()); entity.setMoedas(aluno.getMoedas());
-        return AlunoResponse.of(entity);
-    }
-    @Transactional
-    public AlunoResponse premiarForum(Long id) {
-        AlunoEntity entity = buscar(id);
-        Aluno aluno = new Aluno(entity.getCursosDisponiveis(), entity.getCursosConcluidos(), entity.getPlano(), entity.getMoedas());
-        aluno.premiarParticipacaoForum(); entity.setCursosDisponiveis(aluno.getCursosDisponiveis());
+        entity.setCursosDisponiveis(aluno.getCursosDisponiveis());
         return AlunoResponse.of(entity);
     }
     private AlunoEntity buscar(Long id) { return repository.findById(id).orElseThrow(() -> new IllegalArgumentException("Aluno não encontrado")); }

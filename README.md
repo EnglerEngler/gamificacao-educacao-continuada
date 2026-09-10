@@ -64,7 +64,7 @@ A planilha original da atividade está preservada em [docs/ATDD-Case-AC1.xlsx](d
 ## Estrutura e camadas
 
 ```text
-src/main/java/br/edu/fatec/gamificacao/
+src/main/java/br/edu/unifacens/gamificacao/
 ├── domain/       # regras de negócio puras e seus testes TDD
 ├── entity/       # persistência JPA
 ├── repository/   # acesso aos dados

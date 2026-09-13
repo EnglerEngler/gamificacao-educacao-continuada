@@ -14,6 +14,14 @@ public class Aluno {
 
     public void concluirCurso(BigDecimal media, boolean cursoConcluido) {
         Objects.requireNonNull(media, "A média é obrigatória");
+        if (!cursoConcluido) {
+            return;
+        }
+
+        // Fase Green: Desbloqueia 3 novos cursos se a media final for estritamente maior que 7.0
+        if (media.compareTo(new BigDecimal("7.0")) > 0) {
+            this.cursosDisponiveis += 3;
+        }
     }
 
     public int getCursosDisponiveis() { return cursosDisponiveis; }

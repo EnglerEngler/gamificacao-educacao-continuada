@@ -14,8 +14,6 @@ public class Aluno {
 
     public void concluirCurso(BigDecimal media, boolean cursoConcluido) {
         Objects.requireNonNull(media, "A média é obrigatória");
-        if (!cursoConcluido) return;
-        if (media.compareTo(new BigDecimal("7.0")) > 0) cursosDisponiveis += 3;
     }
 
     public int getCursosDisponiveis() { return cursosDisponiveis; }

@@ -1,6 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgres:5432/gamificacao
-    username: gamificacao
-    password: gamificacao
-  jpa.hibernate.ddl-auto: update
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/gamificacao}
+    username: ${SPRING_DATASOURCE_USERNAME:gamificacao}
+    password: ${SPRING_DATASOURCE_PASSWORD:gamificacao}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

@@ -112,16 +112,61 @@ Implementação mínima para fazer os testes passarem.
 
 ###  Fase BLUE e Cobertura (JaCoCo)
 Refatoração do código (Clean Code e remoção de Magic Numbers) mantendo os testes passando, junto com a comprovação de 100% de cobertura pelo JaCoCo.
-!![TDD BLUE.png](docs/evidencias/TDD%20BLUE.png)
+![TDD BLUE.png](docs/evidencias/TDD%20BLUE.png)
 ![Relatório JaCoCo](docs/evidencias/Jacoco.png)
 
 ---
 
 ## Como executar o projeto (Docker)
 
-O projeto está configurado para rodar em contêineres, garantindo a padronização do ambiente de desenvolvimento.
+O projeto usa o mesmo padrão apresentado em aula: aplicação Spring Boot, PostgreSQL e pgAdmin em containers separados. O Dockerfile compila o frontend Vue e o backend dentro da imagem, portanto não é necessário executar Maven ou npm antes.
 
-1. Certifique-se de ter o **Docker Desktop** instalado e rodando.
-2. Na raiz do projeto, execute o comando:
-   ```bash
-   docker compose up -d --build
+1. Certifique-se de que o Docker Desktop esteja aberto e que a integração WSL esteja ativa.
+2. Na raiz do projeto, execute:
+
+```bash
+docker compose up --build
+```
+
+3. Aguarde o log da aplicação informar que iniciou na porta 8080. O Compose espera o healthcheck do PostgreSQL antes de iniciar a API.
+
+### Acessos Docker
+
+- Aplicação e frontend Vue: `http://localhost:8080`
+- Swagger: `http://localhost:8080/swagger-ui.html`
+- PostgreSQL: porta `5432`, banco/usuário/senha `gamificacao`
+- pgAdmin: `http://localhost:5050`
+  - e-mail: `admin@gamificacao.local`
+  - senha: `admin`
+
+No pgAdmin, registre o servidor com host `postgres`, porta `5432`, banco `gamificacao`, usuário `gamificacao` e senha `gamificacao`.
+
+Para encerrar os containers:
+
+```bash
+docker compose down
+```
+
+Para apagar também os dados do banco e recomeçar do zero:
+
+```bash
+docker compose down -v
+```
+
+## Executar localmente com H2
+
+```bash
+mvn spring-boot:run
+```
+
+- API: `http://localhost:8080/api/alunos`
+- Swagger: `http://localhost:8080/swagger-ui.html`
+- Console H2: `http://localhost:8080/h2-console`
+
+Para rodar o frontend Vue fora do Docker:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```

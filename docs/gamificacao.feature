@@ -12,6 +12,7 @@ Funcionalidade: Recompensas da educação continuada gamificada
     Quando concluir um curso com média final 7,0
     Então o sistema não deve desbloquear cursos
 
+<<<<<<< HEAD
   Cenário: Atualizar assinatura para Premium ao concluir o décimo segundo curso
     Dado que o aluno está no plano Básico com 11 cursos concluídos e 0 moedas
     Quando concluir o décimo segundo curso
@@ -29,3 +30,10 @@ Funcionalidade: Recompensas da educação continuada gamificada
     Quando concluir outro curso
     Então o plano deve continuar Premium
     E o aluno deve continuar com 3 moedas
+=======
+  Cenário: Não desbloquear cursos que ainda estão em andamento
+    Dado que o aluno possui 5 cursos disponíveis
+    Quando registrar média final 9,0 para um curso não concluído
+    Então o sistema não deve desbloquear cursos
+    E o aluno deve continuar com 5 cursos disponíveis
+>>>>>>> origin/main

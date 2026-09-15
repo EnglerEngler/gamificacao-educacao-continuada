@@ -3,15 +3,22 @@ package br.edu.unifacens.gamificacao.domain;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-/** Regras das US01 e US03, independentes de banco, API ou interface. */
+/** Regras de gamificação das US01 e US03, independentes de banco, API ou interface. */
 public class Aluno {
+    private static final BigDecimal MEDIA_MINIMA_DESBLOQUEIO = new BigDecimal("7.0");
+    private static final int CURSOS_LIBERADOS_POR_BOA_MEDIA = 3;
+    private static final int CURSOS_PARA_PREMIUM = 12;
+    private static final int MOEDAS_PREMIUM = 3;
+    private static final String PLANO_BASICO = "BASICO";
+    private static final String PLANO_PREMIUM = "PREMIUM";
+
     private int cursosDisponiveis;
     private int cursosConcluidos;
     private String plano;
     private int moedas;
 
     public Aluno(int cursosDisponiveis) {
-        this(cursosDisponiveis, 0, "BASICO", 0);
+        this(cursosDisponiveis, 0, PLANO_BASICO, 0);
     }
 
     public Aluno(int cursosDisponiveis, int cursosConcluidos, String plano, int moedas) {
@@ -32,14 +39,20 @@ public class Aluno {
         }
 
         this.cursosConcluidos++;
+        liberarCursosPorBoaMedia(media);
+        atualizarPlanoPremium();
+    }
 
-        if (media.compareTo(new BigDecimal("7.0")) > 0) {
-            this.cursosDisponiveis += 3;
+    private void liberarCursosPorBoaMedia(BigDecimal media) {
+        if (media.compareTo(MEDIA_MINIMA_DESBLOQUEIO) > 0) {
+            this.cursosDisponiveis += CURSOS_LIBERADOS_POR_BOA_MEDIA;
         }
+    }
 
-        if (this.cursosConcluidos >= 12 && !"PREMIUM".equals(this.plano)) {
-            this.plano = "PREMIUM";
-            this.moedas += 3;
+    private void atualizarPlanoPremium() {
+        if (this.cursosConcluidos >= CURSOS_PARA_PREMIUM && !PLANO_PREMIUM.equals(this.plano)) {
+            this.plano = PLANO_PREMIUM;
+            this.moedas += MOEDAS_PREMIUM;
         }
     }
 

@@ -136,7 +136,7 @@ docker compose up --build
 - Swagger: `http://localhost:8080/swagger-ui.html`
 - PostgreSQL: porta `5432`, banco/usuário/senha `gamificacao`
 - pgAdmin: `http://localhost:5050`
-  - e-mail: `admin@gamificacao.local`
+  - e-mail: `admin@gamificacao.com`
   - senha: `admin`
 
 No pgAdmin, registre o servidor com host `postgres`, porta `5432`, banco `gamificacao`, usuário `gamificacao` e senha `gamificacao`.

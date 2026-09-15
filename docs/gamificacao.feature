@@ -11,3 +11,9 @@ Funcionalidade: Recompensas da educação continuada gamificada
     Dado que o aluno possui 5 cursos disponíveis
     Quando concluir um curso com média final 7,0
     Então o sistema não deve desbloquear cursos
+
+  Cenário: Não desbloquear cursos que ainda estão em andamento
+    Dado que o aluno possui 5 cursos disponíveis
+    Quando registrar média final 9,0 para um curso não concluído
+    Então o sistema não deve desbloquear cursos
+    E o aluno deve continuar com 5 cursos disponíveis

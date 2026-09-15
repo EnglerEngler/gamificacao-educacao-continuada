@@ -1,0 +1,10 @@
+[33ma68c857[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;33mtag: [m[1;33mevidencia-tdd-green[m[33m)[m feat(green): implementa logica de desbloqueio de cursos por media
+[33m3a07891[m[33m ([m[1;33mtag: [m[1;33mevidencia-tdd-red[m[33m)[m test(red): remove implementacao para falhar o teste
+[33m0e1dcc7[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m refactor: limita implementacao a us01
+[33m538faaf[m docs: corrige referencia institucional
+[33md777999[m refactor: adota namespace da unifacens
+[33m9dac5e5[m docs: adiciona guias individuais de contribuicao
+[33m5d5172b[m test: garante cobertura total do dominio
+[33m69f3ccb[m docs: detalha entrega ATDD no readme
+[33m72220ae[m chore: adiciona pgadmin ao ambiente docker
+[33m8f70bd2[m feat: implementa plataforma de educacao gamificada

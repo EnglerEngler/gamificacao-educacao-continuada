@@ -50,14 +50,7 @@ Cenário: Desbloquear cursos após conclusão com boa média
 
 Guias individuais de contribuição: [Khevyn](docs/GUIA-KHEVYN.md) e [Eduardo](docs/GUIA-EDUARDO.md).
 
-## Tecnologias
 
-- Java 21, Spring Boot, Spring Web, Spring Data JPA
-- H2 (execução local) e PostgreSQL (container)
-- Swagger/OpenAPI, em `http://localhost:8080/swagger-ui.html`
-- JUnit 5 e JaCoCo
-- Vue 3 + Vite
-- Docker e Docker Compose
 
 A planilha original da atividade está preservada em [docs/ATDD-Case-AC1.xlsx](docs/ATDD-Case-AC1.xlsx).
 
@@ -100,75 +93,35 @@ mvn clean verify
 
 O relatório fica em `target/site/jacoco/index.html`. O JaCoCo exige 100% das linhas e decisões (branches) do pacote `domain`, sem itens amarelos ou vermelhos nesse relatório. Na versão atual, `mvn clean verify` executa os testes de domínio e valida essa meta automaticamente.
 
-## Executar localmente
-
-Backend com H2:
-
-```bash
-mvn spring-boot:run
-```
-
-- API: `http://localhost:8080/api/alunos`
-- Swagger: `http://localhost:8080/swagger-ui.html`
-- Console H2: `http://localhost:8080/h2-console`
-  - JDBC URL: `jdbc:h2:mem:gamificacao`
-  - usuário: `sa`; senha vazia.
-
-Frontend:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Abra `http://localhost:5173`.
-
-## Executar com Docker e PostgreSQL
-
-Primeiro empacote a aplicação:
-
-```bash
-mvn clean package
-docker compose up --build
-```
-
-O PostgreSQL estará em `localhost:5432`, com banco, usuário e senha `gamificacao`. A aplicação sobe no perfil `postgres` em `http://localhost:8080`.
-
-O pgAdmin estará em `http://localhost:5050` (login `admin@gamificacao.local`, senha `admin`). No pgAdmin, cadastre o host `postgres`, porta `5432`, usuário `gamificacao` e senha `gamificacao`.
-
-> Para a evidência, execute os dois modos (H2 local e Docker/PostgreSQL) e anexe screenshots do Swagger, console H2, containers em execução e tela do front ao envio no Canvas.
-
-## Endpoints
-
-| Método | Rota | Finalidade |
-| --- | --- | --- |
-| POST | `/api/alunos` | Cadastra aluno |
-| GET | `/api/alunos` | Lista alunos |
-| POST | `/api/alunos/{id}/cursos/conclusao` | Registra média e conclusão do curso |
-
-Exemplo para criar aluno:
-
-```json
-{ "nome": "João Victor", "cursosDisponiveis": 5 }
-```
-
-Exemplo para registrar uma conclusão com recompensa:
-
-```json
-{ "media": 8.0, "concluido": true }
-```
 
 ## Evidências para a entrega
 
-| Evidência exigida | Como gerar | Situação |
+| Evidência exigida | Localização / Comprovação | Status |
 | --- | --- | --- |
-| BDD | Arquivo `docs/gamificacao.feature` e planilha anexada | US01 implementada; US02 e US03 aguardam os responsáveis |
-| RED, GREEN e BLUE | Histórico de commits/tags e screenshots da IDE | Registrar antes da postagem no Canvas |
-| Testes e cobertura | `mvn clean verify`; abrir `target/site/jacoco/index.html` | Validado localmente: 8 testes e regra de 100% do domínio atendida |
-| Swagger | Abrir `/swagger-ui.html` com a API em execução | Capturar screenshot |
-| H2 | Abrir `/h2-console` com a API em execução | Capturar screenshot |
-| PostgreSQL e pgAdmin | `mvn package` e `docker compose up --build`; abrir `localhost:5050` | Capturar screenshot quando Docker estiver disponível |
-| Frontend Vue | `cd frontend && npm run dev` | Capturar screenshot |
+| **BDD** | Arquivo `docs/gamificacao.feature` e planilha anexada | US01 implementada; US02 e US03 aguardam os responsáveis |
+| **RED, GREEN e BLUE** | Histórico de commits/tags e screenshots abaixo | Concluído (US01) |
+| **Testes e cobertura** | Relatório JaCoCo (`target/site/jacoco/index.html`) | Validado: 100% do domínio atendido |
 
-> Não envie evidências inventadas. As capturas devem ser feitas durante a apresentação/execução do projeto e podem ser salvas em `docs/evidencias/`.
+### Fase RED
+Testes criados antes da implementação falhando, garantindo que a regra de negócio é necessária.
+![Painel de Testes - Fase RED](docs/evidencias/tdd-red.png)
+
+###  Fase GREEN
+Implementação mínima para fazer os testes passarem.
+![Painel de Testes e Cobertura - Fase GREEN](docs/evidencias/tdd-green.jpg)
+
+###  Fase BLUE e Cobertura (JaCoCo)
+Refatoração do código (Clean Code e remoção de Magic Numbers) mantendo os testes passando, junto com a comprovação de 100% de cobertura pelo JaCoCo.
+![Painel de Testes - Fase BLUE](docs/evidencias/tdd-blue.jpg)
+![Relatório JaCoCo](docs/evidencias/jacoco.png)
+
+---
+
+## Como executar o projeto (Docker)
+
+O projeto está configurado para rodar em contêineres, garantindo a padronização do ambiente de desenvolvimento.
+
+1. Certifique-se de ter o **Docker Desktop** instalado e rodando.
+2. Na raiz do projeto, execute o comando:
+   ```bash
+   docker compose up -d --build

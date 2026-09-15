@@ -47,11 +47,6 @@ Cenário: Desbloquear cursos após conclusão com boa média
   Então o sistema deve liberar 3 novos cursos
   E o aluno deve visualizar 8 cursos disponíveis
 ```
-
-Guias individuais de contribuição: [Khevyn](docs/GUIA-KHEVYN.md) e [Eduardo](docs/GUIA-EDUARDO.md).
-
-
-
 A planilha original da atividade está preservada em [docs/ATDD-Case-AC1.xlsx](docs/ATDD-Case-AC1.xlsx).
 
 ## Estrutura e camadas
@@ -116,7 +111,23 @@ Refatoração do código (Clean Code e remoção de Magic Numbers) mantendo os t
 ![Relatório JaCoCo](docs/evidencias/Jacoco.png)
 
 ---
+Fase de Integração
 
+Demonstração da User Story 01 validada ponta a ponta, processando as regras de negócio via API integrada à interface.
+
+1. Estado Inicial:
+   Aluno cadastrado e com saldo original de 1 curso disponível.
+![Aluno-registrado.png](docs/evidencias/Aluno-registrado.png)
+
+2. Sucesso (Média > 7.0):
+   Após registrar a conclusão de um curso com média 8,0, a regra de negócio libera 3 novos cursos. 1 saldo é atualizado corretamente para 4.
+![Aluno-media-8.png](docs/evidencias/Aluno-media-8.png)
+
+3. Trava de Segurança (Média <= 7.0):
+   Ao registrar a conclusão de outro curso com média 7,0, o sistema recusa a recompensa, mantendo o saldo de cursos intacto (4).
+![Aluno-media-7.png](docs/evidencias/Aluno-media-7.png)
+
+---
 ## Como executar o projeto (Docker)
 
 O projeto usa o mesmo padrão apresentado em aula: aplicação Spring Boot, PostgreSQL e pgAdmin em containers separados. O Dockerfile compila o frontend Vue e o backend dentro da imagem, portanto não é necessário executar Maven ou npm antes.
@@ -129,7 +140,7 @@ docker compose up --build
 ```
 
 3. Aguarde o log da aplicação informar que iniciou na porta 8080. O Compose espera o healthcheck do PostgreSQL antes de iniciar a API.
-
+![Docker.jpeg](docs/evidencias/Docker.jpeg)
 ### Acessos Docker
 
 - Aplicação e frontend Vue: `http://localhost:8080`

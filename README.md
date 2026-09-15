@@ -104,15 +104,15 @@ O relatório fica em `target/site/jacoco/index.html`. O JaCoCo exige 100% das li
 
 ### Fase RED
 Testes criados antes da implementação falhando, garantindo que a regra de negócio é necessária.
-![Painel de Testes - Fase RED](docs/evidencias/tdd-red.png)
+![TDD RED.png](docs/evidencias/TDD%20RED.png)
 
 ###  Fase GREEN
 Implementação mínima para fazer os testes passarem.
-![Painel de Testes e Cobertura - Fase GREEN](docs/evidencias/tdd-green.jpg)
+![TDD Green.png](docs/evidencias/TDD%20Green.png)
 
 ###  Fase BLUE e Cobertura (JaCoCo)
 Refatoração do código (Clean Code e remoção de Magic Numbers) mantendo os testes passando, junto com a comprovação de 100% de cobertura pelo JaCoCo.
-![Painel de Testes - Fase BLUE](docs/evidencias/tdd-blue.jpg)
+!![TDD BLUE.png](docs/evidencias/TDD%20BLUE.png)
 ![Relatório JaCoCo](docs/evidencias/jacoco.png)
 
 ---

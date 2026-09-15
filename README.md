@@ -26,7 +26,7 @@ Critérios de aceitação (BDD), também disponíveis em [docs/gamificacao.featu
 2. A conclusão com média 7,0 ou menor não libera cursos.
 3. Um curso que ainda está em andamento não gera recompensa.
 
-**Escopo implementado nesta entrega:** somente a US01. As US02 e US03 estão descritas como backlog e reservadas para implementação individual de Eduardo e Khevyn, respectivamente.
+**Escopo atual da entrega:** a US01 permanece como implementação central do grupo. A **US03 foi implementada por Khevyn** em contribuição individual, incluindo promoção automática para Premium ao atingir 12 cursos concluídos, crédito de três moedas e proteção contra duplicidade da premiação. A US02 permanece reservada para implementação individual de Eduardo.
 
 ## BDD: cenários e responsáveis
 
@@ -36,7 +36,7 @@ Os cenários estão em [docs/gamificacao.feature](docs/gamificacao.feature). A i
 | --- | --- | --- |
 | João Victor Cardoso Engler Rizzi de Araujo — RA 236602 | US01 | Desbloqueio com média maior que 7; média igual a 7 não libera cursos; curso em andamento não libera cursos. |
 | Eduardo Bismara Nastri — RA 211466 | US02 | A redigir e implementar: premiação mensal para aluno mais participativo do fórum. |
-| Khevyn Henrique Guedes T. Alves — RA 223761 | US03 | A redigir e implementar: mudança para plano Premium ao atingir 12 cursos e crédito de três moedas. |
+| Khevyn Henrique Guedes T. Alves — RA 223761 | US03 | Implementado: promoção para Premium ao atingir 12 cursos concluídos, crédito de três moedas e proteção contra duplicidade para aluno já Premium. |
 
 Exemplo do cenário principal (US01):
 
@@ -93,9 +93,9 @@ O relatório fica em `target/site/jacoco/index.html`. O JaCoCo exige 100% das li
 
 | Evidência exigida | Localização / Comprovação | Status |
 | --- | --- | --- |
-| **BDD** | Arquivo `docs/gamificacao.feature` e planilha anexada | US01 implementada; US02 e US03 aguardam os responsáveis |
-| **RED, GREEN e BLUE** | Histórico de commits/tags e screenshots abaixo | Concluído (US01) |
-| **Testes e cobertura** | Relatório JaCoCo (`target/site/jacoco/index.html`) | Validado: 100% do domínio atendido |
+| **BDD** | Arquivo `docs/gamificacao.feature` e planilha anexada | US01 e US03 implementadas; US02 aguarda o responsável |
+| **RED, GREEN e BLUE** | Histórico de commits/tags e screenshots abaixo | Concluído para US01; ciclo individual da US03 registrado em commits próprios |
+| **Testes e cobertura** | Relatório JaCoCo (`target/site/jacoco/index.html`) | Validado: 100% do domínio; US03 também validada no GitHub Actions |
 
 ### Fase RED
 Testes criados antes da implementação falhando, garantindo que a regra de negócio é necessária.
@@ -128,6 +128,27 @@ Demonstração da User Story 01 validada ponta a ponta, processando as regras de
 ![Aluno-media-7.png](docs/evidencias/Aluno-media-7.png)
 
 ---
+
+## US03 — Plano Premium (Khevyn)
+
+A US03 promove automaticamente o aluno do plano **BASICO** para **PREMIUM** quando o total de cursos concluídos chega a **12**. Na promoção, o aluno recebe **3 moedas**. Se já estiver Premium, novas conclusões não duplicam essa premiação.
+
+O ciclo TDD da US03 foi registrado em commits separados:
+
+- `test(red): especifica plano Premium da US03`
+- `feat(green): implementa plano Premium e moedas da US03`
+- `refactor(blue): consolida regras e cobertura da US03`
+
+Os testes de domínio cobrem o cenário de promoção, o limite anterior aos 12 cursos e a proteção contra moedas duplicadas. A validação final foi executada pelo GitHub Actions com:
+
+```bash
+mvn clean verify
+```
+
+O relatório JaCoCo confirmou **100% de cobertura de instruções e 100% de branches** no pacote `domain`. O workflow `.github/workflows/us03-jacoco.yml` publica o relatório como artefato `jacoco-us03`.
+
+A contribuição individual da US03 está registrada no [Pull Request #1](https://github.com/EnglerEngler/gamificacao-educacao-continuada/pull/1).
+
 ## Como executar o projeto (Docker)
 
 O projeto usa o mesmo padrão apresentado em aula: aplicação Spring Boot, PostgreSQL e pgAdmin em containers separados. O Dockerfile compila o frontend Vue e o backend dentro da imagem, portanto não é necessário executar Maven ou npm antes.

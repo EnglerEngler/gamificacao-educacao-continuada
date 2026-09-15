@@ -113,7 +113,7 @@ Implementação mínima para fazer os testes passarem.
 ###  Fase BLUE e Cobertura (JaCoCo)
 Refatoração do código (Clean Code e remoção de Magic Numbers) mantendo os testes passando, junto com a comprovação de 100% de cobertura pelo JaCoCo.
 !![TDD BLUE.png](docs/evidencias/TDD%20BLUE.png)
-![Relatório JaCoCo](docs/evidencias/jacoco.png)
+![Relatório JaCoCo](docs/evidencias/Jacoco.png)
 
 ---
 

@@ -135,7 +135,7 @@ docker compose up --build
 - Aplicação e frontend Vue: `http://localhost:8080`
 - Swagger: `http://localhost:8080/swagger-ui.html`
 - PostgreSQL: porta `5432`, banco/usuário/senha `gamificacao`
-- pgAdmin: `http://localhost:5050`
+- pgAdmin: `http://127.0.0.1:5050` (ou `http://localhost:5050`)
   - e-mail: `admin@gamificacao.com`
   - senha: `admin`
 

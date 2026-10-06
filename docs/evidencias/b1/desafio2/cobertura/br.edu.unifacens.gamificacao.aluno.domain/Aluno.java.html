@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Aluno.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Gamificação Educação Continuada</a> &gt; <a href="index.source.html" class="el_package">br.edu.unifacens.gamificacao.aluno.domain</a> &gt; <span class="el_source">Aluno.java</span></div><h1>Aluno.java</h1><pre class="source lang-java linenums">package br.edu.unifacens.gamificacao.aluno.domain;
+
+import java.math.BigDecimal;
+import java.util.Objects;
+
+/** Agregado puro: mantém a regra &gt; 7,0 da AC1 e concentra suas conquistas. */
+public class Aluno {
+<span class="fc" id="L8">    private static final BigDecimal MEDIA_MINIMA = new BigDecimal(&quot;7.0&quot;);</span>
+    private int cursosDisponiveis;
+    private int cursosConcluidos;
+    private int moedas;
+
+<span class="fc" id="L13">    public Aluno(int cursosDisponiveis) { this(cursosDisponiveis, 0, 0); }</span>
+
+<span class="fc" id="L15">    public Aluno(int cursosDisponiveis, int cursosConcluidos, int moedas) {</span>
+<span class="fc bfc" id="L16" title="All 6 branches covered.">        if (cursosDisponiveis &lt; 0 || cursosConcluidos &lt; 0 || moedas &lt; 0)</span>
+<span class="fc" id="L17">            throw new IllegalArgumentException(&quot;Saldos não podem ser negativos&quot;);</span>
+<span class="fc" id="L18">        this.cursosDisponiveis = cursosDisponiveis;</span>
+<span class="fc" id="L19">        this.cursosConcluidos = cursosConcluidos;</span>
+<span class="fc" id="L20">        this.moedas = moedas;</span>
+<span class="fc" id="L21">    }</span>
+
+    public void concluirCurso(BigDecimal media, boolean concluido) {
+<span class="fc" id="L24">        Objects.requireNonNull(media, &quot;A média é obrigatória&quot;);</span>
+<span class="fc bfc" id="L25" title="All 4 branches covered.">        if (media.signum() &lt; 0 || media.compareTo(BigDecimal.TEN) &gt; 0)</span>
+<span class="fc" id="L26">            throw new IllegalArgumentException(&quot;Média deve estar entre 0 e 10&quot;);</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        if (!concluido) return;</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        if (media.compareTo(MEDIA_MINIMA) &gt; 0) {</span>
+<span class="fc" id="L29">            cursosDisponiveis += 3;</span>
+<span class="fc" id="L30">            cursosConcluidos++;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">            if (cursosConcluidos == 12) moedas += 3;</span>
+        }
+<span class="fc" id="L33">    }</span>
+
+<span class="fc" id="L35">    public int getCursosDisponiveis() { return cursosDisponiveis; }</span>
+<span class="fc" id="L36">    public int getCursosConcluidos() { return cursosConcluidos; }</span>
+<span class="fc" id="L37">    public int getMoedas() { return moedas; }</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">    public boolean isPremium() { return cursosConcluidos &gt;= 12; }</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">    public boolean possuiBadge() { return cursosConcluidos &gt; 0; }</span>
+<span class="fc" id="L40">    public int getPontos() { return cursosConcluidos * 100 + moedas; }</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

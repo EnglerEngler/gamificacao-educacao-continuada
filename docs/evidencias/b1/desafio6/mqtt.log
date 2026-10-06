@@ -1,0 +1,23 @@
+1791326916: Warning: File /home/engler/devops/gamificacao-educacao-continuada/ops/mqtt/acl has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /home/engler/devops/gamificacao-educacao-continuada/ops/mqtt/acl`.
+1791326938: New connection from 127.0.0.1:45879 on port 1883.
+1791326938: New client connected from 127.0.0.1:45879 as b1-gateway (p2, c0, k30, u'gateway').
+1791326981: Warning: File /home/engler/devops/gamificacao-educacao-continuada/ops/mqtt/acl has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /home/engler/devops/gamificacao-educacao-continuada/ops/mqtt/acl`.
+1791326994: New connection from 127.0.0.1:50265 on port 1883.
+1791326994: New client connected from 127.0.0.1:50265 as b1-gateway (p2, c0, k30, u'gateway').
+1791327252: Client b1-gateway closed its connection.
+1791327252: New connection from 127.0.0.1:53033 on port 1883.
+1791327252: New client connected from 127.0.0.1:53033 as b1-simulador-923f3a7a-d798-4182-818a-4b224f048621 (p2, c1, k30, u'lab01').
+1791327252: Client b1-simulador-923f3a7a-d798-4182-818a-4b224f048621 disconnected.
+1791327252: New connection from 127.0.0.1:46963 on port 1883.
+1791327252: New client connected from 127.0.0.1:46963 as b1-gateway (p2, c0, k30, u'gateway').
+1791327254: New connection from 127.0.0.1:38505 on port 1883.
+1791327254: New client connected from 127.0.0.1:38505 as b1-simulador-dcf3b5f2-46e9-49d5-8075-41bc770a254f (p2, c1, k30, u'lab01').
+1791327254: Client b1-simulador-dcf3b5f2-46e9-49d5-8075-41bc770a254f disconnected.
+1791327270: New connection from 127.0.0.1:49863 on port 1883.
+1791327270: New client connected from 127.0.0.1:49863 as b1-simulador-77605dd1-f310-4153-bc0f-0feb1cfcc731 (p2, c1, k30, u'lab01').
+1791327270: Client b1-simulador-77605dd1-f310-4153-bc0f-0feb1cfcc731 disconnected.
+1791327270: New connection from 127.0.0.1:45923 on port 1883.
+1791327270: New client connected from 127.0.0.1:45923 as b1-simulador-d50e957d-25e9-4f5e-9cd2-3018414c7250 (p2, c1, k30, u'lab01').
+1791327270: Client b1-simulador-d50e957d-25e9-4f5e-9cd2-3018414c7250 disconnected.

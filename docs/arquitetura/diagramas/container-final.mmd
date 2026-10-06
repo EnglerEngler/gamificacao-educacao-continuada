@@ -1,0 +1,14 @@
+flowchart LR
+    U["Aluno / instituição<br/>[Pessoa]"] -->|"HTTP/JSON"| CORE["Core e Vue Aprende+<br/>[Container: Java 21 / Spring Boot]"]
+    CORE -->|"JPA/JDBC · negócio + outbox"| DB[("PostgreSQL 16<br/>[Container: banco relacional]")]
+    CORE -->|"HTTP/JSON · timeout + fallback"| IA["IA: recomendação e assistente<br/>[Container: Python / FastAPI]"]
+    CORE -->|"Worker assíncrono · HTTP + retry"| N["Notificações<br/>[Container: Python / FastAPI]"]
+    N --> NDB[("Deduplicação<br/>[SQLite persistente]")]
+    D["Dispositivo simulado<br/>[Sistema externo]"] -->|"MQTT / QoS 1 / ACL"| MQTT["Mosquitto<br/>[Container: broker]"]
+    MQTT -->|"Sessão persistente"| GW["Gateway IoT<br/>[Container: Python / Paho]"]
+    GW --> SPOOL[("Spool persistente<br/>[SQLite]")]
+    GW -->|"HTTP/JSON + token + tenant"| CORE
+    P["Prometheus<br/>[Container de operação]"] -->|"Scrape Actuator"| CORE
+    P -->|"Scrape métricas"| GW
+    G["Grafana<br/>[Container de operação]"] -->|"PromQL"| P
+

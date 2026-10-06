@@ -1,0 +1,95 @@
+services:
+  app:
+    environment:
+      IA_URL: http://ia:8001
+      NOTIFICACAO_URL: http://notificacoes:8002
+      INTEGRATION_TOKEN: ${INTEGRATION_TOKEN:-lab-b1-local}
+    # Não depende de IA/notificações: indisponibilidade não impede iniciar o Core.
+  ia:
+    build:
+      context: .
+      dockerfile: services/Dockerfile
+    command: python -m uvicorn services.ia.main:app --host 0.0.0.0 --port 8001
+    ports: ["127.0.0.1:8001:8001"]
+    networks: [gamificacao_net]
+    restart: unless-stopped
+  notificacoes:
+    build:
+      context: .
+      dockerfile: services/Dockerfile
+    command: python -m uvicorn services.notificacoes.main:app --host 0.0.0.0 --port 8002
+    environment:
+      NOTIFICACOES_DB: /data/notificacoes.db
+      INTEGRATION_TOKEN: ${INTEGRATION_TOKEN:-lab-b1-local}
+    volumes: [notificacoes_data:/data]
+    ports: ["127.0.0.1:8002:8002"]
+    networks: [gamificacao_net]
+    restart: unless-stopped
+  mqtt:
+    image: eclipse-mosquitto:2.0.18
+    entrypoint: /bin/sh
+    command:
+      - -c
+      - |
+        mkdir -p /tmp/mqtt
+        mosquitto_passwd -b -c /tmp/mqtt/password lab01 "$$DEVICE_PASSWORD"
+        mosquitto_passwd -b /tmp/mqtt/password gateway "$$GATEWAY_PASSWORD"
+        exec mosquitto -c /mosquitto/config/mosquitto.conf
+    environment:
+      DEVICE_PASSWORD: ${MQTT_DEVICE_PASSWORD:-lab-device}
+      GATEWAY_PASSWORD: ${MQTT_PASSWORD:-lab-gateway}
+    volumes:
+      - ./ops/mqtt/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ./ops/mqtt/acl:/mosquitto/config/acl:ro
+      - mqtt_data:/mosquitto/data
+    ports: ["127.0.0.1:1883:1883"]
+    networks: [gamificacao_net]
+    restart: unless-stopped
+  iot-gateway:
+    build:
+      context: .
+      dockerfile: services/Dockerfile
+    command: python -m services.iot.gateway
+    environment:
+      MQTT_HOST: mqtt
+      MQTT_PASSWORD: ${MQTT_PASSWORD:-lab-gateway}
+      CORE_URL: http://app:8080
+      INTEGRATION_TOKEN: ${INTEGRATION_TOKEN:-lab-b1-local}
+      IOT_DB: /data/iot.db
+    volumes: [iot_data:/data]
+    ports: ["127.0.0.1:8003:8003"]
+    depends_on: [mqtt]
+    networks: [gamificacao_net]
+    restart: unless-stopped
+  prometheus:
+    image: prom/prometheus:v3.2.1
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus"]
+    volumes:
+      - ./ops/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./ops/prometheus/alerts.yml:/etc/prometheus/alerts.yml:ro
+      - prometheus_data:/prometheus
+    ports: ["127.0.0.1:9090:9090"]
+    networks: [gamificacao_net]
+    restart: unless-stopped
+  grafana:
+    image: grafana/grafana:11.5.2
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-lab-b1-grafana}
+      PROMETHEUS_URL: http://prometheus:9090
+      B1_DASHBOARDS_PATH: /etc/grafana/dashboards
+    volumes:
+      - ./ops/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./ops/grafana/dashboards:/etc/grafana/dashboards:ro
+      - grafana_data:/var/lib/grafana
+    ports: ["127.0.0.1:3000:3000"]
+    depends_on: [prometheus]
+    networks: [gamificacao_net]
+    restart: unless-stopped
+volumes:
+  mqtt_data:
+  iot_data:
+  notificacoes_data:
+  prometheus_data:
+  grafana_data:
+

@@ -1,0 +1,36 @@
+{
+  "inicio_utc": "2026-10-06T22:53:50.745736+00:00",
+  "servico_disponivel": {
+    "degradado": false,
+    "cursos": [
+      "IoT e MQTT",
+      "Arquitetura de software",
+      "Python para educação"
+    ],
+    "origem": "python-lab"
+  },
+  "retrieval": {
+    "degradado": false,
+    "origem": "python-lab",
+    "resposta": "Ao concluir um curso com média maior que 7,0, o aluno recebe três novos cursos. Média igual a 7,0 não recebe recompensa.",
+    "fontes": [
+      "ac1-us01"
+    ],
+    "modo": "retrieval-extrativo-lab"
+  },
+  "servico_interrompido": {
+    "degradado": true,
+    "cursos": [
+      "Fundamentos de programação"
+    ],
+    "origem": "catalogo-local"
+  },
+  "assistente_interrompido": {
+    "resposta": "Assistente temporariamente indisponível. Consulte o material do curso.",
+    "origem": "fallback",
+    "degradado": true,
+    "fontes": []
+  },
+  "latencia_fallback_ms": 48.48,
+  "ranking_continua_operando": true
+}

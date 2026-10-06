@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: gamificacao
       POSTGRES_PASSWORD: gamificacao
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -31,7 +31,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: admin
       PGADMIN_CONFIG_SERVER_MODE: "False"
     ports:
-      - "5050:80"
+      - "127.0.0.1:5050:80"
     volumes:
       - pgadmin_data:/var/lib/pgadmin
     networks: [gamificacao_net]
@@ -48,7 +48,7 @@ services:
       SPRING_DATASOURCE_USERNAME: gamificacao
       SPRING_DATASOURCE_PASSWORD: gamificacao
     ports:
-      - "8080:8080"
+      - "127.0.0.1:8080:8080"
     networks: [gamificacao_net]
 volumes:
   postgres_data:

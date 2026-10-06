@@ -1,0 +1,142 @@
+{
+  "inicio_utc": "2026-10-06T22:53:50.745736+00:00",
+  "coletado_utc": "2026-10-06T22:54:50.433792+00:00",
+  "queries": {
+    "up{job=\"core\"}": [
+      {
+        "metric": {
+          "__name__": "up",
+          "instance": "127.0.0.1:8080",
+          "job": "core"
+        },
+        "value": [
+          1791327289.883,
+          "1"
+        ]
+      }
+    ],
+    "b1_ia_requests_total{resultado=\"fallback\"}": [
+      {
+        "metric": {
+          "__name__": "b1_ia_requests_total",
+          "instance": "127.0.0.1:8080",
+          "job": "core",
+          "resultado": "fallback"
+        },
+        "value": [
+          1791327289.928,
+          "2"
+        ]
+      }
+    ],
+    "b1_outbox_deliveries_total{resultado=\"falha\"}": [
+      {
+        "metric": {
+          "__name__": "b1_outbox_deliveries_total",
+          "instance": "127.0.0.1:8080",
+          "job": "core",
+          "resultado": "falha"
+        },
+        "value": [
+          1791327289.973,
+          "1"
+        ]
+      }
+    ],
+    "b1_outbox_deliveries_total{resultado=\"sucesso\"}": [
+      {
+        "metric": {
+          "__name__": "b1_outbox_deliveries_total",
+          "instance": "127.0.0.1:8080",
+          "job": "core",
+          "resultado": "sucesso"
+        },
+        "value": [
+          1791327290.018,
+          "3"
+        ]
+      }
+    ],
+    "b1_outbox_pending": [
+      {
+        "metric": {
+          "__name__": "b1_outbox_pending",
+          "instance": "127.0.0.1:8080",
+          "job": "core"
+        },
+        "value": [
+          1791327290.049,
+          "0"
+        ]
+      }
+    ],
+    "b1_gateway_deliveries_total": [
+      {
+        "metric": {
+          "__name__": "b1_gateway_deliveries_total",
+          "instance": "127.0.0.1:8003",
+          "job": "iot",
+          "resultado": "sucesso"
+        },
+        "value": [
+          1791327290.079,
+          "4"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "b1_gateway_deliveries_total",
+          "instance": "127.0.0.1:8003",
+          "job": "iot",
+          "resultado": "falha"
+        },
+        "value": [
+          1791327290.079,
+          "14"
+        ]
+      }
+    ],
+    "b1_gateway_pending": [
+      {
+        "metric": {
+          "__name__": "b1_gateway_pending",
+          "instance": "127.0.0.1:8003",
+          "job": "iot"
+        },
+        "value": [
+          1791327290.103,
+          "0"
+        ]
+      }
+    ],
+    "b1_ranking_latency_seconds_count": [
+      {
+        "metric": {
+          "__name__": "b1_ranking_latency_seconds_count",
+          "instance": "127.0.0.1:8080",
+          "job": "core"
+        },
+        "value": [
+          1791327290.149,
+          "30"
+        ]
+      }
+    ]
+  },
+  "pendentes_durante_falha": [
+    {
+      "metric": {
+        "__name__": "b1_outbox_pending",
+        "instance": "127.0.0.1:8080",
+        "job": "core"
+      },
+      "value": [
+        1791327276.586,
+        "1"
+      ]
+    }
+  ],
+  "dashboard_uid": "b1-architecture",
+  "painels": 8,
+  "ambiente": "Processos nativos no WSL; configuração equivalente de containers versionada"
+}

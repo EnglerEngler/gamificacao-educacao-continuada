@@ -1,0 +1,24 @@
+flowchart LR
+    U["Cliente HTTP<br/>[Externo]"] --> API
+    subgraph CORE["Core Aprende+ · Container Spring Boot"]
+      API["AlunoController<br/>[Component: REST API]"] --> UC["AlunoService / ConcluirCurso<br/>[Component: caso de uso]"]
+      UC --> DOMAIN["Aluno<br/>[Component: domínio Java puro]"]
+      UC --> PORT["AlunoStore<br/>[Component: porta de saída]"]
+      JPA["JpaAlunoAdapter<br/>[Component: adapter JPA]"] -.->|"implementa"| PORT
+      UC --> EVT["RegistrarEvento<br/>[Component: API de eventos]"]
+      OUTBOX["JpaRegistrarEvento<br/>[Component: adapter transacional]"] -.->|"implementa"| EVT
+      WORKER["OutboxDispatcher<br/>[Component: worker]"] --> HTTPN["NotificacaoPort / HTTP adapter<br/>[Component]"]
+      RANKAPI["RankingController / Service<br/>[Component]"] --> RPORT["RankingPort<br/>[Component: porta]"]
+      SQL["JdbcRankingAdapter<br/>[Component]"] -.->|"implementa"| RPORT
+      IAAPI["IaController / Service<br/>[Component: fallback]"] --> IAPORT["IaPort<br/>[Component]"]
+      HTTPAI["FastApiAdapter<br/>[Component]"] -.->|"implementa"| IAPORT
+      IOT["IotController<br/>[Component: entrada autenticada]"] -->|"ConcluirCurso API"| UC
+    end
+    JPA -->|"alunos / conclusões"| DB[("Banco relacional<br/>[Externo ao Core]")]
+    OUTBOX -->|"mesma transação da conclusão"| DB
+    WORKER -->|"lê pendências / marca entrega"| DB
+    SQL -->|"read model · schema compartilhado"| DB
+    IOT -->|"recibo único"| DB
+    HTTPAI -->|"HTTP/JSON"| AI["FastAPI IA<br/>[Container externo]"]
+    HTTPN -->|"HTTP/JSON"| N["Notificações<br/>[Container externo]"]
+

@@ -4,9 +4,10 @@ spring:
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:h2}
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
@@ -14,3 +15,25 @@ spring:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+
+b1:
+  ia:
+    url: ${IA_URL:http://127.0.0.1:8001}
+  notificacao:
+    url: ${NOTIFICACAO_URL:http://127.0.0.1:8002}
+  integration:
+    token: ${INTEGRATION_TOKEN:lab-b1-local}
+  outbox:
+    interval-ms: ${OUTBOX_INTERVAL_MS:1000}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,info
+  metrics:
+    distribution:
+      percentiles-histogram:
+        b1.ranking.latency: true
+        b1.ia.latency: true
+        http.server.requests: true

@@ -1,4 +1,34 @@
-# Aprende+ — Educação Continuada Gamificada
+# Aprende+ — AC1 e B1 Architecture Lab
+
+Entrega B1: seis decisões evolutivas, Core modular, domínio com Ports & Adapters, integração Python com fallback, eventos duráveis, MQTT e observabilidade.
+
+**Comece pelo [registro arquitetural cumulativo](docs/arquitetura/README.md)**: identificação da equipe, RF/RNF/RPC, matriz de 18 ASRs (três por desafio), seis ADRs, C4 e síntese para a PoC da AF.
+
+- [ADRs](docs/adr/ADR-001-core-modular.md), com alternativas e consequências.
+- [Diagramas C4 e renderizações](docs/arquitetura/diagramas/README.md).
+- [Evidências reais dos seis desafios](docs/evidencias/b1/README.md).
+- [Roteiro de apresentação e entrega](docs/ENTREGA-B1.md).
+
+Para executar os componentes B1 por containers:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.b1.yml up --build -d
+```
+
+Para reproduzir o laboratório nativo no Ubuntu 24.04 sem Docker:
+
+```bash
+bash scripts/bootstrap-lab.sh
+.venv/bin/python scripts/lab.py evidence
+bash scripts/verify.sh
+.venv/bin/python scripts/collect-test-evidence.py
+```
+
+Aplicação/Swagger: localhost:8080; Prometheus: localhost:9090; Grafana: localhost:3000 (admin / lab-b1-grafana). O Core continua com os endpoints da AC1 e aceita X-Instituicao (padrão ac1). Para idempotência de conclusão, envie um cursoId estável; payload legado sem identidade representa nova conclusão a cada chamada.
+
+Os serviços Python, gateway, broker e banco têm dados/artefatos separados. Credenciais versionadas são demonstrativas de localhost. O laboratório foi executado com processos reais e H2 persistente; empacotamento/deploy Docker está configurado, mas não foi apresentado como execução realizada quando Docker Desktop estava indisponível.
+
+## Histórico da AC1
 
 > Projeto acadêmico — ATDD, BDD e TDD | Entrega via GitHub
 
@@ -26,7 +56,7 @@ Critérios de aceitação (BDD), também disponíveis em [docs/gamificacao.featu
 2. A conclusão com média 7,0 ou menor não libera cursos.
 3. Um curso que ainda está em andamento não gera recompensa.
 
-**Escopo implementado nesta entrega:** somente a US01. As US02 e US03 estão descritas como backlog e reservadas para implementação individual de Eduardo e Khevyn, respectivamente.
+**Escopo da AC1:** somente a US01. O B1 reaproveita essa regra e acrescenta conquistas/Premium, ranking e integrações. A recompensa de participação no fórum (US02) continua fora dos mini-labs; não foi apresentada como implementada.
 
 ## BDD: cenários e responsáveis
 

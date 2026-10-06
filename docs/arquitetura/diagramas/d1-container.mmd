@@ -1,0 +1,5 @@
+flowchart LR
+    U["Aluno / instituição<br/>[Pessoa]"] -->|"HTTP/JSON"| CORE["Aprende+<br/>[Container: Spring Boot / Vue]<br/>Monólito modular · um JAR"]
+    CORE -->|"JPA/JDBC"| DB[("Banco relacional<br/>[Container: PostgreSQL]")]
+    ADM["Administrador<br/>[Pessoa]"] -->|"SQL administrativo"| DB
+

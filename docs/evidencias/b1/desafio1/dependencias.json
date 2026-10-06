@@ -1,0 +1,30 @@
+{
+  "baseline_commit_ac1": "b31abd3",
+  "caso_de_uso": "conclusao com recompensa",
+  "antes": {
+    "arquivo": "labs/desafio1/baseline/src/main/java/br/edu/unifacens/gamificacao/service/AlunoService.java",
+    "imports": [
+      "br.edu.unifacens.gamificacao.domain.Aluno",
+      "br.edu.unifacens.gamificacao.dto.*",
+      "br.edu.unifacens.gamificacao.entity.AlunoEntity",
+      "br.edu.unifacens.gamificacao.repository.AlunoRepository"
+    ],
+    "acesso_direto_entidade_jpa": true,
+    "acesso_direto_spring_data_repository": true
+  },
+  "depois": {
+    "arquivo": "src/main/java/br/edu/unifacens/gamificacao/aluno/application/AlunoService.java",
+    "imports": [
+      "br.edu.unifacens.gamificacao.aluno.api.*",
+      "br.edu.unifacens.gamificacao.eventos.api.RegistrarEvento",
+      "br.edu.unifacens.gamificacao.eventos.api.CursoConcluido"
+    ],
+    "acesso_direto_entidade_jpa": false,
+    "acesso_direto_spring_data_repository": false
+  },
+  "dominio": {
+    "arquivos": 1,
+    "imports_tecnicos": []
+  },
+  "observacao": "Agrupar pastas não reduz necessariamente o número de imports; a melhoria testada é a direção da dependência e o encapsulamento da persistência."
+}

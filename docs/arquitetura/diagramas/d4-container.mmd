@@ -1,0 +1,7 @@
+flowchart LR
+    U["Aluno<br/>[Pessoa]"] -->|"HTTP/JSON · conclusão imediata"| CORE["Core Aprende+<br/>[Container: Spring Boot]<br/>Caso de uso + outbox + worker"]
+    CORE -->|"Transação: aluno + conclusão + intenção"| DB[("PostgreSQL<br/>[Container]")]
+    CORE -->|"HTTP/JSON síncrono: interação educacional"| IA["IA<br/>[Container: FastAPI]"]
+    CORE -->|"Worker posterior ao commit<br/>HTTP/JSON com retentativa"| N["Notificações<br/>[Container: FastAPI]"]
+    N --> NDB[("Deduplicação / efeito do lab<br/>[SQLite persistente]")]
+

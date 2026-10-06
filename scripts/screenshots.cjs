@@ -1,0 +1,37 @@
+// Playwright é uma ferramenta de captura opcional, instalada fora do produto.
+const { chromium } = require(process.env.B1_PLAYWRIGHT_MODULE || 'playwright');
+const path = require('path');
+(async () => {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 1500, height: 1000 } });
+  const out = path.resolve('docs/evidencias/b1/desafio6');
+  await page.goto('http://127.0.0.1:3000/login');
+  await page.getByPlaceholder('email or username').fill('admin');
+  await page.getByPlaceholder('password').fill('lab-b1-grafana');
+  await page.getByRole('button', { name: /log in/i }).click();
+  await page.waitForURL(url => !url.pathname.endsWith('/login'));
+  await page.goto('http://127.0.0.1:3000/d/b1-architecture/b1?orgId=1&from=now-30m&to=now&refresh=2s');
+  await page.waitForTimeout(5000);
+  await page.screenshot({ path: path.join(out, 'grafana-dashboard.png'), fullPage: true });
+  await page.goto('http://127.0.0.1:9090/graph?g0.expr=b1_ia_requests_total%7Bresultado%3D%22fallback%22%7D&g0.tab=0&g0.range_input=30m');
+  await page.waitForTimeout(3000);
+  await page.screenshot({ path: path.join(out, 'prometheus-query.png'), fullPage: true });
+  await page.goto('http://127.0.0.1:8080');
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Consultar cursos' }).click();
+  await page.getByPlaceholder('Como recebo recompensas?').fill('Como recebo recompensas?');
+  await page.getByRole('button', { name: 'Perguntar', exact: true }).click();
+  await page.waitForTimeout(1000);
+  await page.screenshot({ path: path.join(out, 'aprendemais.png'), fullPage: true });
+  const jenkinsPage = await browser.newPage({ viewport: { width: 1500, height: 1100 } });
+  await jenkinsPage.goto('http://127.0.0.1:8090/login');
+  await jenkinsPage.locator('input[name="j_username"]').fill('b1');
+  await jenkinsPage.locator('input[name="j_password"]').fill('lab-b1-jenkins');
+  await jenkinsPage.getByRole('button', { name: /sign in/i }).click();
+  await jenkinsPage.goto('http://127.0.0.1:8090/job/b1-architecture/lastBuild/');
+  await jenkinsPage.waitForTimeout(1500);
+  await jenkinsPage.screenshot({ path: path.join(out, 'jenkins-build.png'), fullPage: true });
+  await browser.close();
+  console.log('Quatro capturas reais salvas em ' + out);
+})().catch(error => { console.error(error); process.exit(1); });
+

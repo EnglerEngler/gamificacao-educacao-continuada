@@ -1,0 +1,53 @@
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1662.0
+python_gc_objects_collected_total{generation="1"} 45.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 77.0
+python_gc_collections_total{generation="1"} 6.0
+python_gc_collections_total{generation="2"} 0.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="3",version="3.12.3"} 1.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 2.76242432e+08
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 4.6379008e+07
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.79132725167e+09
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 0.5700000000000001
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 71.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1.048576e+06
+# HELP b1_gateway_received_total Eventos MQTT gravados
+# TYPE b1_gateway_received_total counter
+b1_gateway_received_total{resultado="aceito"} 5.0
+# HELP b1_gateway_received_created Eventos MQTT gravados
+# TYPE b1_gateway_received_created gauge
+b1_gateway_received_created{resultado="aceito"} 1.7913272526179314e+09
+# HELP b1_gateway_deliveries_total Resultado de entrega HTTP
+# TYPE b1_gateway_deliveries_total counter
+b1_gateway_deliveries_total{resultado="sucesso"} 4.0
+b1_gateway_deliveries_total{resultado="falha"} 14.0
+# HELP b1_gateway_deliveries_created Resultado de entrega HTTP
+# TYPE b1_gateway_deliveries_created gauge
+b1_gateway_deliveries_created{resultado="sucesso"} 1.7913272539206326e+09
+b1_gateway_deliveries_created{resultado="falha"} 1.791327254945683e+09
+# HELP b1_gateway_pending Eventos persistidos aguardando Core
+# TYPE b1_gateway_pending gauge
+b1_gateway_pending 0.0

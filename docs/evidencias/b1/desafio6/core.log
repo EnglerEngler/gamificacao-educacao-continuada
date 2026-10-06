@@ -1,0 +1,198 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-06T19:48:40.235-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : Starting GamificacaoApplication v1.0.0 using Java 21.0.12.1 with PID 58880 (/home/engler/devops/gamificacao-educacao-continuada/target/gamificacao-educacao-continuada-1.0.0.jar started by engler in /home/engler/devops/gamificacao-educacao-continuada)
+2026-10-06T19:48:40.240-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : The following 1 profile is active: "lab"
+2026-10-06T19:48:47.002-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T19:48:47.169-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 4 JPA repository interfaces.
+2026-10-06T19:48:48.850-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-06T19:48:48.883-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T19:48:48.884-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-10-06T19:48:48.952-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-06T19:48:48.953-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8610 ms
+2026-10-06T19:48:49.685-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-06T19:48:49.923-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-10-06T19:48:50.020-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-06T19:48:50.972-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T19:48:51.065-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T19:48:51.780-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261006T224834Z/core user=SA
+2026-10-06T19:48:51.783-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T19:48:51.968-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06T19:48:53.725-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T19:48:53.805-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T19:48:54.277-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06T19:48:55.848-03:00  WARN 58880 --- [gamificacao-educacao-continuada] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T19:48:57.136-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-10-06T19:48:57.277-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-10-06T19:48:57.308-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : Started GamificacaoApplication in 18.173 seconds (process running for 19.814)
+2026-10-06T19:48:57.404-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-06T19:48:57.404-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-06T19:48:57.408-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-06T19:48:59.819-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06T19:48:59.822-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-10-06T19:48:59.830-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T19:48:59.833-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-06T19:48:59.836-03:00  INFO 58880 --- [gamificacao-educacao-continuada] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-06T19:49:44.354-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : Starting GamificacaoApplication v1.0.0 using Java 21.0.12.1 with PID 59576 (/home/engler/devops/gamificacao-educacao-continuada/target/gamificacao-educacao-continuada-1.0.0.jar started by engler in /home/engler/devops/gamificacao-educacao-continuada)
+2026-10-06T19:49:44.357-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : The following 1 profile is active: "lab"
+2026-10-06T19:49:45.944-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T19:49:46.038-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 4 JPA repository interfaces.
+2026-10-06T19:49:47.168-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-06T19:49:47.189-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T19:49:47.189-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-10-06T19:49:47.237-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-06T19:49:47.238-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2819 ms
+2026-10-06T19:49:47.776-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-06T19:49:47.880-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-10-06T19:49:47.947-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-06T19:49:48.357-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T19:49:48.396-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T19:49:48.838-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261006T224940Z/core user=SA
+2026-10-06T19:49:48.842-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T19:49:48.942-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06T19:49:50.262-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T19:49:50.352-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T19:49:50.902-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06T19:49:52.390-03:00  WARN 59576 --- [gamificacao-educacao-continuada] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T19:49:53.656-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-10-06T19:49:53.776-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-10-06T19:49:53.804-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : Started GamificacaoApplication in 10.118 seconds (process running for 10.892)
+2026-10-06T19:49:54.242-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-06T19:49:54.243-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-06T19:49:54.245-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-06T19:53:52.980-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [0.1-8080-exec-3] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=fda54b2f-0587-468a-a51b-0f39cd2e8014 instituicao=ac1 alunoId=1
+2026-10-06T19:53:53.058-03:00  WARN 59576 --- [gamificacao-educacao-continuada] [   scheduling-1] b.e.u.g.e.application.OutboxDispatcher   : outbox_retry eventId=fda54b2f-0587-468a-a51b-0f39cd2e8014 tentativa=1
+2026-10-06T19:53:54.677-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06T19:53:54.687-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-10-06T19:53:54.699-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T19:53:54.707-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-06T19:53:54.710-03:00  INFO 59576 --- [gamificacao-educacao-continuada] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-06T19:53:56.467-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : Starting GamificacaoApplication v1.0.0 using Java 21.0.12.1 with PID 62098 (/home/engler/devops/gamificacao-educacao-continuada/target/gamificacao-educacao-continuada-1.0.0.jar started by engler in /home/engler/devops/gamificacao-educacao-continuada)
+2026-10-06T19:53:56.471-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : The following 1 profile is active: "lab"
+2026-10-06T19:53:58.136-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T19:53:58.230-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2026-10-06T19:53:59.413-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-06T19:53:59.438-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T19:53:59.439-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-10-06T19:53:59.498-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-06T19:53:59.500-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2891 ms
+2026-10-06T19:54:00.045-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-06T19:54:00.136-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-10-06T19:54:00.202-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-06T19:54:00.643-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T19:54:00.685-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T19:54:01.190-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261006T224940Z/core user=SA
+2026-10-06T19:54:01.194-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T19:54:01.287-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06T19:54:02.979-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T19:54:03.110-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T19:54:03.612-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06T19:54:05.446-03:00  WARN 62098 --- [gamificacao-educacao-continuada] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T19:54:06.770-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-10-06T19:54:06.944-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-10-06T19:54:06.972-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : Started GamificacaoApplication in 11.253 seconds (process running for 12.071)
+2026-10-06T19:54:07.249-03:00  WARN 62098 --- [gamificacao-educacao-continuada] [   scheduling-1] b.e.u.g.e.application.OutboxDispatcher   : outbox_retry eventId=fda54b2f-0587-468a-a51b-0f39cd2e8014 tentativa=2
+2026-10-06T19:54:07.331-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-06T19:54:07.332-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-06T19:54:07.334-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-06T19:54:13.885-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=7d8343ba-16aa-4f14-a477-8d97b6dd3e5e instituicao=ac1 alunoId=1
+2026-10-06T19:54:14.440-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06T19:54:14.443-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-10-06T19:54:14.451-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T19:54:14.457-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-06T19:54:14.461-03:00  INFO 62098 --- [gamificacao-educacao-continuada] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-06T19:54:16.528-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : Starting GamificacaoApplication v1.0.0 using Java 21.0.12.1 with PID 62337 (/home/engler/devops/gamificacao-educacao-continuada/target/gamificacao-educacao-continuada-1.0.0.jar started by engler in /home/engler/devops/gamificacao-educacao-continuada)
+2026-10-06T19:54:16.531-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : The following 1 profile is active: "lab"
+2026-10-06T19:54:18.265-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T19:54:18.362-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 4 JPA repository interfaces.
+2026-10-06T19:54:19.427-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-06T19:54:19.448-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T19:54:19.449-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-10-06T19:54:19.502-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-06T19:54:19.503-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2903 ms
+2026-10-06T19:54:20.010-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-06T19:54:20.097-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-10-06T19:54:20.143-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-06T19:54:20.527-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T19:54:20.570-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T19:54:21.129-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261006T224940Z/core user=SA
+2026-10-06T19:54:21.132-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T19:54:21.239-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06T19:54:23.622-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T19:54:23.702-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T19:54:24.189-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06T19:54:25.987-03:00  WARN 62337 --- [gamificacao-educacao-continuada] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T19:54:28.603-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-10-06T19:54:29.019-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-10-06T19:54:29.055-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.GamificacaoApplication           : Started GamificacaoApplication in 13.235 seconds (process running for 13.995)
+2026-10-06T19:54:29.282-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-06T19:54:29.283-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-06T19:54:29.286-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-06T19:54:30.426-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [0.1-8080-exec-4] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=e07101b4-301b-4196-89e3-4a6c772710e1 instituicao=ac1 alunoId=1
+2026-10-06T19:54:34.846-03:00  INFO 62337 --- [gamificacao-educacao-continuada] [0.1-8080-exec-9] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=917def08-3ba4-4bee-8605-453420d15661 instituicao=ac1 alunoId=1
+2026-10-06T19:54:35.589-03:00  WARN 62337 --- [gamificacao-educacao-continuada] [   scheduling-1] b.e.u.g.e.application.OutboxDispatcher   : outbox_retry eventId=917def08-3ba4-4bee-8605-453420d15661 tentativa=1

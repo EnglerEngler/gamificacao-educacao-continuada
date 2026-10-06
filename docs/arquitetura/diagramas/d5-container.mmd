@@ -1,0 +1,11 @@
+flowchart LR
+    U["Aluno<br/>[Pessoa]"] --> CORE["Core Aprende+<br/>[Container: Spring Boot]"]
+    CORE --> DB[("PostgreSQL<br/>[Container]")]
+    CORE --> IA["IA<br/>[Container: FastAPI]"]
+    CORE -->|"Outbox / worker HTTP"| N["Notificações<br/>[Container: FastAPI]"]
+    N --> NDB[("Deduplicação<br/>[SQLite]")]
+    D["Dispositivo de laboratório<br/>[Sistema externo simulado]"] -->|"MQTT 3.1.1 / QoS 1<br/>credenciais + ACL"| MQTT["Mosquitto<br/>[Container: broker MQTT]"]
+    MQTT -->|"Sessão persistente / QoS 1"| GW["Gateway IoT<br/>[Container: Python / Paho]"]
+    GW -->|"Commit local antes do PUBACK"| SPOOL[("Spool durável<br/>[SQLite]")]
+    GW -->|"HTTP/JSON + token + tenant<br/>retry / identificação estável"| CORE
+

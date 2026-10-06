@@ -1,0 +1,10 @@
+services:
+  app:
+    image: b1-core:${B1_IMAGE_TAG:?Defina B1_IMAGE_TAG}
+  ia:
+    image: b1-python:${B1_IMAGE_TAG:?Defina B1_IMAGE_TAG}
+  notificacoes:
+    image: b1-python:${B1_IMAGE_TAG:?Defina B1_IMAGE_TAG}
+  iot-gateway:
+    image: b1-python:${B1_IMAGE_TAG:?Defina B1_IMAGE_TAG}
+

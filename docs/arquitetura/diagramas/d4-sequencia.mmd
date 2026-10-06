@@ -1,0 +1,30 @@
+sequenceDiagram
+    actor Aluno
+    participant Core as Core / caso de uso
+    participant DB as Banco relacional
+    participant Worker as Worker outbox
+    participant N as Consumidor de notificações
+    Aluno->>Core: POST conclusão (tenant, cursoId, eventoId)
+    Core->>DB: BEGIN / lock aluno
+    Core->>DB: Verificar curso já concluído
+    alt Nova conclusão
+      Core->>Core: Aplicar regra > 7,0 e conquistas
+      Core->>DB: Atualizar aluno + conclusão única + outbox
+    else Reenvio do mesmo curso
+      Core->>Core: Retornar estado, sem nova recompensa/evento
+    end
+    Core->>DB: COMMIT
+    Core-->>Aluno: 200 / recompensa persistida
+    loop Pendências após commit
+      Worker->>DB: Selecionar lote com lock
+      Worker->>N: POST evento HTTP/JSON + token
+      alt Consumidor indisponível
+        N--xWorker: Falha / timeout
+        Worker->>DB: Guardar tentativa e próximo retry
+      else Consumidor recuperado
+        N->>N: Persistir efeito único por tenant/eventoId
+        N-->>Worker: 200, inclusive se duplicado
+        Worker->>DB: Marcar entregue
+      end
+    end
+

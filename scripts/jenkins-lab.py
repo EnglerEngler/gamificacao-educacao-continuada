@@ -95,10 +95,21 @@ def build():
         path = "/job/b1-architecture/config.xml" if exists else "/createItem?name=b1-architecture"
         response = client.post(path, content=config.encode(), headers={"Content-Type": "application/xml"})
         response.raise_for_status()
-        client.post("/job/b1-architecture/buildWithParameters", data={"BUILD_IMAGES": "false", "DEPLOY_LAB": "false"}).raise_for_status()
-        time.sleep(3)
+        scheduled = client.post("/job/b1-architecture/buildWithParameters", data={"BUILD_IMAGES": "false", "DEPLOY_LAB": "false"})
+        scheduled.raise_for_status()
+        queue_url = scheduled.headers['Location']
+        for _ in range(180):
+            queue_item = client.get(queue_url + 'api/json').json()
+            if queue_item.get('cancelled'):
+                raise RuntimeError('Build cancelado na fila')
+            if queue_item.get('executable'):
+                build_number = queue_item['executable']['number']
+                break
+            time.sleep(1)
+        else:
+            raise RuntimeError('Build não saiu da fila')
         for _ in range(1200):
-            response = client.get("/job/b1-architecture/lastBuild/api/json")
+            response = client.get(f"/job/b1-architecture/{build_number}/api/json")
             if response.is_success and not response.json()["building"]:
                 result = response.json()
                 break
@@ -109,6 +120,9 @@ def build():
         (OUT / "jenkins-console.log").write_text(console)
         test_report = client.get(f"/job/b1-architecture/{result['number']}/testReport/api/json").json()
         stages = client.get(f"/job/b1-architecture/{result['number']}/wfapi/describe")
+        built_revisions = [a['lastBuiltRevision']['SHA1'] for a in result.get('actions', [])
+                           if a.get('lastBuiltRevision')]
+        assert revision in built_revisions, f'Commit esperado {revision}, executado {built_revisions}'
         output = {"status": result["result"], "numero": result["number"],
                   "url_local": result["url"], "commit_validado": revision,
                   "jenkins_version": response.headers.get("x-jenkins"),

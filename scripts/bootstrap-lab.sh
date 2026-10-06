@@ -8,8 +8,10 @@ if [ ! -x "$task_tools/uv-x86_64-unknown-linux-gnu/uv" ]; then
     curl -fL https://github.com/astral-sh/uv/releases/download/0.6.14/uv-x86_64-unknown-linux-gnu.tar.gz -o "$task_tools/uv.tar.gz"
     tar -xzf "$task_tools/uv.tar.gz" -C "$task_tools"
 fi
-"$task_tools/uv-x86_64-unknown-linux-gnu/uv" venv .venv
-"$task_tools/uv-x86_64-unknown-linux-gnu/uv" pip install --python .venv/bin/python -r requirements.txt
+if [ ! -x .venv/bin/python ]; then
+    "$task_tools/uv-x86_64-unknown-linux-gnu/uv" venv .venv
+fi
+"$task_tools/uv-x86_64-unknown-linux-gnu/uv" pip install --python .venv/bin/python -r requirements.lock
 if [ ! -x "$task_tools/prometheus-3.2.1.linux-amd64/prometheus" ]; then
     curl -fL https://github.com/prometheus/prometheus/releases/download/v3.2.1/prometheus-3.2.1.linux-amd64.tar.gz -o "$task_tools/prometheus.tar.gz"
     tar -xzf "$task_tools/prometheus.tar.gz" -C "$task_tools"

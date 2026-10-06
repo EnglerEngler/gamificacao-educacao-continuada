@@ -287,7 +287,7 @@ def evidence(state):
     carga_tenant = 'carga-' + uuid4().hex[:8]
     sql = f"""INSERT INTO alunos(instituicao,nome,cursos_disponiveis,cursos_concluidos,moedas,versao)
         SELECT '{carga_tenant}', CONCAT('Aluno ', X), 5, MOD(X,30), 0, 0 FROM SYSTEM_RANGE(1,100000)"""
-    subprocess.run(["java", "-cp", str(h2jar), "org.h2.tools.Shell", "-url",
+    subprocess.run(["java", "-Xmx128m", "-cp", str(h2jar), "org.h2.tools.Shell", "-url",
                     "jdbc:h2:file:" + state["data"] + "/core;MODE=PostgreSQL;AUTO_SERVER=TRUE",
                     "-user", "sa", "-password", "", "-sql", sql], check=True, capture_output=True)
     samples = []

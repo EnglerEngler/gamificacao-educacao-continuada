@@ -1,8 +1,8 @@
 {
-  "inicio_utc": "2026-10-06T22:53:50.745736+00:00",
+  "inicio_utc": "2026-10-06T23:00:26.657464+00:00",
   "http_sincrono": 503,
   "resposta_assincrona": {
-    "id": 1,
+    "id": 100002,
     "nome": "Evidência B1",
     "cursosDisponiveis": 8,
     "cursosConcluidos": 1,
@@ -14,7 +14,7 @@
     "pontos": 100
   },
   "reenvio": {
-    "id": 1,
+    "id": 100002,
     "nome": "Evidência B1",
     "cursosDisponiveis": 8,
     "cursosConcluidos": 1,
@@ -25,7 +25,7 @@
     ],
     "pontos": 100
   },
-  "latencia_core_ms": 101.71,
+  "latencia_core_ms": 122.94,
   "core_reiniciado_sem_perder_recompensa": true,
-  "evento_entregue_apos_recuperacao": "fda54b2f-0587-468a-a51b-0f39cd2e8014"
+  "evento_entregue_apos_recuperacao": "e86a2bd8-812e-4daf-bd37-277324db4c9a"
 }

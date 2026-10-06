@@ -1,7 +1,7 @@
 FROM python:3.12-slim
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.lock .
+RUN pip install --no-cache-dir -r requirements.lock
 COPY services ./services
 ENV PYTHONUNBUFFERED=1
 RUN useradd --create-home app && mkdir /data && chown app /data

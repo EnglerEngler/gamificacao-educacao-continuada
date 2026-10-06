@@ -21,3 +21,18 @@ To fix this, use `chmod 0700 /home/engler/devops/gamificacao-educacao-continuada
 1791327270: New connection from 127.0.0.1:45923 on port 1883.
 1791327270: New client connected from 127.0.0.1:45923 as b1-simulador-d50e957d-25e9-4f5e-9cd2-3018414c7250 (p2, c1, k30, u'lab01').
 1791327270: Client b1-simulador-d50e957d-25e9-4f5e-9cd2-3018414c7250 disconnected.
+1791327649: New connection from 127.0.0.1:43599 on port 1883.
+1791327649: New client connected from 127.0.0.1:43599 as b1-simulador-146a950a-8bf1-47e3-a1a5-f369e6a17b26 (p2, c1, k30, u'lab01').
+1791327649: Client b1-gateway closed its connection.
+1791327649: Client b1-simulador-146a950a-8bf1-47e3-a1a5-f369e6a17b26 disconnected.
+1791327650: New connection from 127.0.0.1:35597 on port 1883.
+1791327650: New client connected from 127.0.0.1:35597 as b1-gateway (p2, c0, k30, u'gateway').
+1791327654: New connection from 127.0.0.1:54407 on port 1883.
+1791327654: New client connected from 127.0.0.1:54407 as b1-simulador-3d00bcfa-e573-4e39-8adb-6c1e37fd040c (p2, c1, k30, u'lab01').
+1791327654: Client b1-simulador-3d00bcfa-e573-4e39-8adb-6c1e37fd040c disconnected.
+1791327671: New connection from 127.0.0.1:58499 on port 1883.
+1791327671: New client connected from 127.0.0.1:58499 as b1-simulador-f9b83b83-eafa-499f-bb95-e30020704164 (p2, c1, k30, u'lab01').
+1791327671: Client b1-simulador-f9b83b83-eafa-499f-bb95-e30020704164 disconnected.
+1791327671: New connection from 127.0.0.1:39545 on port 1883.
+1791327671: New client connected from 127.0.0.1:39545 as b1-simulador-a8b2b633-ba7b-44ca-830e-cc4ec4274efa (p2, c1, k30, u'lab01').
+1791327671: Client b1-simulador-a8b2b633-ba7b-44ca-830e-cc4ec4274efa disconnected.

@@ -1,0 +1,274 @@
+[
+  {
+    "plugin": "antisamy-markup-formatter",
+    "versao": "173.v680e3a_b_69ff3"
+  },
+  {
+    "plugin": "apache-httpcomponents-client-4-api",
+    "versao": "4.5.14-269.vfa_2321039a_83"
+  },
+  {
+    "plugin": "asm-api",
+    "versao": "9.10.1-216.va_9256d3b_844b_"
+  },
+  {
+    "plugin": "bootstrap5-api",
+    "versao": "5.3.8-1048.va_c299057e35c"
+  },
+  {
+    "plugin": "bouncycastle-api",
+    "versao": "2.30.1.85.2-304.v4b_5b_62e59a_a_7"
+  },
+  {
+    "plugin": "branch-api",
+    "versao": "2.1303.v9f3b_95dc329d"
+  },
+  {
+    "plugin": "caffeine-api",
+    "versao": "3.2.4-208.v7e2da_a_7db_82b_"
+  },
+  {
+    "plugin": "checks-api",
+    "versao": "422.vc7e8b_51488c6"
+  },
+  {
+    "plugin": "cloudbees-folder",
+    "versao": "6.1106.v3a_d9a_6d2465e"
+  },
+  {
+    "plugin": "commons-lang3-api",
+    "versao": "3.21.0-122.v6a_ea_4fd34049"
+  },
+  {
+    "plugin": "commons-text-api",
+    "versao": "1.15.0-218.va_61573470393"
+  },
+  {
+    "plugin": "credentials-binding",
+    "versao": "728.v902a_273b_8947"
+  },
+  {
+    "plugin": "credentials",
+    "versao": "1511.v2e3cb_0008ef0"
+  },
+  {
+    "plugin": "display-url-api",
+    "versao": "2.217.va_6b_de84cc74b_"
+  },
+  {
+    "plugin": "durable-task",
+    "versao": "686.v80ff80875b_82"
+  },
+  {
+    "plugin": "echarts-api",
+    "versao": "6.1.0-1321.v86c4c5114494"
+  },
+  {
+    "plugin": "font-awesome-api",
+    "versao": "7.3.1-1013.v0835a_879ec6d"
+  },
+  {
+    "plugin": "git-client",
+    "versao": "6.6.1"
+  },
+  {
+    "plugin": "git",
+    "versao": "5.10.1"
+  },
+  {
+    "plugin": "gson-api",
+    "versao": "2.14.0-201.v8eefe5515533"
+  },
+  {
+    "plugin": "instance-identity",
+    "versao": "203.v15e81a_1b_7a_38"
+  },
+  {
+    "plugin": "ionicons-api",
+    "versao": "94.vcc3065403257"
+  },
+  {
+    "plugin": "jackson-annotations2-api",
+    "versao": "2.22-19.v10a_a_582ea_26e"
+  },
+  {
+    "plugin": "jackson2-api",
+    "versao": "2.22.2-445.vdc613f1d8012"
+  },
+  {
+    "plugin": "jackson3-api",
+    "versao": "3.2.3-101.v69fc84453a_8e"
+  },
+  {
+    "plugin": "jakarta-activation-api",
+    "versao": "2.1.4-1"
+  },
+  {
+    "plugin": "jakarta-mail-api",
+    "versao": "2.1.5-1"
+  },
+  {
+    "plugin": "jakarta-xml-bind-api",
+    "versao": "4.0.9-19.v2b_a_5b_44d9a_1c"
+  },
+  {
+    "plugin": "javax-activation-api",
+    "versao": "1.2.0-8"
+  },
+  {
+    "plugin": "jaxb",
+    "versao": "2.3.9-143.v5979df3304e6"
+  },
+  {
+    "plugin": "joda-time-api",
+    "versao": "2.15.0-208.v6b_084e7a_d9f0"
+  },
+  {
+    "plugin": "jquery3-api",
+    "versao": "3.7.1-687.v68d468e40b_30"
+  },
+  {
+    "plugin": "json-api",
+    "versao": "20260814-226.v20f9685d642c"
+  },
+  {
+    "plugin": "junit",
+    "versao": "1432.v3f9a_b_73dd986"
+  },
+  {
+    "plugin": "mailer",
+    "versao": "534.v1b_36f5864073"
+  },
+  {
+    "plugin": "mina-sshd-api-common",
+    "versao": "2.19.0-192.v2b_a_7b_2c1dc71"
+  },
+  {
+    "plugin": "mina-sshd-api-core",
+    "versao": "2.19.0-192.v2b_a_7b_2c1dc71"
+  },
+  {
+    "plugin": "pipeline-build-step",
+    "versao": "601.v6d4c6d1a_9dc7"
+  },
+  {
+    "plugin": "pipeline-groovy-lib",
+    "versao": "806.v408277b_33d1d"
+  },
+  {
+    "plugin": "pipeline-input-step",
+    "versao": "560.v56198a_642157"
+  },
+  {
+    "plugin": "pipeline-milestone-step",
+    "versao": "152.v6e22b_8cfc66c"
+  },
+  {
+    "plugin": "pipeline-model-api",
+    "versao": "2.2293.v6e7193cec599"
+  },
+  {
+    "plugin": "pipeline-model-definition",
+    "versao": "2.2293.v6e7193cec599"
+  },
+  {
+    "plugin": "pipeline-model-extensions",
+    "versao": "2.2293.v6e7193cec599"
+  },
+  {
+    "plugin": "pipeline-stage-step",
+    "versao": "345.va_96187909426"
+  },
+  {
+    "plugin": "pipeline-stage-tags-metadata",
+    "versao": "2.2293.v6e7193cec599"
+  },
+  {
+    "plugin": "plain-credentials",
+    "versao": "199.v9f8e1f741799"
+  },
+  {
+    "plugin": "plugin-util-api",
+    "versao": "7.1341.v039f146993d9"
+  },
+  {
+    "plugin": "prism-api",
+    "versao": "1.30.0-741.v034eb_0b_0a_a_fa_"
+  },
+  {
+    "plugin": "scm-api",
+    "versao": "728.vc30dcf7a_0df5"
+  },
+  {
+    "plugin": "script-security",
+    "versao": "1433.v17c58a_e45cc1"
+  },
+  {
+    "plugin": "snakeyaml-api",
+    "versao": "2.7-152.vc672728cf536"
+  },
+  {
+    "plugin": "snakeyaml-engine-api",
+    "versao": "3.2-18.v885ed7ff698f"
+  },
+  {
+    "plugin": "ssh-credentials",
+    "versao": "372.va_250881b_08cd"
+  },
+  {
+    "plugin": "structs",
+    "versao": "362.va_b_695ef4fdf9"
+  },
+  {
+    "plugin": "timestamper",
+    "versao": "1.30"
+  },
+  {
+    "plugin": "variant",
+    "versao": "70.va_d9f17f859e0"
+  },
+  {
+    "plugin": "woodstox-core-api",
+    "versao": "7.3.0-16.v017f30ed004c"
+  },
+  {
+    "plugin": "workflow-aggregator",
+    "versao": "608.v67378e9d3db_1"
+  },
+  {
+    "plugin": "workflow-api",
+    "versao": "1413.v2ff1a_5e720fa_"
+  },
+  {
+    "plugin": "workflow-basic-steps",
+    "versao": "1098.v808b_fd7f8cf4"
+  },
+  {
+    "plugin": "workflow-cps",
+    "versao": "4391.v652b_b_b_1b_7c00"
+  },
+  {
+    "plugin": "workflow-durable-task-step",
+    "versao": "1479.v56e587f413a_7"
+  },
+  {
+    "plugin": "workflow-job",
+    "versao": "1602.v2a_70b_80a_2396"
+  },
+  {
+    "plugin": "workflow-multibranch",
+    "versao": "842.v3a_b_59b_57b_e6e"
+  },
+  {
+    "plugin": "workflow-scm-step",
+    "versao": "487.v41313a_96b_65d"
+  },
+  {
+    "plugin": "workflow-step-api",
+    "versao": "724.v538c2362b_dfb_"
+  },
+  {
+    "plugin": "workflow-support",
+    "versao": "1015.v785e5a_b_b_8b_22"
+  }
+]

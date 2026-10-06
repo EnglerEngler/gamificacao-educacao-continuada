@@ -1385,3 +1385,5 @@ logger=installer.fs t=2026-10-06T19:50:27.572101609-03:00 level=info msg="Downlo
 logger=plugins.registration t=2026-10-06T19:50:27.599338483-03:00 level=info msg="Plugin registered" pluginId=grafana-lokiexplore-app
 logger=plugin.backgroundinstaller t=2026-10-06T19:50:27.599406763-03:00 level=info msg="Plugin successfully installed" pluginId=grafana-lokiexplore-app version= duration=1.099329592s
 logger=infra.usagestats t=2026-10-06T19:52:01.078170803-03:00 level=info msg="Usage stats are ready to report"
+logger=cleanup t=2026-10-06T20:00:24.148215512-03:00 level=info msg="Completed cleanup jobs" duration=89.242879ms
+logger=plugins.update.checker t=2026-10-06T20:00:25.727652589-03:00 level=info msg="Update check succeeded" duration=387.505278ms

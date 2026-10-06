@@ -3,7 +3,7 @@ const { chromium } = require(process.env.B1_PLAYWRIGHT_MODULE || 'playwright');
 const path = require('path');
 (async () => {
   const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage({ viewport: { width: 1500, height: 1000 } });
+  const page = await browser.newPage({ locale: 'en-US', viewport: { width: 1500, height: 1000 } });
   const out = path.resolve('docs/evidencias/b1/desafio6');
   await page.goto('http://127.0.0.1:3000/login');
   await page.getByPlaceholder('email or username').fill('admin');
@@ -23,7 +23,7 @@ const path = require('path');
   await page.getByRole('button', { name: 'Perguntar', exact: true }).click();
   await page.waitForTimeout(1000);
   await page.screenshot({ path: path.join(out, 'aprendemais.png'), fullPage: true });
-  const jenkinsPage = await browser.newPage({ viewport: { width: 1500, height: 1100 } });
+  const jenkinsPage = await browser.newPage({ locale: 'en-US', viewport: { width: 1500, height: 1100 } });
   await jenkinsPage.goto('http://127.0.0.1:8090/login');
   await jenkinsPage.locator('input[name="j_username"]').fill('b1');
   await jenkinsPage.locator('input[name="j_password"]').fill('lab-b1-jenkins');
@@ -34,4 +34,3 @@ const path = require('path');
   await browser.close();
   console.log('Quatro capturas reais salvas em ' + out);
 })().catch(error => { console.error(error); process.exit(1); });
-

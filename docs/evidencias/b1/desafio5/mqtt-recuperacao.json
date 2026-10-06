@@ -2,21 +2,21 @@
   "qos": 1,
   "sessao_persistente": true,
   "evento_publicado_com_gateway_offline": {
-    "eventoId": "7d8343ba-16aa-4f14-a477-8d97b6dd3e5e",
+    "eventoId": "2ac7b390-e9c3-4b57-831c-3fbf4e055cd1",
     "instituicao": "ac1",
     "dispositivoId": "lab01",
     "tipo": "CONCLUSAO",
-    "alunoId": 1,
+    "alunoId": 100002,
     "cursoId": "curso-mqtt",
     "media": 8
   },
   "publicacoes_duplicadas": 2,
   "evento_publicado_com_core_offline": {
-    "eventoId": "e07101b4-301b-4196-89e3-4a6c772710e1",
+    "eventoId": "fccca0c6-130d-4d75-8cdd-42c0ce63d29c",
     "instituicao": "ac1",
     "dispositivoId": "lab01",
     "tipo": "CONCLUSAO",
-    "alunoId": 1,
+    "alunoId": 100002,
     "cursoId": "curso-spool",
     "media": 8
   },
@@ -40,10 +40,30 @@
       "282f93a9-ccd6-4317-b685-7a315c68310f",
       "entregue",
       1
+    ],
+    [
+      "2ac7b390-e9c3-4b57-831c-3fbf4e055cd1",
+      "entregue",
+      1
+    ],
+    [
+      "fccca0c6-130d-4d75-8cdd-42c0ce63d29c",
+      "entregue",
+      16
+    ],
+    [
+      "1887890c-ce24-4e42-92e4-2128ec973c2e",
+      "entregue",
+      1
+    ],
+    [
+      "76983ffb-4232-484d-ab24-42a5bd7915af",
+      "entregue",
+      1
     ]
   ],
   "aluno_apos_recuperacao": {
-    "id": 1,
+    "id": 100002,
     "nome": "Evidência B1",
     "cursosDisponiveis": 14,
     "cursosConcluidos": 3,

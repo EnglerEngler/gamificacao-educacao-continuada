@@ -11,8 +11,8 @@ pipeline {
         stage('Python: contratos e idempotência') {
             steps {
                 sh '''set -eu
-                    uv venv .venv
-                    uv pip install --python .venv/bin/python -r requirements.txt
+                    uv venv --clear .venv
+                    uv pip install --python .venv/bin/python -r requirements.lock
                     mkdir -p .runtime
                     .venv/bin/python -m pytest -q tests --junitxml=.runtime/python-tests.xml
                 '''
@@ -52,4 +52,3 @@ pipeline {
         }
     }
 }
-

@@ -19,6 +19,12 @@ OUT = ROOT / "docs/evidencias/b1/desafio6"
 
 
 def start():
+    try:
+        if httpx.get(URL + '/api/json', auth=AUTH, timeout=2).is_success:
+            print('Jenkins local já ativo em :8090')
+            return
+    except httpx.RequestError:
+        pass
     JHOME.mkdir(parents=True, exist_ok=True)
     init = JHOME / "init.groovy.d"
     init.mkdir(exist_ok=True)
@@ -65,7 +71,14 @@ def build():
 <flow-definition plugin="workflow-job">
   <description>B1 — execução real dos gates no laboratório nativo.</description>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.BooleanParameterDefinition><name>BUILD_IMAGES</name><description>Empacotar imagens</description><defaultValue>false</defaultValue></hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition><name>DEPLOY_LAB</name><description>Implantar laboratório</description><defaultValue>false</defaultValue></hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps">
     <scm class="hudson.plugins.git.GitSCM" plugin="git">
       <configVersion>2</configVersion>
@@ -114,4 +127,3 @@ if __name__ == "__main__":
     parser.add_argument("action", choices=["start", "build"])
     args = parser.parse_args()
     start() if args.action == "start" else build()
-

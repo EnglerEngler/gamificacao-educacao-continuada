@@ -9,6 +9,22 @@ Entrega B1: seis decisões evolutivas, Core modular, domínio com Ports & Adapte
 - [Evidências reais dos seis desafios](docs/evidencias/b1/README.md).
 - [Roteiro de apresentação e entrega](docs/ENTREGA-B1.md).
 
+## Onde encontrar cada arquivo
+
+| Local | Finalidade |
+| --- | --- |
+| `src/` e `frontend/` | Core modular Java, testes e interface Vue da aplicação. |
+| [services](services/README.md) | IA, notificações, gateway e simulador Python. |
+| `docs/arquitetura/` | Registro cumulativo, matriz de ASRs e diagramas C4 com SVG. |
+| `docs/adr/` | As seis decisões arquiteturais. |
+| `docs/evidencias/b1/desafio1..6/` | Resultados reais, relatórios, logs e capturas por desafio. |
+| `docs/fontes/` | Os três arquivos originais do exercício. |
+| `labs/desafio1..6/` | Instruções de cada microsolução; baseline AC1 preservado no desafio 1. |
+| [scripts](scripts/README.md) | Preparação, execução, validação e coleta de evidências. |
+| [ops](ops/README.md) | MQTT, monitoramento, plugins Jenkins e seleção de imagens. |
+
+`target/`, `frontend/node_modules/`, `.venv/` e `.runtime/` são gerados localmente e ficam fora do Git e do ZIP de entrega.
+
 Para executar os componentes B1 por containers:
 
 ```bash

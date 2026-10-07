@@ -6,7 +6,7 @@ const path = require('path');
   const page = await browser.newPage({ locale: 'en-US', viewport: { width: 1500, height: 1350 } });
   const out = path.resolve('docs/evidencias/b1/desafio6');
   await page.setExtraHTTPHeaders({ Authorization: 'Basic ' + Buffer.from('admin:lab-b1-grafana').toString('base64') });
-  await page.goto('http://127.0.0.1:3000/d/b1-architecture/b1?orgId=1&from=now-2h&to=now');
+  await page.goto('http://127.0.0.1:3000/d/b1-architecture/b1?orgId=1&from=now-15m&to=now');
   await page.getByText('Notificações pendentes', { exact: true }).waitFor({ timeout: 60000 });
   await page.locator('[data-testid="uplot-main-div"]').first().waitFor({ timeout: 60000 });
   await page.waitForTimeout(3000);

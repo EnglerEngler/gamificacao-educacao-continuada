@@ -76,3 +76,52 @@ INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
 INFO:     127.0.0.1:47448 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:47432 - "POST /eventos HTTP/1.1" 200 OK
 INFO:     127.0.0.1:47458 - "GET /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58968 - "POST /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58968 - "POST /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58968 - "POST /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58968 - "POST /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57310 - "POST /eventos HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [68256]
+INFO:     Started server process [79913]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:46012 - "GET /health HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [79913]
+INFO:     Started server process [82305]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60134 - "GET /health HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82305]
+INFO:     Started server process [82856]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:47010 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47018 - "GET /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36902 - "GET /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54606 - "POST /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54606 - "POST /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54606 - "POST /eventos HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82856]
+INFO:     Started server process [83096]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54632 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54648 - "GET /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54658 - "POST /eventos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54672 - "GET /eventos HTTP/1.1" 200 OK

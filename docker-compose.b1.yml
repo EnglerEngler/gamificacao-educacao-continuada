@@ -75,6 +75,7 @@ services:
     image: grafana/grafana:11.5.2
     environment:
       GF_SECURITY_ADMIN_USER: admin
+      GF_PLUGINS_PREINSTALL_DISABLED: "true"
       GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-lab-b1-grafana}
       PROMETHEUS_URL: http://prometheus:9090
       B1_DASHBOARDS_PATH: /etc/grafana/dashboards

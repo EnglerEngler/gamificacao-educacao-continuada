@@ -62,6 +62,7 @@ def spawn(state, name, cmd, extra=None):
         "GF_PATHS_PLUGINS": state["data"] + "/grafana-plugins",
         "GF_SECURITY_ADMIN_USER": "admin", "GF_SECURITY_ADMIN_PASSWORD": "lab-b1-grafana",
         "GF_SERVER_HTTP_ADDR": "127.0.0.1",
+        "GF_PLUGINS_PREINSTALL_DISABLED": "true",
         "LD_LIBRARY_PATH": str(TOOLS / "root/usr/lib/x86_64-linux-gnu"),
     })
     env.update(extra or {})
@@ -159,7 +160,7 @@ def start():
         spawn(state, "grafana", [str(TOOLS / "grafana-v11.5.2/bin/grafana"), "server",
               "--homepath=" + str(TOOLS / "grafana-v11.5.2"), "--config=" + str(data / "grafana.ini")])
         wait_for(lambda: ready("http://127.0.0.1:9090/-/ready"), "Prometheus")
-        wait_for(lambda: ready("http://127.0.0.1:3000/api/health"), "Grafana")
+        wait_for(lambda: ready("http://127.0.0.1:3000/api/health"), "Grafana", 180)
     except Exception:
         for name in list(state["processes"]):
             stop_one(state, name)

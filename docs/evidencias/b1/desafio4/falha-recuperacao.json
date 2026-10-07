@@ -1,31 +1,33 @@
 {
-  "inicio_utc": "2026-10-06T23:00:26.657464+00:00",
+  "inicio_utc": "2026-10-07T00:06:48.749786+00:00",
   "http_sincrono": 503,
   "resposta_assincrona": {
-    "id": 100002,
+    "id": 1,
     "nome": "Evidência B1",
     "cursosDisponiveis": 8,
     "cursosConcluidos": 1,
     "moedas": 0,
     "plano": "BASICO",
+    "cursosAprovados": 1,
     "badges": [
       "primeira-conclusao"
     ],
     "pontos": 100
   },
   "reenvio": {
-    "id": 100002,
+    "id": 1,
     "nome": "Evidência B1",
     "cursosDisponiveis": 8,
     "cursosConcluidos": 1,
     "moedas": 0,
     "plano": "BASICO",
+    "cursosAprovados": 1,
     "badges": [
       "primeira-conclusao"
     ],
     "pontos": 100
   },
-  "latencia_core_ms": 122.94,
+  "latencia_core_ms": 53.52,
   "core_reiniciado_sem_perder_recompensa": true,
-  "evento_entregue_apos_recuperacao": "e86a2bd8-812e-4daf-bd37-277324db4c9a"
+  "evento_entregue_apos_recuperacao": "2e49c652-3e6e-4e07-8884-c159fe957c16"
 }

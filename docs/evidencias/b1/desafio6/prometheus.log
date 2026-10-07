@@ -53,3 +53,73 @@ time=2026-10-06T22:49:55.045Z level=INFO source=main.go:1476 msg="updated GOGC" 
 time=2026-10-06T22:49:55.045Z level=INFO source=main.go:1486 msg="Completed loading of configuration file" db_storage=1.523µs remote_storage=2.166µs web_handler=395ns query_engine=1.461µs scrape=377.093µs scrape_sd=115.461µs notify=1.86µs notify_sd=753ns rules=682.381µs tracing=7.03µs filename=/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261006T224940Z/prometheus.yml totalDuration=1.58253ms
 time=2026-10-06T22:49:55.045Z level=INFO source=main.go:1213 msg="Server is ready to receive web requests."
 time=2026-10-06T22:49:55.045Z level=INFO source=manager.go:175 msg="Starting rule manager..." component="rule manager"
+time=2026-10-06T23:58:45.726Z level=WARN source=main.go:1015 msg="Received an OS signal, exiting gracefully..." signal=terminated
+time=2026-10-06T23:58:45.734Z level=INFO source=main.go:1040 msg="Stopping scrape discovery manager..."
+time=2026-10-06T23:58:45.734Z level=INFO source=main.go:1054 msg="Stopping notify discovery manager..."
+time=2026-10-06T23:58:45.735Z level=INFO source=main.go:1036 msg="Scrape discovery manager stopped"
+time=2026-10-06T23:58:45.736Z level=INFO source=main.go:1050 msg="Notify discovery manager stopped"
+time=2026-10-06T23:58:45.735Z level=INFO source=manager.go:189 msg="Stopping rule manager..." component="rule manager"
+time=2026-10-06T23:58:45.739Z level=INFO source=manager.go:205 msg="Rule manager stopped" component="rule manager"
+time=2026-10-06T23:58:45.739Z level=INFO source=main.go:1091 msg="Stopping scrape manager..."
+time=2026-10-06T23:58:45.753Z level=INFO source=main.go:1083 msg="Scrape manager stopped"
+time=2026-10-06T23:58:45.902Z level=INFO source=notifier.go:702 msg="Stopping notification manager..." component=notifier
+time=2026-10-06T23:58:45.909Z level=INFO source=notifier.go:409 msg="Draining any remaining notifications..." component=notifier
+time=2026-10-06T23:58:45.909Z level=INFO source=notifier.go:415 msg="Remaining notifications drained" component=notifier
+time=2026-10-06T23:58:45.911Z level=INFO source=notifier.go:345 msg="Notification manager stopped" component=notifier
+time=2026-10-06T23:58:45.911Z level=INFO source=main.go:1361 msg="Notifier manager stopped"
+time=2026-10-06T23:58:45.912Z level=INFO source=main.go:1375 msg="See you next time!"
+time=2026-10-07T00:02:23.765Z level=INFO source=main.go:640 msg="No time or size retention was set so using the default time retention" duration=15d
+time=2026-10-07T00:02:23.768Z level=INFO source=main.go:687 msg="Starting Prometheus Server" mode=server version="(version=3.2.1, branch=HEAD, revision=804c49d58f3f3784c77c9c8ec17c9062092cae27)"
+time=2026-10-07T00:02:23.768Z level=INFO source=main.go:692 msg="operational information" build_context="(go=go1.23.6, platform=linux/amd64, user=root@42fd9529152a, date=20250226-09:19:49, tags=netgo,builtinassets,stringlabels)" host_details="(Linux 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 Engler localdomain)" fd_limits="(soft=1048576, hard=1048576)" vm_limits="(soft=unlimited, hard=unlimited)"
+time=2026-10-07T00:02:23.783Z level=INFO source=main.go:768 msg="Leaving GOMAXPROCS=8: CPU quota undefined" component=automaxprocs
+time=2026-10-07T00:02:23.793Z level=INFO source=web.go:654 msg="Start listening for connections" component=web address=127.0.0.1:9090
+time=2026-10-07T00:02:23.796Z level=INFO source=main.go:1228 msg="Starting TSDB ..."
+time=2026-10-07T00:02:23.799Z level=INFO source=tls_config.go:347 msg="Listening on" component=web address=127.0.0.1:9090
+time=2026-10-07T00:02:23.800Z level=INFO source=tls_config.go:350 msg="TLS is disabled." component=web http2=false address=127.0.0.1:9090
+time=2026-10-07T00:02:23.811Z level=INFO source=head.go:628 msg="Replaying on-disk memory mappable chunks if any" component=tsdb
+time=2026-10-07T00:02:23.811Z level=INFO source=head.go:715 msg="On-disk memory mappable chunks replay completed" component=tsdb duration=24.086µs
+time=2026-10-07T00:02:23.812Z level=INFO source=head.go:723 msg="Replaying WAL, this may take a while" component=tsdb
+time=2026-10-07T00:02:23.817Z level=INFO source=head.go:795 msg="WAL segment loaded" component=tsdb segment=0 maxSegment=0
+time=2026-10-07T00:02:23.817Z level=INFO source=head.go:832 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=108.469µs wal_replay_duration=4.60376ms wbl_replay_duration=583ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=24.086µs total_replay_duration=5.374822ms
+time=2026-10-07T00:02:23.823Z level=INFO source=main.go:1249 msg="filesystem information" fs_type=EXT4_SUPER_MAGIC
+time=2026-10-07T00:02:23.823Z level=INFO source=main.go:1252 msg="TSDB started"
+time=2026-10-07T00:02:23.824Z level=INFO source=main.go:1437 msg="Loading configuration file" filename=/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261007T000210Z/prometheus.yml
+time=2026-10-07T00:02:23.842Z level=INFO source=main.go:1476 msg="updated GOGC" old=100 new=75
+time=2026-10-07T00:02:23.842Z level=INFO source=main.go:1486 msg="Completed loading of configuration file" db_storage=2.179µs remote_storage=2.305µs web_handler=503ns query_engine=2.191µs scrape=6.401514ms scrape_sd=147.389µs notify=2.242µs notify_sd=961ns rules=8.556846ms tracing=771.872µs filename=/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261007T000210Z/prometheus.yml totalDuration=19.068974ms
+time=2026-10-07T00:02:23.842Z level=INFO source=main.go:1213 msg="Server is ready to receive web requests."
+time=2026-10-07T00:02:23.843Z level=INFO source=manager.go:175 msg="Starting rule manager..." component="rule manager"
+time=2026-10-07T00:03:32.077Z level=WARN source=main.go:1015 msg="Received an OS signal, exiting gracefully..." signal=terminated
+time=2026-10-07T00:03:32.078Z level=INFO source=main.go:1040 msg="Stopping scrape discovery manager..."
+time=2026-10-07T00:03:32.078Z level=INFO source=main.go:1054 msg="Stopping notify discovery manager..."
+time=2026-10-07T00:03:32.078Z level=INFO source=manager.go:189 msg="Stopping rule manager..." component="rule manager"
+time=2026-10-07T00:03:32.078Z level=INFO source=manager.go:205 msg="Rule manager stopped" component="rule manager"
+time=2026-10-07T00:03:32.078Z level=INFO source=main.go:1091 msg="Stopping scrape manager..."
+time=2026-10-07T00:03:32.078Z level=INFO source=main.go:1036 msg="Scrape discovery manager stopped"
+time=2026-10-07T00:03:32.078Z level=INFO source=main.go:1050 msg="Notify discovery manager stopped"
+time=2026-10-07T00:03:32.092Z level=INFO source=main.go:1083 msg="Scrape manager stopped"
+time=2026-10-07T00:03:32.144Z level=INFO source=notifier.go:702 msg="Stopping notification manager..." component=notifier
+time=2026-10-07T00:03:32.148Z level=INFO source=notifier.go:409 msg="Draining any remaining notifications..." component=notifier
+time=2026-10-07T00:03:32.148Z level=INFO source=notifier.go:415 msg="Remaining notifications drained" component=notifier
+time=2026-10-07T00:03:32.148Z level=INFO source=notifier.go:345 msg="Notification manager stopped" component=notifier
+time=2026-10-07T00:03:32.148Z level=INFO source=main.go:1361 msg="Notifier manager stopped"
+time=2026-10-07T00:03:32.148Z level=INFO source=main.go:1375 msg="See you next time!"
+time=2026-10-07T00:06:26.073Z level=INFO source=main.go:640 msg="No time or size retention was set so using the default time retention" duration=15d
+time=2026-10-07T00:06:26.075Z level=INFO source=main.go:687 msg="Starting Prometheus Server" mode=server version="(version=3.2.1, branch=HEAD, revision=804c49d58f3f3784c77c9c8ec17c9062092cae27)"
+time=2026-10-07T00:06:26.076Z level=INFO source=main.go:692 msg="operational information" build_context="(go=go1.23.6, platform=linux/amd64, user=root@42fd9529152a, date=20250226-09:19:49, tags=netgo,builtinassets,stringlabels)" host_details="(Linux 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 Engler localdomain)" fd_limits="(soft=1048576, hard=1048576)" vm_limits="(soft=unlimited, hard=unlimited)"
+time=2026-10-07T00:06:26.085Z level=INFO source=main.go:768 msg="Leaving GOMAXPROCS=8: CPU quota undefined" component=automaxprocs
+time=2026-10-07T00:06:26.096Z level=INFO source=web.go:654 msg="Start listening for connections" component=web address=127.0.0.1:9090
+time=2026-10-07T00:06:26.100Z level=INFO source=main.go:1228 msg="Starting TSDB ..."
+time=2026-10-07T00:06:26.108Z level=INFO source=tls_config.go:347 msg="Listening on" component=web address=127.0.0.1:9090
+time=2026-10-07T00:06:26.109Z level=INFO source=tls_config.go:350 msg="TLS is disabled." component=web http2=false address=127.0.0.1:9090
+time=2026-10-07T00:06:26.113Z level=INFO source=head.go:628 msg="Replaying on-disk memory mappable chunks if any" component=tsdb
+time=2026-10-07T00:06:26.113Z level=INFO source=head.go:715 msg="On-disk memory mappable chunks replay completed" component=tsdb duration=577.049µs
+time=2026-10-07T00:06:26.114Z level=INFO source=head.go:723 msg="Replaying WAL, this may take a while" component=tsdb
+time=2026-10-07T00:06:26.120Z level=INFO source=head.go:795 msg="WAL segment loaded" component=tsdb segment=0 maxSegment=0
+time=2026-10-07T00:06:26.120Z level=INFO source=head.go:832 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=397.947µs wal_replay_duration=5.716888ms wbl_replay_duration=171ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=577.049µs total_replay_duration=7.563873ms
+time=2026-10-07T00:06:26.124Z level=INFO source=main.go:1249 msg="filesystem information" fs_type=EXT4_SUPER_MAGIC
+time=2026-10-07T00:06:26.124Z level=INFO source=main.go:1252 msg="TSDB started"
+time=2026-10-07T00:06:26.125Z level=INFO source=main.go:1437 msg="Loading configuration file" filename=/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261007T000613Z/prometheus.yml
+time=2026-10-07T00:06:26.149Z level=INFO source=main.go:1476 msg="updated GOGC" old=100 new=75
+time=2026-10-07T00:06:26.150Z level=INFO source=main.go:1486 msg="Completed loading of configuration file" db_storage=22.221µs remote_storage=375.371µs web_handler=735ns query_engine=21.317µs scrape=4.82741ms scrape_sd=150.648µs notify=23.952µs notify_sd=838ns rules=13.507963ms tracing=1.363529ms filename=/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261007T000613Z/prometheus.yml totalDuration=25.67147ms
+time=2026-10-07T00:06:26.150Z level=INFO source=main.go:1213 msg="Server is ready to receive web requests."
+time=2026-10-07T00:06:26.150Z level=INFO source=manager.go:175 msg="Starting rule manager..." component="rule manager"

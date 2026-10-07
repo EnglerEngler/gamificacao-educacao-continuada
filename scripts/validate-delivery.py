@@ -6,8 +6,9 @@ import re
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
-docs = [ROOT / "README.md", *sorted((ROOT / "docs/arquitetura").rglob("*.md")),
-        *sorted((ROOT / "docs/adr").glob("*.md")), *sorted((ROOT / "labs").glob("*/README.md"))]
+docs = [ROOT / "README.md", *sorted((ROOT / "docs").rglob("*.md")),
+        *sorted((ROOT / "labs").glob("*/README.md")),
+        ROOT / "scripts/README.md", ROOT / "services/README.md", ROOT / "ops/README.md"]
 missing = []
 for path in docs:
     for link in re.findall(r"\[[^\]]*\]\(([^)]+)\)", path.read_text()):

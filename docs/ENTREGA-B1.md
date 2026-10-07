@@ -11,6 +11,8 @@ https://github.com/EnglerEngler/gamificacao-educacao-continuada/tree/feat/b1-arc
 
 ## Artefatos a apresentar
 
+O [índice da documentação](README.md) distingue a entrega B1 dos registros históricos da AC1. O [mapa do repositório](../README.md) localiza código, serviços, scripts e operação.
+
 | Exigência do enunciado | Localização |
 | --- | --- |
 | Registro cumulativo e RF/RNF/RPC | [docs/arquitetura/README.md](arquitetura/README.md) |
@@ -52,4 +54,3 @@ Execute as falhas com `scripts/lab.py evidence`, que encerra somente processos d
 ```
 
 No Compose: `docker compose -f docker-compose.yml -f docker-compose.b1.yml down`. Evite remover volumes se quiser preservar dados.
-

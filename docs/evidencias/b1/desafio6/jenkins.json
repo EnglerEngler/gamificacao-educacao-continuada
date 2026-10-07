@@ -1,18 +1,18 @@
 {
   "status": "SUCCESS",
-  "numero": 2,
-  "url_local": "http://127.0.0.1:8090/job/b1-architecture/2/",
-  "commit_validado": "f563a999e5525b8c2f326fb52315d361fc599461",
+  "numero": 3,
+  "url_local": "http://127.0.0.1:8090/job/b1-architecture/3/",
+  "commit_validado": "ec3f9775e7a8d7b8fab7af0e8d1669124660627e",
   "jenkins_version": "2.580.1",
-  "duracao_ms": 2699106,
-  "timestamp": 1791327867256,
+  "duracao_ms": 144926,
+  "timestamp": 1791331341229,
   "relatorio_testes": {
     "_class": "hudson.tasks.junit.TestResult",
     "testActions": [],
-    "duration": 2605.892,
+    "duration": 33.824,
     "empty": false,
     "failCount": 0,
-    "passCount": 24,
+    "passCount": 29,
     "skipCount": 0,
     "suites": [
       {
@@ -21,7 +21,7 @@
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.aluno.application.FakeAdapterContractTest",
-            "duration": 0.002,
+            "duration": 0.004,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -54,7 +54,7 @@
             "stdout": null
           }
         ],
-        "duration": 0.019,
+        "duration": 0.012,
         "enclosingBlockNames": [
           "Declarative: Post Actions"
         ],
@@ -75,7 +75,7 @@
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.aluno.application.JpaAdapterContractTest",
-            "duration": 0.044,
+            "duration": 0.024,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -87,13 +87,13 @@
             "skippedMessage": null,
             "status": "PASSED",
             "stderr": null,
-            "stdout": "2026-10-06T20:47:59.939-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [br.edu.unifacens.gamificacao.aluno.application.JpaAdapterContractTest]: JpaAdapterContractTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\n2026-10-06T20:48:00.467-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] .b.t\n...[truncated 3598 chars]...\n  : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:gamificacao'\n2026-10-06T20:48:09.504-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'\n2026-10-06T20:48:09.554-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.a.a.JpaAdapterContractTest       : Started JpaAdapterContractTest in 9.01 seconds (process running for 78.817)\n"
+            "stdout": "2026-10-06T21:04:09.556-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [br.edu.unifacens.gamificacao.aluno.application.JpaAdapterContractTest]: JpaAdapterContractTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\n2026-10-06T21:04:09.570-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] .b.t\n...[truncated 3598 chars]...\n : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:gamificacao'\n2026-10-06T21:04:10.761-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'\n2026-10-06T21:04:10.790-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.a.a.JpaAdapterContractTest       : Started JpaAdapterContractTest in 1.216 seconds (process running for 32.905)\n"
           },
           {
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.aluno.application.JpaAdapterContractTest",
-            "duration": 0.076,
+            "duration": 0.082,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -105,10 +105,10 @@
             "skippedMessage": null,
             "status": "PASSED",
             "stderr": null,
-            "stdout": "2026-10-06T20:48:09.643-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=72189c56-cbe0-4c6e-b79b-e342236afa9c instituicao=ac1 alunoId=9\n2026-10-06T20:48:09.674-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=5c8397a6-1b33-4c90-8887-b4b36c92df92 instituicao=ac1 alunoId=9\n"
+            "stdout": "2026-10-06T21:04:10.861-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=f3bdd718-d915-4407-a1c1-a12e6389b277 instituicao=ac1 alunoId=9\n2026-10-06T21:04:10.895-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=ed768eb5-d7a4-4e83-9fba-ff3e339afd70 instituicao=ac1 alunoId=9\n"
           }
         ],
-        "duration": 10.568,
+        "duration": 1.345,
         "enclosingBlockNames": [
           "Declarative: Post Actions"
         ],
@@ -129,66 +129,12 @@
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
-            "duration": 0.044,
+            "duration": 0.001,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
             "flakyFailures": [],
-            "name": "desbloqueiaTresCursosQuandoConcluiComMediaMaiorQueSete",
-            "properties": {},
-            "rerunFailures": [],
-            "skipped": false,
-            "skippedMessage": null,
-            "status": "PASSED",
-            "stderr": null,
-            "stdout": null
-          },
-          {
-            "testActions": [],
-            "age": 0,
-            "className": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
-            "duration": 0.063,
-            "errorDetails": null,
-            "errorStackTrace": null,
-            "failedSince": 0,
-            "flakyFailures": [],
-            "name": "naoProcessaCursoQueAindaEstaEmAndamento",
-            "properties": {},
-            "rerunFailures": [],
-            "skipped": false,
-            "skippedMessage": null,
-            "status": "PASSED",
-            "stderr": null,
-            "stdout": null
-          },
-          {
-            "testActions": [],
-            "age": 0,
-            "className": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
-            "duration": 0.002,
-            "errorDetails": null,
-            "errorStackTrace": null,
-            "failedSince": 0,
-            "flakyFailures": [],
-            "name": "naoDesbloqueiaCursosQuandoMediaForMenorQueSete",
-            "properties": {},
-            "rerunFailures": [],
-            "skipped": false,
-            "skippedMessage": null,
-            "status": "PASSED",
-            "stderr": null,
-            "stdout": null
-          },
-          {
-            "testActions": [],
-            "age": 0,
-            "className": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
-            "duration": 0.052,
-            "errorDetails": null,
-            "errorStackTrace": null,
-            "failedSince": 0,
-            "flakyFailures": [],
-            "name": "rejeitaValoresNegativosEMediaNula",
+            "name": "naoDuplicaMoedasQuandoAlunoJaEPremium",
             "properties": {},
             "rerunFailures": [],
             "skipped": false,
@@ -206,6 +152,114 @@
             "errorStackTrace": null,
             "failedSince": 0,
             "flakyFailures": [],
+            "name": "desbloqueiaTresCursosQuandoConcluiComMediaMaiorQueSete",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "status": "PASSED",
+            "stderr": null,
+            "stdout": null
+          },
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
+            "duration": 0.001,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
+            "name": "atualizaParaPremiumAoConcluirDecimoSegundoCurso",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "status": "PASSED",
+            "stderr": null,
+            "stdout": null
+          },
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
+            "duration": 0.0,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
+            "name": "naoProcessaCursoQueAindaEstaEmAndamento",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "status": "PASSED",
+            "stderr": null,
+            "stdout": null
+          },
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
+            "duration": 0.0,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
+            "name": "naoDesbloqueiaCursosQuandoMediaForMenorQueSete",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "status": "PASSED",
+            "stderr": null,
+            "stdout": null
+          },
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
+            "duration": 0.002,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
+            "name": "rejeitaValoresInvalidosEMediaNula",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "status": "PASSED",
+            "stderr": null,
+            "stdout": null
+          },
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
+            "duration": 0.001,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
+            "name": "permaneceBasicoAntesDeDozeCursosConcluidos",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "status": "PASSED",
+            "stderr": null,
+            "stdout": null
+          },
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
+            "duration": 0.0,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
             "name": "naoDesbloqueiaCursosQuandoMediaForIgualASete",
             "properties": {},
             "rerunFailures": [],
@@ -216,7 +270,7 @@
             "stdout": null
           }
         ],
-        "duration": 0.178,
+        "duration": 0.009,
         "enclosingBlockNames": [
           "Declarative: Post Actions"
         ],
@@ -237,7 +291,7 @@
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.aluno.domain.ConquistasTest",
-            "duration": 0.007,
+            "duration": 0.006,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -255,7 +309,25 @@
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.aluno.domain.ConquistasTest",
-            "duration": 0.12,
+            "duration": 0.005,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
+            "name": "us03ContaConclusoesMesmoSemAprovacao",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "status": "PASSED",
+            "stderr": null,
+            "stdout": null
+          },
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "br.edu.unifacens.gamificacao.aluno.domain.ConquistasTest",
+            "duration": 0.0,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -268,9 +340,27 @@
             "status": "PASSED",
             "stderr": null,
             "stdout": null
+          },
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "br.edu.unifacens.gamificacao.aluno.domain.ConquistasTest",
+            "duration": 0.0,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
+            "name": "preservaPlanoPremiumExistenteSemRecreditarMoedas",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "status": "PASSED",
+            "stderr": null,
+            "stdout": null
           }
         ],
-        "duration": 0.132,
+        "duration": 0.016,
         "enclosingBlockNames": [
           "Declarative: Post Actions"
         ],
@@ -291,7 +381,7 @@
             "testActions": [],
             "age": 0,
             "className": "ArchitectureTest",
-            "duration": 3.178,
+            "duration": 4.335,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -303,13 +393,13 @@
             "skippedMessage": null,
             "status": "PASSED",
             "stderr": null,
-            "stdout": "20:04:45.903 [main] INFO com.tngtech.archunit.core.PluginLoader -- Detected Java version 21.0.12.1\n"
+            "stdout": "21:03:39.585 [main] INFO com.tngtech.archunit.core.PluginLoader -- Detected Java version 21.0.12.1\n"
           },
           {
             "testActions": [],
             "age": 0,
             "className": "ArchitectureTest",
-            "duration": 0.048,
+            "duration": 0.051,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -324,7 +414,7 @@
             "stdout": null
           }
         ],
-        "duration": 3.236,
+        "duration": 4.402,
         "enclosingBlockNames": [
           "Declarative: Post Actions"
         ],
@@ -345,7 +435,7 @@
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.ia.TimeoutTest",
-            "duration": 1.61,
+            "duration": 1.472,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -360,7 +450,7 @@
             "stdout": null
           }
         ],
-        "duration": 1.638,
+        "duration": 1.507,
         "enclosingBlockNames": [
           "Declarative: Post Actions"
         ],
@@ -381,7 +471,7 @@
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.integration.CoreIntegrationTest",
-            "duration": 1.557,
+            "duration": 1.416,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -393,13 +483,13 @@
             "skippedMessage": null,
             "status": "PASSED",
             "stderr": null,
-            "stdout": "2026-10-06T20:05:15.243-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [br.edu.unifacens.gamificacao.integration.CoreIntegrationTest]: CoreIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\n2026-10-06T20:05:15.258-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] .b.t.c.SpringBoo\n...[truncated 4334 chars]...\nherServlet  : Completed initialization in 49 ms\n2026-10-06T20:05:20.388-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.integration.CoreIntegrationTest  : Started CoreIntegrationTest in 5.126 seconds (process running for 36.681)\n2026-10-06T20:05:21.686-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [pool-4-thread-1] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=828b4939-02a2-458b-853a-b0e143c84e89 instituicao=concorrencia alunoId=2\n"
+            "stdout": "2026-10-06T21:04:05.238-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [br.edu.unifacens.gamificacao.integration.CoreIntegrationTest]: CoreIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\n2026-10-06T21:04:05.270-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] .b.t.c.SpringBoo\n...[truncated 4333 chars]...\nherServlet  : Completed initialization in 25 ms\n2026-10-06T21:04:07.706-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.integration.CoreIntegrationTest  : Started CoreIntegrationTest in 2.433 seconds (process running for 29.822)\n2026-10-06T21:04:09.023-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [pool-4-thread-1] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=18d9e468-07f9-4a1f-a040-72c2e97c52c6 instituicao=concorrencia alunoId=2\n"
           },
           {
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.integration.CoreIntegrationTest",
-            "duration": 0.355,
+            "duration": 0.095,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -411,13 +501,13 @@
             "skippedMessage": null,
             "status": "PASSED",
             "stderr": null,
-            "stdout": "2026-10-06T20:05:22.058-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=4cf743eb-31b0-4648-ae34-900ae810b1b6 instituicao=rank alunoId=3\n"
+            "stdout": "2026-10-06T21:04:09.165-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=45fe7b8f-3313-4af0-8e24-d5f82d13f38c instituicao=rank alunoId=3\n"
           },
           {
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.integration.CoreIntegrationTest",
-            "duration": 0.276,
+            "duration": 0.158,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -429,13 +519,13 @@
             "skippedMessage": null,
             "status": "PASSED",
             "stderr": null,
-            "stdout": "2026-10-06T20:05:22.484-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=27e9d178-1ca8-44c1-a9d9-353622fcdcd0 instituicao=ac1 alunoId=6\n"
+            "stdout": "2026-10-06T21:04:09.308-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=ce283cb5-3c53-4425-a665-3ecf5295c3cd instituicao=ac1 alunoId=6\n"
           },
           {
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.integration.CoreIntegrationTest",
-            "duration": 0.061,
+            "duration": 0.032,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -453,7 +543,7 @@
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.integration.CoreIntegrationTest",
-            "duration": 2555.912,
+            "duration": 0.099,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -465,10 +555,10 @@
             "skippedMessage": null,
             "status": "PASSED",
             "stderr": null,
-            "stdout": "2026-10-06T20:05:22.703-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=1730a076-360c-4e92-9f55-a61fb55330c3 instituicao=outbox alunoId=7\n2026-10-06T20:05:22.721-03:00  WARN 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.application.OutboxDispatcher   : outbox_retry eventId=828b4939-02a2-458b-853a-b0e143c84e89 tentativa=1\n2026-10-06T20:05:22.724-03:00  WARN 71322 --- [gamificacao\n...[truncated 75 chars]...\nher   : outbox_retry eventId=4cf743eb-31b0-4648-ae34-900ae810b1b6 tentativa=1\n2026-10-06T20:05:22.725-03:00  WARN 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.application.OutboxDispatcher   : outbox_retry eventId=27e9d178-1ca8-44c1-a9d9-353622fcdcd0 tentativa=1\n2026-10-06T20:05:22.725-03:00  WARN 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.application.OutboxDispatcher   : outbox_retry eventId=1730a076-360c-4e92-9f55-a61fb55330c3 tentativa=1\n"
+            "stdout": "2026-10-06T21:04:09.444-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.i.p.JpaRegistrarEvento         : curso_concluido eventId=1e40f37f-f9a2-4719-9753-92ea761a7d6c instituicao=outbox alunoId=7\n2026-10-06T21:04:09.454-03:00  WARN 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.application.OutboxDispatcher   : outbox_retry eventId=18d9e468-07f9-4a1f-a040-72c2e97c52c6 tentativa=1\n2026-10-06T21:04:09.455-03:00  WARN 80851 --- [gamificacao\n...[truncated 75 chars]...\nher   : outbox_retry eventId=45fe7b8f-3313-4af0-8e24-d5f82d13f38c tentativa=1\n2026-10-06T21:04:09.455-03:00  WARN 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.application.OutboxDispatcher   : outbox_retry eventId=ce283cb5-3c53-4425-a665-3ecf5295c3cd tentativa=1\n2026-10-06T21:04:09.455-03:00  WARN 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.e.application.OutboxDispatcher   : outbox_retry eventId=1e40f37f-f9a2-4719-9753-92ea761a7d6c tentativa=1\n"
           }
         ],
-        "duration": 2563.341,
+        "duration": 4.285,
         "enclosingBlockNames": [
           "Declarative: Post Actions"
         ],
@@ -489,7 +579,7 @@
             "testActions": [],
             "age": 0,
             "className": "br.edu.unifacens.gamificacao.integration.TransactionRollbackTest",
-            "duration": 0.317,
+            "duration": 1.549,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -501,10 +591,10 @@
             "skippedMessage": null,
             "status": "PASSED",
             "stderr": "Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3\nWARNING: A Java agent has been loaded dynamically (/home/engler/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)\nWARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning\nWARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information\nWARNING: Dynamic loading of agents will be disallowed by default in a future release\n",
-            "stdout": "20:04:51.033 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.edu.unifacens.gamificacao.integration.TransactionRollbackTest]: TransactionRollbackTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\n20:04:51.295 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.edu.unifa\n...[truncated 3913 chars]...\n H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:gamificacao'\n2026-10-06T20:05:14.529-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'\n2026-10-06T20:05:14.676-03:00  INFO 71322 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.i.TransactionRollbackTest        : Started TransactionRollbackTest in 22.909 seconds (process running for 30.967)\n"
+            "stdout": "21:03:45.658 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.edu.unifacens.gamificacao.integration.TransactionRollbackTest]: TransactionRollbackTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\n21:03:45.835 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.edu.unifa\n...[truncated 3912 chars]...\n: H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:gamificacao'\n2026-10-06T21:04:02.343-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'\n2026-10-06T21:04:02.559-03:00  INFO 80851 --- [gamificacao-educacao-continuada] [           main] b.e.u.g.i.TransactionRollbackTest        : Started TransactionRollbackTest in 16.52 seconds (process running for 24.674)\n"
           }
         ],
-        "duration": 24.395,
+        "duration": 19.693,
         "enclosingBlockNames": [
           "Declarative: Post Actions"
         ],
@@ -525,7 +615,7 @@
             "testActions": [],
             "age": 0,
             "className": "tests.test_services",
-            "duration": 0.028,
+            "duration": 0.039,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -543,7 +633,7 @@
             "testActions": [],
             "age": 0,
             "className": "tests.test_services",
-            "duration": 0.135,
+            "duration": 0.397,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -561,7 +651,7 @@
             "testActions": [],
             "age": 0,
             "className": "tests.test_services",
-            "duration": 0.077,
+            "duration": 0.282,
             "errorDetails": null,
             "errorStackTrace": null,
             "failedSince": 0,
@@ -594,7 +684,7 @@
             "stdout": null
           }
         ],
-        "duration": 2.385,
+        "duration": 2.555,
         "enclosingBlockNames": [
           "Declarative: Post Actions"
         ],
@@ -607,18 +697,12 @@
         "properties": {},
         "stderr": null,
         "stdout": null,
-        "timestamp": "2026-10-06T20:48:23.692373-03:00"
+        "timestamp": "2026-10-06T21:04:23.899817-03:00"
       }
     ]
   },
   "build_images": false,
   "deploy_lab": false,
   "motivo_stages_opcionais": "Docker Desktop indisponível no WSL",
-  "stages_validados": [
-    "Checkout",
-    "Core: regras, adapters e arquitetura",
-    "Python: contratos e idempotência",
-    "Frontend AC1",
-    "Configurações e rastreabilidade"
-  ]
+  "stages": null
 }

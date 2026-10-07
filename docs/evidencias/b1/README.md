@@ -2,6 +2,8 @@
 
 Os arquivos são saídas dos testes e serviços executados, não exemplos de resultados. Cada microsolução tem uma hipótese descrita no ADR.
 
+Validação final: **25 testes Java + 4 testes Python**, sem falhas; domínio com **100% de linhas e ramificações** cobertas. O Jenkins build **3** validou a revisão `ec3f977` com os mesmos 29 testes. Os resultados detalhados e o commit completo estão nos JSONs dos desafios 2 e 6.
+
 | Desafio | Evidência | Resultado |
 | --- | --- | --- |
 | 1 | [Dependências antes/depois](desafio1/dependencias.json), [ranking/carga](desafio1/ranking-carga.json) | Caso de uso deixa de importar JPA; resposta limitada sobre 100 mil registros H2. |
@@ -29,3 +31,4 @@ As evidências capturadas registram horário/ambiente. Timings variam com host, 
 
 Exportações `core-prometheus.txt` e `gateway-prometheus.txt`, logs e JSON permitem conferir capturas sem depender apenas de imagem. A execução do Jenkins declara explicitamente quais stages opcionais foram executados ou pulados.
 
+O [manifesto SHA-256](manifesto-sha256.json) identifica todos os arquivos desta pasta no fechamento da entrega, excluindo o próprio manifesto. Para conferir um arquivo, compare `sha256sum caminho/do/arquivo` com a entrada correspondente.

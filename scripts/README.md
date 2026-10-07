@@ -1,6 +1,6 @@
 # Comandos do laboratório
 
-Execute os comandos na raiz do repositório. Comece pelo [guia de entrega](../docs/ENTREGA-B1.md) para conhecer os artefatos.
+Execute os comandos na raiz do repositório. Comece pelo [documento de entrega](../docs/arquitetura/README.md) para conhecer os artefatos.
 
 | Arquivo | Finalidade |
 | --- | --- |

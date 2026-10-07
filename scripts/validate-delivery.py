@@ -26,6 +26,7 @@ for directory in ['src', 'frontend/src', 'docs']:
 adrs = sorted((ROOT / "docs/adr").glob("ADR-*.md"))
 assert len(adrs) == 6, "Exatamente seis ADRs essenciais"
 matrix = (ROOT / "docs/arquitetura/README.md").read_text()
+assert not (ROOT / "docs/ENTREGA-B1.md").exists(), "Consolidar entrega em docs/arquitetura/README.md"
 rows = [line for line in matrix.splitlines() if line.startswith("| ASR-")]
 assert len(rows) == 18
 for i in range(1, 7):

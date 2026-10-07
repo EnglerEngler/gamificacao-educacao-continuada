@@ -1,6 +1,6 @@
 # B1 — Registro arquitetural vivo do Aprende+
 
-**Entrega principal do B1**, no caminho exigido pelo DOCX. [Como entregar](../ENTREGA-B1.md) · [Desafios 1 a 6](../../labs/README.md) · [Evidências](../evidencias/b1/README.md).
+**Documento único da entrega B1**, no caminho exigido pelo DOCX. [Desafios 1 a 6](../../labs/README.md) · [Evidências](../evidencias/b1/README.md).
 
 ## Entrega e equipe
 
@@ -121,6 +121,8 @@ bash scripts/bootstrap-lab.sh
 
 No ambiente nativo: aplicação/Swagger 8080, IA 8001, notificações 8002, métricas gateway 8003, MQTT 1883, Prometheus 9090 e Grafana 3000. Grafana local: admin / lab-b1-grafana. Credenciais do laboratório estão restritas ao localhost e devem ser substituídas fora dele. O cabeçalho X-Instituicao demonstra particionamento; autenticação/autorização de usuários de instituições continua sendo trabalho de produto para AF, não foi apresentada como segurança completa de multi-tenancy.
 
+Para encerrar os containers, use `docker compose -f docker-compose.yml -f docker-compose.b1.yml down`. Preserve os volumes para manter os dados.
+
 ## Síntese para a PoC da AF
 
 | Levar para AF | Motivo / condição |
@@ -142,3 +144,34 @@ Em cada desafio, RF/RNF/ASR corresponde a 0,25; RPC/alternativas a 0,20; ADR a 0
 ## Integração da main da equipe
 
 A atualização ef33fa7 trouxe a US03 de Khevyn. Sua regra conta toda conclusão para Premium, mesmo com média <= 7,0; a US01 concede novos cursos apenas com média > 7,0. O B1 preserva ambas usando cursosConcluidos e cursosAprovados separados, além do plano persistido. Não foi inferida aprovação de dados legados sem notas. Marcadores de conflito que já estavam no frontend/BDD da main foram resolvidos conservando os cenários de ambas as histórias.
+
+## Envio e apresentação
+
+Envie o link da `main`: https://github.com/EnglerEngler/gamificacao-educacao-continuada. Este README contém o registro único exigido pelos itens 6 e 8 do DOCX; os links das seis decisões acima levam aos ADRs, C4s, microsoluções e evidências. A identificação da equipe está no início e a seleção para AF está na síntese.
+
+Se a submissão aceitar arquivo, use o ZIP exportado da mesma `main`, em `pacote-final/AprendeMais_B1.zip`. O pacote contém este mesmo projeto e este documento.
+
+## Roteiro sugerido de demonstração (10–15 minutos)
+
+1. Mostrar a matriz: requisitos explicam decisões, não a popularidade de ferramentas.
+2. D1: comparar baseline AC1 e AlunoService atual; mostrar agrupamento por capacidade, porta e resultado do ranking com 100 mil registros.
+3. D2: mostrar Aluno puro, AlunoStore, fake/JPA e mesmo contrato; explicar > 7,0 e cursoId estável.
+4. D3: mostrar JSON com Python ativo e interrompido; Core usa fallback sem bloquear ranking.
+5. D4: mostrar 503 do controle síncrono versus 200 real e a recuperação da outbox após reiniciar Core.
+6. D5: mostrar broker/session/spool e o mesmo evento duplicado gerando uma recompensa; explicar QoS 1 e fronteira de segurança.
+7. D6: mostrar execução SUCCESS do Jenkins, dashboard Grafana e consultas Prometheus; ligar cada métrica ao ASR que testa.
+8. Encerrar com o C4 final e a seleção de decisões para AF.
+
+Execute as falhas com `scripts/lab.py evidence`, que encerra somente processos do lab registrados em `.runtime/lab-state.json`. Não desligue serviços de outras atividades manualmente.
+
+## Pacote para envio
+
+O repositório é a fonte da entrega. A pasta local `../pacote-final/` contém apenas o ZIP e seu checksum. Para recriar o arquivo, execute na raiz do projeto:
+
+```bash
+mkdir -p ../pacote-final
+git archive --format=zip --prefix=AprendeMais-B1/ --output=../pacote-final/AprendeMais_B1.zip main
+(cd ../pacote-final && sha256sum AprendeMais_B1.zip > SHA256SUMS.txt)
+```
+
+O ZIP inclui somente arquivos versionados. Código gerado, ambientes locais e dados temporários permanecem fora do pacote.

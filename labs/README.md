@@ -15,4 +15,4 @@ A **[entrega principal](../docs/arquitetura/README.md)** é o registro arquitetu
 
 O código permanece em `src/`, `frontend/`, `services/` e `ops/`, com um único produto cumulativo. Cada desafio aponta para os arquivos que materializam sua decisão; copiar o produto seis vezes criaria versões divergentes. O desafio 1 conserva a [snapshot AC1 b31abd3](desafio1/baseline) para a comparação antes/depois.
 
-[Checklist de envio](../docs/ENTREGA-B1.md) · [Todos os resultados](../docs/evidencias/b1/README.md) · [Comandos de reprodução](../scripts/README.md).
+[Documento de entrega](../docs/arquitetura/README.md) · [Todos os resultados](../docs/evidencias/b1/README.md) · [Comandos de reprodução](../scripts/README.md).

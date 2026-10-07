@@ -1,6 +1,6 @@
 # Guia de contribuição — Eduardo Bismara Nastri
 
-Registro da etapa AC1. [Histórico e materiais](../README.md) · [Entrega atual B1](../../../ENTREGA-B1.md).
+Registro da etapa AC1. [Histórico e materiais](../README.md) · [Entrega atual B1](../../../arquitetura/README.md).
 
 **Responsável:** Eduardo Bismara Nastri — **RA:** 211466  
 **User story:** US02 — Premiação por participação no fórum.

@@ -26,7 +26,7 @@ desafio6/  README + jenkins/ + monitoramento/ + capturas/ + logs/
 
 Cada pasta tem um README que explica **o que foi testado, qual arquivo abrir e o que o resultado permite concluir**. As [capturas e seus resultados](desafio6/README.md) ficam junto à operação do desafio 6.
 
-[Entrega principal](../../arquitetura/README.md) · [Índice dos desafios](../../../labs/README.md) · [Como entregar](../../ENTREGA-B1.md).
+[Documento de entrega](../../arquitetura/README.md) · [Índice dos desafios](../../../labs/README.md).
 
 ## Reproduzir
 

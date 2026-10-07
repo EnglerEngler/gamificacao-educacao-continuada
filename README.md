@@ -1,8 +1,8 @@
-# Aprende+ — AC1 e B1 Architecture Lab
+# Aprende+ — B1 Architecture Lab
 
 Entrega B1: seis decisões evolutivas, Core modular, domínio com Ports & Adapters, integração Python com fallback, eventos duráveis, MQTT e observabilidade.
 
-**Comece pelo [registro arquitetural cumulativo](docs/arquitetura/README.md)**: identificação da equipe, RF/RNF/RPC, matriz de 18 ASRs (três por desafio), seis ADRs, C4 e síntese para a PoC da AF.
+**Documento oficial: [registro arquitetural cumulativo](docs/arquitetura/README.md)**: identificação da equipe, RF/RNF/RPC, matriz de 18 ASRs (três por desafio), seis ADRs, C4 e síntese para a PoC da AF.
 
 ## Entrega principal, desafios e evidências
 
@@ -11,12 +11,9 @@ Entrega B1: seis decisões evolutivas, Core modular, domínio com Ports & Adapte
 | **Entrega principal** | [docs/arquitetura/README.md](docs/arquitetura/README.md) | O único registro cumulativo exigido pelo DOCX, com as seis decisões e a síntese para AF. |
 | **Desafios 1 a 6** | [labs/README.md](labs/README.md) | Índice dos desafios; cada pasta explica RF → RNF → ASR/RPC → alternativas → ADR → C4 → microsolução. |
 | **Evidências** | [docs/evidencias/b1/README.md](docs/evidencias/b1/README.md) | Resultados verificáveis, separados por desafio e por tipo de arquivo. |
-| **Envio e apresentação** | [docs/ENTREGA-B1.md](docs/ENTREGA-B1.md) | Link correto, identificação da equipe, checklist do item 8 do DOCX e roteiro de demonstração. |
 
 - [ADRs](docs/adr/README.md), com alternativas e consequências.
 - [Diagramas C4 e renderizações](docs/arquitetura/diagramas/README.md).
-- [Evidências reais dos seis desafios](docs/evidencias/b1/README.md).
-- [Roteiro de apresentação e entrega](docs/ENTREGA-B1.md).
 
 ## Onde encontrar cada arquivo
 

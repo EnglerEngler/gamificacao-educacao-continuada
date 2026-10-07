@@ -1,6 +1,6 @@
 # Guia de contribuição — Khevyn Henrique Guedes T. Alves
 
-Registro da etapa AC1. [Histórico e materiais](../README.md) · [Entrega atual B1](../../../ENTREGA-B1.md).
+Registro da etapa AC1. [Histórico e materiais](../README.md) · [Entrega atual B1](../../../arquitetura/README.md).
 
 **Responsável:** Khevyn Henrique Guedes T. Alves — **RA:** 223761  
 **User story:** US03 — Plano Premium e moedas.

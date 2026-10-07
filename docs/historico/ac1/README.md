@@ -1,6 +1,6 @@
 # AC1 — Histórico do Aprende+
 
-Este registro preserva a etapa AC1, seus BDDs, guias, imagens e regras. Para avaliar e executar o B1, siga o [guia de entrega](../../ENTREGA-B1.md) e o [registro arquitetural](../../arquitetura/README.md). A estrutura em camadas descrita abaixo corresponde ao legado preservado.
+Este registro preserva a etapa AC1, seus BDDs, guias, imagens e regras. Para avaliar e executar o B1, siga o [documento único do B1](../../arquitetura/README.md). A estrutura em camadas descrita abaixo corresponde ao legado preservado.
 
 > Projeto acadêmico — ATDD, BDD e TDD | Entrega via GitHub
 

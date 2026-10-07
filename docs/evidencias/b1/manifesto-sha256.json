@@ -1,7 +1,7 @@
 {
   "algoritmo": "SHA-256",
   "arquivos": {
-    "README.md": "b880ed35a7fe1807c05adf8d22968e5f340383135d520401d27aa390744bdb93",
+    "README.md": "171a876e280d5f8dda0714b7075b7f267c5c8a7991bf26c2c75f8dceb8fc5d4b",
     "desafio1/README.md": "61b4e24172c2f8581e332d1ab90c77558a831240a613cbde7979aa9b80e3a975",
     "desafio1/dependencias.json": "412d112d55d883b26d4ee0f3fa26ea6b679f8d71184f8c0ad6e5b0bd9b73f75b",
     "desafio1/ranking-carga.json": "08cf99280c2bbbe41571e6256af4f32809eca6552e2a786304006f1552b2329a",

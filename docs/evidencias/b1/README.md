@@ -6,22 +6,27 @@ Validação final: **25 testes Java + 4 testes Python**, sem falhas; domínio co
 
 | Desafio | Evidência | Resultado |
 | --- | --- | --- |
-| 1 | [Dependências antes/depois](desafio1/dependencias.json), [ranking/carga](desafio1/ranking-carga.json) | Caso de uso deixa de importar JPA; resposta limitada sobre 100 mil registros H2. |
-| 2 | [Testes e cobertura](desafio2/testes.json), [relatório HTML](desafio2/cobertura/index.html) | Contrato fake/JPA, domínio puro, concorrência e rollback; domínio com 100% linhas/branches. |
-| 3 | [Interrupção real da IA](desafio3/falha-ia.json) | Core retorna fallback e mantém ranking; Python recupera. |
-| 4 | [Síncrono/assíncrono e retomada](desafio4/falha-recuperacao.json) | Síncrono 503; real 200; evento/recompensa persistem após reiniciar Core e consumidor recebe depois. |
-| 5 | [MQTT com gateway/Core offline](desafio5/mqtt-recuperacao.json) | Sessão/spool entregam após recuperação; reenvio não duplica recompensa. |
-| 6 | [Consultas Prometheus/Grafana](desafio6/prometheus-grafana.json), [Jenkins](desafio6/jenkins.json) | Falha gera métricas e pendência; recuperação zera fila; pipeline valida código/configurações. |
+| [Desafio 1](desafio1/README.md) | [Dependências antes/depois](desafio1/dependencias.json), [ranking/carga](desafio1/ranking-carga.json) | Caso de uso deixa de importar JPA; resposta limitada sobre 100 mil registros H2. |
+| [Desafio 2](desafio2/README.md) | [Testes e cobertura](desafio2/testes.json), [relatório HTML](desafio2/cobertura/index.html) | Contrato fake/JPA, domínio puro, concorrência e rollback; domínio com 100% linhas/branches. |
+| [Desafio 3](desafio3/README.md) | [Interrupção real da IA](desafio3/falha-ia.json) | Core retorna fallback e mantém ranking; Python recupera. |
+| [Desafio 4](desafio4/README.md) | [Síncrono/assíncrono e retomada](desafio4/falha-recuperacao.json) | Síncrono 503; real 200; evento/recompensa persistem após reiniciar Core e consumidor recebe depois. |
+| [Desafio 5](desafio5/README.md) | [MQTT com gateway/Core offline](desafio5/mqtt-recuperacao.json) | Sessão/spool entregam após recuperação; reenvio não duplica recompensa. |
+| [Desafio 6](desafio6/README.md) | [Consultas Prometheus/Grafana](desafio6/monitoramento/prometheus-grafana.json), [Jenkins](desafio6/jenkins/jenkins.json) | Falha gera métricas e pendência; recuperação zera fila; pipeline valida código/configurações. |
 
-## Capturas
+## Organização das pastas
 
-![Dashboard Grafana](desafio6/grafana-dashboard.png)
+```text
+desafio1/  README + comparação de dependências + carga do ranking
+desafio2/  README + resumo de testes + relatorios/ + cobertura/
+desafio3/  README + interrupção real da IA
+desafio4/  README + comparação síncrona/assíncrona e recuperação
+desafio5/  README + recuperação de MQTT/spool
+desafio6/  README + jenkins/ + monitoramento/ + capturas/ + logs/
+```
 
-![Consulta Prometheus](desafio6/prometheus-query.png)
+Cada pasta tem um README que explica **o que foi testado, qual arquivo abrir e o que o resultado permite concluir**. As [capturas e seus resultados](desafio6/README.md) ficam junto à operação do desafio 6.
 
-![Pipeline Jenkins](desafio6/jenkins-build.png)
-
-![Aprende+ executado](desafio6/aprendemais.png)
+[Entrega principal](../../arquitetura/README.md) · [Índice dos desafios](../../../labs/README.md) · [Como entregar](../../ENTREGA-B1.md).
 
 ## Reproduzir
 

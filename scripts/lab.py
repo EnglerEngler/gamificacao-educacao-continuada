@@ -317,14 +317,16 @@ def evidence(state):
     dashboard = httpx.get("http://127.0.0.1:3000/api/dashboards/uid/b1-architecture",
                          auth=("admin", "lab-b1-grafana")).json()
     assert dashboard["dashboard"]["uid"] == "b1-architecture"
-    write("desafio6/prometheus-grafana.json", {"inicio_utc": started, "coletado_utc": datetime.now(timezone.utc).isoformat(),
+    write("desafio6/monitoramento/prometheus-grafana.json", {"inicio_utc": started, "coletado_utc": datetime.now(timezone.utc).isoformat(),
           "queries": metrics, "pendentes_durante_falha": pending,
           "dashboard_uid": dashboard["dashboard"]["uid"], "painels": len(dashboard["dashboard"]["panels"]),
           "ambiente": "Processos nativos no WSL; configuração equivalente de containers versionada"})
-    (EVIDENCE / "desafio6/core-prometheus.txt").write_text(httpx.get(CORE + "/actuator/prometheus").text)
-    (EVIDENCE / "desafio6/gateway-prometheus.txt").write_text(httpx.get("http://127.0.0.1:8003/metrics").text)
+    (EVIDENCE / "desafio6/monitoramento/core-prometheus.txt").write_text(httpx.get(CORE + "/actuator/prometheus").text)
+    (EVIDENCE / "desafio6/monitoramento/gateway-prometheus.txt").write_text(httpx.get("http://127.0.0.1:8003/metrics").text)
     for name in state["processes"]:
-        shutil.copyfile(RUNTIME / (name + ".log"), EVIDENCE / "desafio6" / (name + ".log"))
+        log_dir = EVIDENCE / "desafio6/logs"
+        log_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(RUNTIME / (name + ".log"), log_dir / (name + ".log"))
     print("Evidências reais gravadas em docs/evidencias/b1")
 
 

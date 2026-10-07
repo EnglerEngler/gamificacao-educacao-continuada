@@ -1,5 +1,7 @@
 # Guia de contribuição — Eduardo Bismara Nastri
 
+Registro da etapa AC1. [Histórico e materiais](../README.md) · [Entrega atual B1](../../../ENTREGA-B1.md).
+
 **Responsável:** Eduardo Bismara Nastri — **RA:** 211466  
 **User story:** US02 — Premiação por participação no fórum.
 
@@ -13,7 +15,7 @@ O cenário que você representa é:
 
 ## Alteração técnica sugerida
 
-Abra `docs/gamificacao.feature` e acrescente os cenários da US02, incluindo o caso em que somente o aluno selecionado como destaque do mês recebe a recompensa:
+Abra `docs/historico/ac1/gamificacao.feature` e acrescente os cenários da US02, incluindo o caso em que somente o aluno selecionado como destaque do mês recebe a recompensa:
 
 ```gherkin
   Cenário: Não premiar aluno que não foi o destaque do fórum

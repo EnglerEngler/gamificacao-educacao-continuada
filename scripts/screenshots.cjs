@@ -1,10 +1,12 @@
 // Playwright é uma ferramenta de captura opcional, instalada fora do produto.
 const { chromium } = require(process.env.B1_PLAYWRIGHT_MODULE || 'playwright');
 const path = require('path');
+const fs = require('fs');
 (async () => {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ locale: 'en-US', viewport: { width: 1500, height: 1350 } });
-  const out = path.resolve('docs/evidencias/b1/desafio6');
+  const out = path.resolve('docs/evidencias/b1/desafio6/capturas');
+  fs.mkdirSync(out, { recursive: true });
   await page.setExtraHTTPHeaders({ Authorization: 'Basic ' + Buffer.from('admin:lab-b1-grafana').toString('base64') });
   await page.goto('http://127.0.0.1:3000/d/b1-architecture/b1?orgId=1&from=now-15m&to=now');
   await page.getByText('Notificações pendentes', { exact: true }).waitFor({ timeout: 60000 });

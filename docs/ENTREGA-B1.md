@@ -1,13 +1,29 @@
-# Entrega e apresentação do B1
+# Como entregar e apresentar o B1
+
+## Entrega principal exigida pelo DOCX
+
+O documento a avaliar é [arquitetura/README.md](arquitetura/README.md), mantido no caminho `/docs/arquitetura/README.md` indicado pelo item 6. Os seis desafios compõem esse mesmo registro e o mesmo produto evolutivo.
+
+| Item 8 — entrega final do DOCX | Onde conferir |
+| --- | --- |
+| Link do repositório e identificação da equipe | Seção abaixo e abertura do registro principal. |
+| README arquitetural com seis decisões e matriz cumulativa | [Registro principal](arquitetura/README.md). |
+| ADRs essenciais e C4 final coerente | [Seis ADRs](adr/README.md), [índice C4](arquitetura/diagramas/README.md) e visão final no registro. |
+| Links/pastas das microsoluções e evidências | [Desafios 1 a 6](../labs/README.md) e [evidências por desafio](evidencias/b1/README.md). |
+| Síntese de decisões para a PoC da AF | Seção Síntese para a PoC da AF no registro principal. |
+
+Este arquivo organiza envio/apresentação. Cada [desafio](../labs/README.md) liga a decisão aos seus artefatos; cada [pasta de evidência](evidencias/b1/README.md) explica o resultado que sustenta a hipótese.
 
 ## Link e equipe
 
 Repositório: https://github.com/EnglerEngler/gamificacao-educacao-continuada  
 Equipe: Eduardo Bismara Nastri (211466), Khevyn Henrique Guedes T. Alves (223761), João Victor Cardoso Engler Rizzi de Araujo (236602).
 
-A entrega B1 está na branch `feat/b1-architecture-lab`; use o link dessa branch enquanto o PR não for integrado, para não entregar apenas a main da AC1:
+A entrega B1 está na `main`. Use o link principal do repositório para enviar:
 
-https://github.com/EnglerEngler/gamificacao-educacao-continuada/tree/feat/b1-architecture-lab
+https://github.com/EnglerEngler/gamificacao-educacao-continuada
+
+A integração e seu histórico estão no [PR #2](https://github.com/EnglerEngler/gamificacao-educacao-continuada/pull/2).
 
 ## Artefatos a apresentar
 
@@ -17,9 +33,9 @@ O [índice da documentação](README.md) distingue a entrega B1 dos registros hi
 | --- | --- |
 | Registro cumulativo e RF/RNF/RPC | [docs/arquitetura/README.md](arquitetura/README.md) |
 | Matriz de ASRs, máximo três por desafio | Seção RNFs e seleção de ASRs no registro |
-| Seis decisões / alternativas / trade-offs | [docs/adr](adr/ADR-001-core-modular.md) até ADR-006 |
+| Seis decisões / alternativas / trade-offs | [docs/adr](adr/README.md) até ADR-006 |
 | C4 coerente e visão final | [diagramas](arquitetura/diagramas/README.md), fontes Mermaid e SVG |
-| Microsoluções | [labs/desafio1](../labs/desafio1/README.md) até desafio6; código compartilhado src/services/ops/scripts |
+| Microsoluções | [Índice dos seis desafios](../labs/README.md); código compartilhado src/services/ops/scripts |
 | Evidências e reprodução | [índice de evidências](evidencias/b1/README.md) |
 | Jenkins/Prometheus/Grafana | Jenkinsfile, ops e evidências do desafio6 |
 | Síntese para AF | Seção Síntese para a PoC da AF no registro |

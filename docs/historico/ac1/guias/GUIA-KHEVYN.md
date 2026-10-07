@@ -1,5 +1,7 @@
 # Guia de contribuição — Khevyn Henrique Guedes T. Alves
 
+Registro da etapa AC1. [Histórico e materiais](../README.md) · [Entrega atual B1](../../../ENTREGA-B1.md).
+
 **Responsável:** Khevyn Henrique Guedes T. Alves — **RA:** 223761  
 **User story:** US03 — Plano Premium e moedas.
 
@@ -13,7 +15,7 @@ O cenário que você representa é:
 
 ## Alteração técnica sugerida
 
-Abra `docs/gamificacao.feature` e acrescente os cenários da US03, incluindo o caso que confirma que as moedas não são duplicadas quando um aluno já Premium conclui outro curso:
+Abra `docs/historico/ac1/gamificacao.feature` e acrescente os cenários da US03, incluindo o caso que confirma que as moedas não são duplicadas quando um aluno já Premium conclui outro curso:
 
 ```gherkin
   Cenário: Não duplicar moedas de aluno que já é Premium

@@ -1,5 +1,7 @@
 # B1 — Registro arquitetural vivo do Aprende+
 
+**Entrega principal do B1**, no caminho exigido pelo DOCX. [Como entregar](../ENTREGA-B1.md) · [Desafios 1 a 6](../../labs/README.md) · [Evidências](../evidencias/b1/README.md).
+
 ## Entrega e equipe
 
 Repositório: https://github.com/EnglerEngler/gamificacao-educacao-continuada
@@ -61,7 +63,7 @@ Nem todo RNF discutido virou ASR. A tabela registra **três ASRs por desafio**, 
 | ASR-13 | D5 / RF06 | Interoperabilidade/eficiência de comunicação / P+ | MQTT publish/subscribe evita conexão HTTP direta de cada dispositivo ao Core. | Mosquitto real, payload pequeno, tópicos por instituição/dispositivo e QoS 1. |
 | ASR-14 | D5 / RF06 | Conectividade intermitente / R | Sessão persistente MQTT e spool durável no gateway cobrem ausência do consumidor e ausência do Core. | Publicação com gateway offline, spool com Core offline e recuperação; [MQTT](../evidencias/b1/desafio5/mqtt-recuperacao.json). |
 | ASR-15 | D5 / RF06 | Segurança de integração / F+ | Credenciais/ACL, correspondência tópico-payload e deduplicação protegem a fronteira de entrada. | Token inválido 401, tenant divergente 403, replay sem recompensa adicional; testes Java/Python. |
-| ASR-16 | D6 / Todos | Testabilidade / S | Gates automatizados impedem avanço da esteira com regressão de regra, contrato ou fronteira. | Jenkins executa verify, pytest, frontend e validação documental; [execução](../evidencias/b1/desafio6/jenkins.json). |
+| ASR-16 | D6 / Todos | Testabilidade / S | Gates automatizados impedem avanço da esteira com regressão de regra, contrato ou fronteira. | Jenkins executa verify, pytest, frontend e validação documental; [execução](../evidencias/b1/desafio6/jenkins/jenkins.json). |
 | ASR-17 | D6 / Todos | Observabilidade / S | Métricas de fallback, fila e latência conectam condições operacionais a decisões dos desafios anteriores. | Métricas reais consultadas no Prometheus e dashboard provisionado no Grafana. |
 | ASR-18 | D6 / Todos | Recuperabilidade / R | Artefatos identificados e dados fora das imagens permitem reiniciar componentes sem perder trabalho pendente. | JAR/dados separados, volumes, outbox e spool; smoke após deploy e rollback documentado. |
 

@@ -42,7 +42,7 @@ O script V1 de migração documenta adoção da tabela AC1/índice do ranking. `
 
 ## Evidência
 
-Jenkins real executa o pipeline de validação; console/status/relatórios ficam em [Jenkins](../evidencias/b1/desafio6/jenkins.json). [Prometheus/Grafana](../evidencias/b1/desafio6/prometheus-grafana.json), capturas e métricas exportadas registram a condição real e a recuperação. Ambiente nativo WSL com H2 persistente; container packaging/deploy permanece configuração versionada a validar com Docker, não evidência fictícia.
+Jenkins real executa o pipeline de validação; console/status/relatórios ficam em [Jenkins](../evidencias/b1/desafio6/jenkins/jenkins.json). [Prometheus/Grafana](../evidencias/b1/desafio6/monitoramento/prometheus-grafana.json), capturas e métricas exportadas registram a condição real e a recuperação. Ambiente nativo WSL com H2 persistente; container packaging/deploy permanece configuração versionada a validar com Docker, não evidência fictícia.
 
 ## C4 e revisão
 

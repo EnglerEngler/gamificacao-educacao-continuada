@@ -15,7 +15,7 @@ TOOLS = Path(os.getenv("B1_TOOLS_DIR", "/tmp/b1-tools"))
 JHOME = TOOLS / "jenkins-home"
 URL = "http://127.0.0.1:8090"
 AUTH = ("b1", "lab-b1-jenkins")
-OUT = ROOT / "docs/evidencias/b1/desafio6"
+OUT = ROOT / "docs/evidencias/b1/desafio6/jenkins"
 
 
 def start():

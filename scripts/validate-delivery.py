@@ -6,7 +6,8 @@ import re
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
-docs = [ROOT / "README.md", *sorted((ROOT / "docs").rglob("*.md")),
+docs = [ROOT / "README.md", ROOT / "CONTRIBUTING.md", ROOT / "labs/README.md",
+        *sorted((ROOT / "docs").rglob("*.md")),
         *sorted((ROOT / "labs").glob("*/README.md")),
         ROOT / "scripts/README.md", ROOT / "services/README.md", ROOT / "ops/README.md"]
 missing = []
@@ -30,6 +31,15 @@ assert len(rows) == 18
 for i in range(1, 7):
     assert sum(f"D{i} /" in row for row in rows) == 3, f"D{i}: máximo três ASRs"
     assert (ROOT / f"labs/desafio{i}/README.md").exists()
+    challenge = (ROOT / f"labs/desafio{i}/README.md").read_text()
+    for stage in ('1. RF', '2. RNF', '3. ASR', '4. RPC', '5. Alternativas/trade-offs',
+                  '6. ADR', '7. C4', '8. Evidência'):
+        assert f'| {stage} |' in challenge, f'D{i}: etapa {stage} ausente'
+    assert (ROOT / f"docs/evidencias/b1/desafio{i}/README.md").exists()
+assert (ROOT / 'docs/historico/ac1/gamificacao.feature').exists()
+assert not (ROOT / 'docs/gamificacao.feature').exists(), 'BDD AC1 deve permanecer no histórico'
+for entry in (ROOT / 'docs/evidencias').iterdir():
+    assert entry.name in {'README.md', 'b1'}, f'Evidência fora de sua etapa: {entry.name}'
 for path in (ROOT / "ops").rglob("*.yml"):
     yaml.safe_load(path.read_text())
 for name in ["docker-compose.yml", "docker-compose.b1.yml"]:
@@ -42,4 +52,4 @@ for name in ["docker-compose.yml", "docker-compose.b1.yml"]:
 dashboard = json.loads((ROOT / "ops/grafana/dashboards/b1.json").read_text())
 assert len(dashboard["panels"]) == 8 and dashboard["uid"] == "b1-architecture"
 assert (ROOT / "Jenkinsfile").exists()
-print("Entrega validada: seis ADRs/labs, três ASRs por desafio, links locais e configurações")
+print("Entrega validada: seis ADRs/labs, oito etapas por desafio, três ASRs por desafio, evidências indexadas, links e configurações")

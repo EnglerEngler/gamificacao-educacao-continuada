@@ -4,7 +4,7 @@ Status: aceito para B1. Desafio 5. RF06. ASR-13/14/15.
 
 ## Contexto
 
-Dispositivos publicam presença, início e conclusão com recursos/conexão limitados. RNFs analisados: interoperabilidade, eficiência, disponibilidade, conectividade intermitente, escala e segurança. Selecionados: interoperabilidade/eficiência de comunicação (protocolo), conectividade intermitente (sessão/spool) e segurança de integração (fronteira).
+Dispositivos publicam presença, início e conclusão com recursos/conexão limitados. RNFs analisados: interoperabilidade, eficiência, disponibilidade, conectividade intermitente, escala e segurança. Selecionados: interoperabilidade (tradução de protocolo/contrato no gateway), conectividade intermitente (sessão/spool) e segurança de integração (fronteira). Eficiência é um benefício secundário do protocolo, sem constituir um quarto RNF prioritário.
 
 RPCs: dispositivos limitados, conexão instável, protocolos/brokers aumentam componentes operacionais.
 
@@ -37,4 +37,3 @@ Credenciais demonstrativas, ACL e token protegem o lab em localhost. Implantaç�
 Broker real recebe duas publicações do mesmo evento com gateway desligado; sessão entrega após reconexão. Outro evento chega com Core offline, fica no spool e é aplicado após reinício. Presença/início não alteram recompensa. [Resultados](../evidencias/b1/desafio5/mqtt-recuperacao.json).
 
 Testes de schema/tópico, spool após reinício, replay, 401/403 e concorrência complementam a evidência. [Container D5](../arquitetura/diagramas/d5-container.mmd).
-

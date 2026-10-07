@@ -21,6 +21,8 @@ Pipeline integrado inicialmente, com stages de Core, Python, frontend, configura
 
 Jenkinsfile: checkout, `mvn verify` (domínio/adapters/fronteiras/cobertura), pytest (contrato/idempotência/spool), frontend build e validação documental. Falha em gate bloqueia os stages seguintes. Imagens tagueadas pelo BUILD_NUMBER e deploy local são opcionais no agente com Docker. Deploy utiliza imagens já testadas e smoke; não recompila silenciosamente uma imagem diferente. Etapas opcionais não foram tratadas como executadas quando Docker estava indisponível.
 
+Depois dos testes e do build Vue, a esteira incorpora `frontend/dist` ao JAR e o empacota com `-DskipTests`, sem repetir testes já aprovados para o mesmo código. Arquiva o JAR executável com a interface, fontes Python, lock de dependências e relatórios. Assim, o artefato do Core pode ser baixado e executado mesmo quando os stages Docker ficam desabilitados.
+
 ## Métrica técnica versus evidência arquitetural
 
 | Métrica | Condição provocada / conclusão permitida |
@@ -47,4 +49,3 @@ Jenkins real executa o pipeline de validação; console/status/relatórios ficam
 ## C4 e revisão
 
 [Deployment](../arquitetura/diagramas/d6-deployment.mmd), [Container final](../arquitetura/diagramas/container-final.mmd). O dashboard/alertas são provisionados pelo Git. Definir retenção/backup, registry, ambientes e SLOs da PoC antes de operação real.
-

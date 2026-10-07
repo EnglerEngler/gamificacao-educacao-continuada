@@ -14,7 +14,7 @@ Dispositivos limitados e conectividade intermitente produzem presença, início 
 | --- | --- |
 | 1. RF | RF06 Receber eventos IoT e encaminhá-los à plataforma. |
 | 2. RNF | Interoperabilidade, eficiência de comunicação, disponibilidade, conectividade intermitente, escalabilidade e segurança de integração. |
-| 3. ASR | ASR-13 Interoperabilidade/eficiência; ASR-14 Conectividade intermitente; ASR-15 Segurança de integração. Impactos estruturais e critérios estão na matriz cumulativa da entrega principal. |
+| 3. ASR | ASR-13 Interoperabilidade; ASR-14 Conectividade intermitente; ASR-15 Segurança de integração. Impactos estruturais e critérios estão na matriz cumulativa da entrega principal. |
 | 4. RPC | Recursos limitados, conexão instável e custo operacional de protocolo/broker. |
 | 5. Alternativas/trade-offs | REST direto versus MQTT com consumidor/gateway versus MQTT com mensageria interna adicional. A última alternativa exige ASR que justifique outro broker. |
 | 6. ADR | [ADR-005-iot-mqtt.md](../../docs/adr/ADR-005-iot-mqtt.md). Decisão: Mosquitto com QoS 1 e sessão persistente; gateway persiste spool antes do ACK, valida origem e envia HTTP idempotente ao Core. |

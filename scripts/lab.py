@@ -116,9 +116,15 @@ def start_core(state):
 
 
 def start_gateway(state):
+    log_path = RUNTIME / "gateway.log"
+    previous_size = log_path.stat().st_size if log_path.exists() else 0
     spawn(state, "gateway", [str(PYTHON), "-m", "services.iot.gateway"])
     wait_for(lambda: ready("http://127.0.0.1:8003/metrics"), "gateway")
-    wait_for(lambda: "mqtt_conectado" in (RUNTIME / "gateway.log").read_text(), "sessão MQTT")
+    def connected_now():
+        with log_path.open("rb") as log:
+            log.seek(previous_size)
+            return b"mqtt_conectado" in log.read()
+    wait_for(connected_now, "sessão MQTT desta execução")
 
 
 def start():
@@ -127,6 +133,15 @@ def start():
         old = json.loads(STATE_FILE.read_text())
         if any(alive(p["pid"]) for p in old.get("processes", {}).values()):
             raise RuntimeError("Laboratório já ativo. Use evidence ou stop.")
+    # Preserva os logs anteriores e inicia um conjunto exclusivo para o novo cenário.
+    previous_logs = [RUNTIME / (name + ".log") for name in
+                     ("ia", "notificacoes", "core", "gateway", "mqtt", "grafana", "prometheus")]
+    archive = RUNTIME / "logs-anteriores" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    for log in previous_logs:
+        if log.exists():
+            archive.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(log, archive / log.name)
+            log.write_text("")
     data = RUNTIME / ("run-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ"))
     data.mkdir()
     state = {"data": str(data), "processes": {}, "inicio_utc": datetime.now(timezone.utc).isoformat()}

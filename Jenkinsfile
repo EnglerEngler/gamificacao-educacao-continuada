@@ -21,6 +21,15 @@ pipeline {
         stage('Frontend AC1') {
             steps { sh 'npm --prefix frontend ci && npm --prefix frontend run build' }
         }
+        stage('JAR com interface e artefatos') {
+            steps {
+                sh '''set -eu
+                    mkdir -p src/main/resources/static
+                    cp -r frontend/dist/. src/main/resources/static/
+                    mvn -B package -DskipTests
+                '''
+            }
+        }
         stage('Configurações e rastreabilidade') {
             steps { sh '.venv/bin/python scripts/validate-delivery.py && .venv/bin/python scripts/architecture-evidence.py' }
         }
@@ -48,7 +57,7 @@ pipeline {
         always {
             junit allowEmptyResults: false, testResults: 'target/surefire-reports/*.xml'
             junit allowEmptyResults: true, testResults: '.runtime/python-tests.xml'
-            archiveArtifacts allowEmptyArchive: true, artifacts: 'target/site/jacoco/**, .runtime/*.xml, .runtime/images.json, docs/evidencias/b1/**'
+            archiveArtifacts allowEmptyArchive: true, artifacts: 'target/*.jar, target/site/jacoco/**, services/**/*.py, requirements.lock, .runtime/*.xml, .runtime/images.json, docs/evidencias/b1/**'
         }
     }
 }

@@ -42,6 +42,7 @@ j.setNumExecutors(1)
 j.save()
 """)
     env = dict(os.environ, JENKINS_HOME=str(JHOME), PATH=str(TOOLS / "uv-x86_64-unknown-linux-gnu") + ":" + os.environ["PATH"])
+    (ROOT / ".runtime").mkdir(exist_ok=True)
     log = (ROOT / ".runtime/jenkins.log").open("a")
     proc = subprocess.Popen(["java", "-Xms64m", "-Xmx384m", "-Djenkins.install.runSetupWizard=false",
         "-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true",

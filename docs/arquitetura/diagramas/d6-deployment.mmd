@@ -1,0 +1,32 @@
+flowchart TB
+    GIT["Git · fonte, configurações e contratos<br/>[Sistema de versionamento]"] --> J
+    subgraph AGENT["Nó CI · Jenkins / JDK 21 / Maven / Python / Node"]
+      J["Jenkins Pipeline<br/>Gates: regras, adapters, arquitetura, contratos, frontend"]
+      J --> ART["JAR Core / código Python / relatórios<br/>[Artefatos versionados pelo build]"]
+      ART --> IMG["Imagens b1-core e b1-python por BUILD_NUMBER<br/>[Empacotamento opcional com Docker]"]
+    end
+    IMG -.->|"Deploy opcional e smoke"| HOST
+    subgraph HOST["Nó de laboratório · Compose previsto / processos nativos executados"]
+      CORE["Core Spring Boot + frontend"]
+      AI["FastAPI IA"]
+      N["FastAPI notificações"]
+      MQTT["Mosquitto"]
+      GW["Gateway IoT"]
+      DB[("PostgreSQL no Compose<br/>H2 persistente no lab nativo")]
+      SPOOL[("Volume spool / notificações")]
+      MQTTV[("Volume sessão MQTT")]
+      P["Prometheus"]
+      G["Grafana"]
+      CORE --> DB
+      CORE --> AI
+      CORE --> N
+      MQTT --> GW
+      MQTT --> MQTTV
+      GW --> SPOOL
+      N --> SPOOL
+      GW --> CORE
+      P --> CORE
+      P --> GW
+      G --> P
+    end
+

@@ -1,0 +1,7 @@
+flowchart LR
+    U["Aluno<br/>[Pessoa]"] -->|"HTTP/JSON"| CORE["Aprende+ Core<br/>[Container: Java / Spring Boot]"]
+    CORE --> DB[("PostgreSQL<br/>[Container]")]
+    CORE -->|"HTTP/JSON · timeout de fases 250/700 ms"| IA["Recomendação e retrieval<br/>[Container: Python / FastAPI]"]
+    CORE -->|"Na falha: catálogo / mensagem de indisponibilidade"| F["Fallback local no Core<br/>[Responsabilidade interna]"]
+    IA -->|"Leitura de material versionado"| MATERIAL["Catálogo / documentos locais<br/>[Artefatos do serviço]"]
+

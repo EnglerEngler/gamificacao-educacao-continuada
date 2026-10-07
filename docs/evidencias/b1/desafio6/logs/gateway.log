@@ -1,0 +1,31 @@
+2026-10-06 19:48:58,802 INFO mqtt_conectado sessao_presente=False
+2026-10-06 19:49:54,638 INFO mqtt_conectado sessao_presente=False
+2026-10-06 19:54:12,516 INFO mqtt_conectado sessao_presente=True
+2026-10-06 19:54:13,901 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 19:54:13,920 INFO iot_entregue eventId=7d8343ba-16aa-4f14-a477-8d97b6dd3e5e
+2026-10-06 19:54:30,451 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 19:54:30,555 INFO iot_entregue eventId=e07101b4-301b-4196-89e3-4a6c772710e1
+2026-10-06 19:54:31,576 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 19:54:31,611 INFO iot_entregue eventId=c4bf1ea3-f276-4bad-9342-f79b52409e7f
+2026-10-06 19:54:31,634 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 19:54:31,643 INFO iot_entregue eventId=282f93a9-ccd6-4317-b685-7a315c68310f
+2026-10-06 20:00:50,161 INFO mqtt_conectado sessao_presente=True
+2026-10-06 20:00:53,773 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 20:00:53,847 INFO iot_entregue eventId=2ac7b390-e9c3-4b57-831c-3fbf4e055cd1
+2026-10-06 20:01:10,863 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 20:01:10,877 INFO iot_entregue eventId=fccca0c6-130d-4d75-8cdd-42c0ce63d29c
+2026-10-06 20:01:11,894 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 20:01:11,908 INFO iot_entregue eventId=1887890c-ce24-4e42-92e4-2128ec973c2e
+2026-10-06 20:01:11,925 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 20:01:11,936 INFO iot_entregue eventId=76983ffb-4232-484d-ab24-42a5bd7915af
+2026-10-06 21:02:22,839 INFO mqtt_conectado sessao_presente=False
+2026-10-06 21:06:25,234 INFO mqtt_conectado sessao_presente=False
+2026-10-06 21:07:06,636 INFO mqtt_conectado sessao_presente=True
+2026-10-06 21:07:07,875 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 21:07:07,903 INFO iot_entregue eventId=0c337df6-7294-4f2c-ac32-003338da0347
+2026-10-06 21:07:16,769 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 21:07:16,791 INFO iot_entregue eventId=8561ce44-d23a-4e1c-8824-def0f8c0c3a0
+2026-10-06 21:07:17,800 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 21:07:17,840 INFO iot_entregue eventId=7235da6c-eb82-42db-9c28-646c6ee8543b
+2026-10-06 21:07:17,849 INFO HTTP Request: POST http://127.0.0.1:8080/api/iot/eventos "HTTP/1.1 200 "
+2026-10-06 21:07:17,868 INFO iot_entregue eventId=99254572-d06b-473f-b709-791ebce25666

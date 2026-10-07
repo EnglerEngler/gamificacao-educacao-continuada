@@ -31,7 +31,7 @@ git push -u origin docs/us02-eduardo
 
 | Integrante | Branch | Alteração real sugerida | Commit sugerido |
 | --- | --- | --- | --- |
-| Eduardo Bismara Nastri | `docs/us02-eduardo` | Revisar/expandir o cenário BDD da premiação do fórum em `docs/gamificacao.feature` e README. | `docs: detalha cenarios BDD da US02` |
+| Eduardo Bismara Nastri | `docs/us02-eduardo` | Revisar/expandir o cenário BDD da premiação do fórum em `docs/historico/ac1/gamificacao.feature` e README. | `docs: detalha cenarios BDD da US02` |
 | Khevyn Henrique Guedes T. Alves | `docs/us03-khevyn` | Revisar/expandir o cenário BDD Premium e a documentação de moedas. | `docs: detalha cenarios BDD da US03` |
 | João Victor Cardoso Engler Rizzi de Araujo | `test/us01-joao` | Revisar os testes da US01 e gerar a evidência JaCoCo. | `test: valida cobertura da US01` |
 

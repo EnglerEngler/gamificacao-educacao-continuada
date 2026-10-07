@@ -1,0 +1,18 @@
+groups:
+  - name: b1-asrs
+    rules:
+      - alert: CoreIndisponivel
+        expr: up{job="core"} == 0
+        for: 30s
+        annotations:
+          summary: Core indisponível — ASR confiabilidade
+      - alert: OutboxAcumulada
+        expr: b1_outbox_pending > 0
+        for: 30s
+        annotations:
+          summary: Notificações aguardando recuperação — ASR recuperabilidade
+      - alert: IaDegradada
+        expr: increase(b1_ia_requests_total{resultado="fallback"}[2m]) > 0
+        annotations:
+          summary: IA indisponível, Core operando em fallback
+

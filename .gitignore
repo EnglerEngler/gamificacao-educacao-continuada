@@ -4,3 +4,10 @@ target/
 frontend/node_modules/
 frontend/dist/
 .env
+.venv/
+.runtime/
+__pycache__/
+.pytest_cache/
+*.pyc
+src/main/resources/static/
+services/**/data/

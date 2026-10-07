@@ -1,0 +1,59 @@
+{
+  "qos": 1,
+  "sessao_persistente": true,
+  "evento_publicado_com_gateway_offline": {
+    "eventoId": "0c337df6-7294-4f2c-ac32-003338da0347",
+    "instituicao": "ac1",
+    "dispositivoId": "lab01",
+    "tipo": "CONCLUSAO",
+    "alunoId": 1,
+    "cursoId": "curso-mqtt",
+    "media": 8
+  },
+  "publicacoes_duplicadas": 2,
+  "evento_publicado_com_core_offline": {
+    "eventoId": "8561ce44-d23a-4e1c-8824-def0f8c0c3a0",
+    "instituicao": "ac1",
+    "dispositivoId": "lab01",
+    "tipo": "CONCLUSAO",
+    "alunoId": 1,
+    "cursoId": "curso-spool",
+    "media": 8
+  },
+  "spool": [
+    [
+      "0c337df6-7294-4f2c-ac32-003338da0347",
+      "entregue",
+      1
+    ],
+    [
+      "8561ce44-d23a-4e1c-8824-def0f8c0c3a0",
+      "entregue",
+      8
+    ],
+    [
+      "7235da6c-eb82-42db-9c28-646c6ee8543b",
+      "entregue",
+      1
+    ],
+    [
+      "99254572-d06b-473f-b709-791ebce25666",
+      "entregue",
+      1
+    ]
+  ],
+  "aluno_apos_recuperacao": {
+    "id": 1,
+    "nome": "Evidência B1",
+    "cursosDisponiveis": 14,
+    "cursosConcluidos": 3,
+    "moedas": 0,
+    "plano": "BASICO",
+    "cursosAprovados": 3,
+    "badges": [
+      "primeira-conclusao"
+    ],
+    "pontos": 300
+  },
+  "presenca_inicio_sem_recompensa": true
+}

@@ -1,0 +1,6 @@
+user lab01
+topic write instituicoes/ac1/dispositivos/lab01/eventos
+
+user gateway
+topic read instituicoes/+/dispositivos/+/eventos
+

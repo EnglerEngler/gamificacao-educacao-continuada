@@ -9,7 +9,7 @@ h2 { margin: 0 0 16px; }
 .card { background: #fff; border: 1px solid #e6e8f0; border-radius: 14px; padding: 22px; box-shadow: 0 5px 16px #2029570a; }
 form, .actions { display: flex; gap: 10px; flex-wrap: wrap; }
 label { color: #465269; display: grid; flex: 1 1 210px; font-size: .9rem; font-weight: 650; gap: 6px; }
-input { padding: 11px; border: 1px solid #cdd2df; border-radius: 8px; font: inherit; font-weight: 400; width: 100%; }
+input, select { padding: 11px; border: 1px solid #cdd2df; border-radius: 8px; font: inherit; font-weight: 400; width: 100%; }
 button { align-self: end; border: 0; border-radius: 8px; padding: 11px 15px; background: #5b5bd6; color: white; font-weight: 650; cursor: pointer; }
 button:hover { filter: brightness(.94); }
 .secondary { background: #e9eaf9; color: #404096; }
@@ -22,3 +22,7 @@ button:hover { filter: brightness(.94); }
 .message { color: #176b43; }
 .message.erro { color: #b42318; }
 .empty { color: #637084; text-align: center; padding: 30px; }
+section.card { margin-top: 16px; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 10px 8px; border-bottom: 1px solid #e6e8f0; }
+small { color: #637084; }

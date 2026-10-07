@@ -1,0 +1,132 @@
+{
+  "coletado_utc": "2026-10-07T00:02:09.711417+00:00",
+  "comando_java": "mvn -B verify",
+  "java_testes": 25,
+  "suites": [
+    {
+      "nome": "br.edu.unifacens.gamificacao.aluno.application.FakeAdapterContractTest",
+      "testes": 2,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "casos": [
+        "isolaInstituicoes",
+        "preservaRegraAc1EImpedeRecompensaDuplicada"
+      ]
+    },
+    {
+      "nome": "br.edu.unifacens.gamificacao.aluno.application.JpaAdapterContractTest",
+      "testes": 2,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "casos": [
+        "isolaInstituicoes",
+        "preservaRegraAc1EImpedeRecompensaDuplicada"
+      ]
+    },
+    {
+      "nome": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
+      "testes": 8,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "casos": [
+        "naoDuplicaMoedasQuandoAlunoJaEPremium",
+        "desbloqueiaTresCursosQuandoConcluiComMediaMaiorQueSete",
+        "atualizaParaPremiumAoConcluirDecimoSegundoCurso",
+        "naoProcessaCursoQueAindaEstaEmAndamento",
+        "naoDesbloqueiaCursosQuandoMediaForMenorQueSete",
+        "rejeitaValoresInvalidosEMediaNula",
+        "permaneceBasicoAntesDeDozeCursosConcluidos",
+        "naoDesbloqueiaCursosQuandoMediaForIgualASete"
+      ]
+    },
+    {
+      "nome": "br.edu.unifacens.gamificacao.aluno.domain.ConquistasTest",
+      "testes": 4,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "casos": [
+        "rejeitaEstadoInvalidoEMediasForaDoIntervalo",
+        "us03ContaConclusoesMesmoSemAprovacao",
+        "premioPremiumAconteceUmaUnicaVez",
+        "preservaPlanoPremiumExistenteSemRecreditarMoedas"
+      ]
+    },
+    {
+      "nome": "br.edu.unifacens.gamificacao.architecture.ArchitectureTest",
+      "testes": 2,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "casos": [
+        "dominioPuro",
+        "modulos"
+      ]
+    },
+    {
+      "nome": "br.edu.unifacens.gamificacao.ia.TimeoutTest",
+      "testes": 1,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "casos": [
+        "servidorConectadoQueNaoRespondeTambemDegrada"
+      ]
+    },
+    {
+      "nome": "br.edu.unifacens.gamificacao.integration.CoreIntegrationTest",
+      "testes": 5,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "casos": [
+        "repeticaoConcorrenteGeraUmaRecompensa",
+        "rankingLimitaResultadoOrdenaEIsolaTenant",
+        "mqttContratoProtegeTokenTenantEDuplicidade",
+        "iaDegradaSemBloquearRanking",
+        "falhaDoConsumidorNaoBloqueiaCoreEEventoPermaneceRecuperavel"
+      ]
+    },
+    {
+      "nome": "br.edu.unifacens.gamificacao.integration.TransactionRollbackTest",
+      "testes": 1,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "casos": [
+        "falhaAoGravarIntencaoDesfazRecompensaEConclusao"
+      ]
+    }
+  ],
+  "cobertura_dominio": {
+    "INSTRUCTION": {
+      "cobertos": 151,
+      "perdidos": 0
+    },
+    "BRANCH": {
+      "cobertos": 22,
+      "perdidos": 0
+    },
+    "LINE": {
+      "cobertos": 33,
+      "perdidos": 0
+    },
+    "COMPLEXITY": {
+      "cobertos": 24,
+      "perdidos": 0
+    },
+    "METHOD": {
+      "cobertos": 13,
+      "perdidos": 0
+    },
+    "CLASS": {
+      "cobertos": 1,
+      "perdidos": 0
+    }
+  },
+  "python_testes": 4,
+  "python_falhas": 0
+}

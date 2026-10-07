@@ -8,7 +8,7 @@ Sustenta ASR-16/17/18, selecionados na matriz cumulativa. As saídas pertencem a
 
 | Arquivo/pasta | Como usar |
 | --- | --- |
-| [jenkins/jenkins.json](jenkins/jenkins.json) | Build 3 SUCCESS, commit ec3f977, 29 testes sem falhas e stages Docker desabilitados. |
+| [jenkins/jenkins.json](jenkins/jenkins.json) | Status, build, revisão Git, 29 testes sem falhas e stages Docker desabilitados. |
 | [jenkins/jenkins-console.log](jenkins/jenkins-console.log) | Saída completa do pipeline real. |
 | [jenkins/jenkins-plugins.json](jenkins/jenkins-plugins.json) | Manifesto do controller utilizado. |
 | [monitoramento/prometheus-grafana.json](monitoramento/prometheus-grafana.json) | Queries reais, uma pendência durante a falha, zero após recuperação e dashboard com oito painéis. |

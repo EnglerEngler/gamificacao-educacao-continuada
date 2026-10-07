@@ -2,7 +2,7 @@
 
 Os arquivos são saídas dos testes e serviços executados, não exemplos de resultados. Cada microsolução tem uma hipótese descrita no ADR.
 
-Validação final: **25 testes Java + 4 testes Python**, sem falhas; domínio com **100% de linhas e ramificações** cobertas. O Jenkins build **3** validou a revisão `ec3f977` com os mesmos 29 testes. Os resultados detalhados e o commit completo estão nos JSONs dos desafios 2 e 6.
+Validação final: **25 testes Java + 4 testes Python**, sem falhas; domínio com **100% de linhas e ramificações** cobertas. A execução real do Jenkins valida os mesmos 29 testes; número do build e revisão completa estão registrados no resultado do desafio 6. Os resultados detalhados e o commit completo estão nos JSONs dos desafios 2 e 6.
 
 | Desafio | Evidência | Resultado |
 | --- | --- | --- |

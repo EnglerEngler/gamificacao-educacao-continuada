@@ -25,7 +25,7 @@ Os componentes precisam de gates de construção e métricas que demonstrem falh
 
 | Arquivo/pasta do produto | Papel no experimento |
 | --- | --- |
-| [Jenkinsfile](../../Jenkinsfile) | Esteira e gates |
+| [Jenkinsfile](../../Jenkinsfile) | Esteira, gates e JAR executável com interface |
 | [prometheus.yml](../../ops/prometheus/prometheus.yml) | Scrape |
 | [alerts.yml](../../ops/prometheus/alerts.yml) | Alertas |
 | [b1.json](../../ops/grafana/dashboards/b1.json) | Oito painéis |
@@ -42,7 +42,7 @@ Execute na raiz do repositório. Prepare o ambiente com `bash scripts/bootstrap-
 bash scripts/bootstrap-jenkins.sh
 ```
 
-Jenkins real build 3 SUCCESS com 29 testes; Prometheus/Grafana registram falha e recuperação. Imagens/deploy Docker são stages opcionais não executados no WSL; processos nativos comprovaram o mini-lab.
+Jenkins real com resultado SUCCESS e 29 testes; Prometheus/Grafana registram falha e recuperação. Imagens/deploy Docker são stages opcionais não executados no WSL; processos nativos comprovaram o mini-lab.
 
 A avaliação usa o mesmo padrão: RF/RNF/ASR (0,25), RPC/alternativas (0,20), ADR (0,20), C4 (0,15) e microsolução/evidência/Git (0,20). Justificativa e consequências completas estão no ADR; os resultados brutos permanecem na pasta de evidências.
 

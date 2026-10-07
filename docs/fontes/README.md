@@ -6,7 +6,7 @@ Os três arquivos originais recebidos estão preservados nesta pasta:
 - `B1_Desafio1_Monolito_Camadas.zip`: exemplo de estrutura horizontal.
 - `B1_Desafio1_Monolito_Modular.zip`: exemplo de agrupamento por capacidade.
 
-A base de implementação é o próprio Aprende+ da AC1 (commit b31abd3), para cumprir reaproveitamento do legado. Os ZIPs contêm as mesmas 37 classes após desconsiderar package/import; a versão modular ainda tem acesso direto à persistência de outros módulos e imports ausentes de Usuario/Curso em Matricula. Não foram tratados como arquitetura pronta.
+A base de implementação é o próprio Aprende+ da AC1 (commit b31abd3), para cumprir reaproveitamento do legado. Os ZIPs contêm as mesmas 37 classes após desconsiderar package/import; a referência modular também tem quatro arquivos package-info.java para documentar os módulos; a versão modular ainda tem acesso direto à persistência de outros módulos e imports ausentes de Usuario/Curso em Matricula. Não foram tratados como arquitetura pronta.
 
 Diferença semântica preservada: a AC1 recompensa média **maior que 7,0**; o exemplo de matrícula recompensa >= 7,0. A regra do produto foi mantida e testada.
 

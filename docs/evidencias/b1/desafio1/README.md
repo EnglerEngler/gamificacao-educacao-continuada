@@ -9,7 +9,7 @@ Sustenta ASR-01/02/03, selecionados na matriz cumulativa. As saídas pertencem a
 | Arquivo/pasta | Como usar |
 | --- | --- |
 | [dependencias.json](dependencias.json) | Imports do mesmo caso de uso antes/depois e ausência de dependências técnicas no domínio. |
-| [ranking-carga.json](ranking-carga.json) | 100 mil registros H2, 30 consultas sequenciais, resposta de 20 itens, p50 21,53 ms e p95 32,70 ms. |
+| [ranking-carga.json](ranking-carga.json) | 100 mil registros H2, 30 consultas sequenciais, resposta de 20 itens e amostras/p50/p95 medidos. |
 
 ## Como interpretar
 

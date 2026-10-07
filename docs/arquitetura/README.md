@@ -140,6 +140,9 @@ Não levar por enquanto: microserviço de ranking, Kafka, RabbitMQ, banco vetori
 
 Em cada desafio, RF/RNF/ASR corresponde a 0,25; RPC/alternativas a 0,20; ADR a 0,20; C4 a 0,15; microsolução/evidência/Git a 0,20. Total: seis desafios de 1,0 ponto. Esta matriz liga cada item ao artefato que permite avaliação, sem prometer a nota.
 
+Na revisão final de 07/10/2026, os seis desafios foram conferidos novamente contra o DOCX original: oito etapas por desafio, três ASRs prioritários por desafio, seis ADRs, diagramas C4, microsoluções e evidências. Os [testes](../evidencias/b1/desafio2/testes.json) registram 25 casos Java e quatro Python aprovados, com 100% de linhas e branches do domínio `aluno`. O [Jenkins](../evidencias/b1/desafio6/jenkins/jenkins.json) aprovou os 29 casos e arquivou o JAR com a interface Vue; as falhas e recuperações de IA, outbox e MQTT foram executadas novamente em serviços reais nativos. A [proveniência](../evidencias/b1/proveniencia.json) identifica a revisão validada e o [manifesto](../evidencias/b1/manifesto-sha256.json) permite verificar a integridade das evidências.
+
+Os containers e os stages Docker permanecem configurados, mas não foram executados porque a integração do Docker Desktop com este WSL estava indisponível. Esse limite está registrado nas evidências e na seleção de validações futuras para AF.
 
 ## Integração da main da equipe
 

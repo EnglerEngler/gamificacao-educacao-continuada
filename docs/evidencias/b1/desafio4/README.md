@@ -8,7 +8,7 @@ Sustenta ASR-10/11/12, selecionados na matriz cumulativa. As saídas pertencem a
 
 | Arquivo/pasta | Como usar |
 | --- | --- |
-| [falha-recuperacao.json](falha-recuperacao.json) | Controle síncrono 503; resposta assíncrona bem-sucedida em 53,52 ms, reenvio e retomada após reinício. |
+| [falha-recuperacao.json](falha-recuperacao.json) | Controle síncrono 503; resposta assíncrona bem-sucedida com latência medida, reenvio e retomada após reinício. |
 
 ## Como interpretar
 

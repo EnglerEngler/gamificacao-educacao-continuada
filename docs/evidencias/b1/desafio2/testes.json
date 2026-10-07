@@ -1,5 +1,5 @@
 {
-  "coletado_utc": "2026-10-07T00:02:09.711417+00:00",
+  "coletado_utc": "2026-10-07T04:52:33.597078+00:00",
   "comando_java": "mvn -B verify",
   "java_testes": 25,
   "suites": [

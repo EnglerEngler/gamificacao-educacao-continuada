@@ -8,7 +8,7 @@ Sustenta ASR-07/08/09, selecionados na matriz cumulativa. As saídas pertencem a
 
 | Arquivo/pasta | Como usar |
 | --- | --- |
-| [falha-ia.json](falha-ia.json) | Respostas com Python ativo, recomendação/assistente degradados e latência de fallback 25,95 ms. |
+| [falha-ia.json](falha-ia.json) | Respostas com Python ativo, recomendação/assistente degradados e latência medida de fallback. |
 
 ## Como interpretar
 

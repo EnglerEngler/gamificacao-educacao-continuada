@@ -1,5 +1,5 @@
 {
-  "inicio_utc": "2026-10-07T00:06:48.749786+00:00",
+  "inicio_utc": "2026-10-07T04:53:01.498542+00:00",
   "http_sincrono": 503,
   "resposta_assincrona": {
     "id": 1,
@@ -27,7 +27,7 @@
     ],
     "pontos": 100
   },
-  "latencia_core_ms": 53.52,
+  "latencia_core_ms": 66.13,
   "core_reiniciado_sem_perder_recompensa": true,
-  "evento_entregue_apos_recuperacao": "2e49c652-3e6e-4e07-8884-c159fe957c16"
+  "evento_entregue_apos_recuperacao": "35a838bc-78a4-4e99-9429-68c20afbb6e8"
 }

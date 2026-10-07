@@ -1,10 +1,27 @@
 {
-  "fechado_utc": "2026-10-07T00:09:25.801636+00:00",
-  "codigo_core_validado": "ec3f9775e7a8d7b8fab7af0e8d1669124660627e",
-  "jenkins_build": 3,
+  "fechado_utc": "2026-10-07T04:57:50.017696+00:00",
+  "codigo_core_validado": "b7cbcc747ed5bf49b9fb33a0b3609d9575154ae6",
+  "jenkins_build": 4,
+  "jenkins_status": "SUCCESS",
   "testes_java": 25,
   "testes_python": 4,
+  "cobertura_dominio_aluno": {
+    "linhas_percentual": 100,
+    "branches_percentual": 100
+  },
   "ambiente": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
-  "jar_sha256": "753ebed7d2146410c08c20b28d7085873783b15a13a2dfd1a85b1fdd7e49ddba",
-  "observacao": "Código do Core, frontend e serviços corresponde à revisão integrada ec3f977; ajustes finais de organização, scripts e evidências validados separadamente. Serviços reais executados nativamente; stages Docker não executados."
+  "jar_sha256": "d4972a68b6d8f0f12d9f081894760d7bdd66d15acac61ca6002139221a8bc694",
+  "jar_arquivado_no_jenkins": "target/gamificacao-educacao-continuada-1.0.0.jar",
+  "interface_vue_no_jar_verificada": true,
+  "docx_sha256": "cb5b51138ad714b3f86d6bbaf6a47fbdbdf7b41d6ccbf32065714934972b1d7f",
+  "conferencia": {
+    "desafios": 6,
+    "adrs": 6,
+    "asrs": 18,
+    "etapas_por_desafio": 8,
+    "falhas_ia_outbox_mqtt_reexecutadas": true,
+    "links_locais_validos": true
+  },
+  "docker_executado": false,
+  "observacao": "Core, frontend, serviços e pipeline correspondem à revisão validada pelo Jenkins. Evidências desta nova execução e ajustes de documentação são posteriores ao build. O p95 do script de coleta foi corrigido para nearest rank e recalculado a partir das mesmas 30 amostras preservadas, sem alterar os tempos medidos. Serviços reais executados nativamente; stages Docker não executados."
 }

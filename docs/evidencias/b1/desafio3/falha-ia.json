@@ -1,5 +1,5 @@
 {
-  "inicio_utc": "2026-10-07T00:06:48.749786+00:00",
+  "inicio_utc": "2026-10-07T04:53:01.498542+00:00",
   "servico_disponivel": {
     "degradado": false,
     "cursos": [
@@ -19,18 +19,18 @@
     "modo": "retrieval-extrativo-lab"
   },
   "servico_interrompido": {
-    "degradado": true,
+    "origem": "catalogo-local",
     "cursos": [
       "Fundamentos de programação"
     ],
-    "origem": "catalogo-local"
+    "degradado": true
   },
   "assistente_interrompido": {
-    "resposta": "Assistente temporariamente indisponível. Consulte o material do curso.",
-    "origem": "fallback",
+    "fontes": [],
     "degradado": true,
-    "fontes": []
+    "origem": "fallback",
+    "resposta": "Assistente temporariamente indisponível. Consulte o material do curso."
   },
-  "latencia_fallback_ms": 25.95,
+  "latencia_fallback_ms": 26.89,
   "ranking_continua_operando": true
 }

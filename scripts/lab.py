@@ -1,6 +1,7 @@
 """Executa serviços reais e falhas controladas, sem Docker e sem usar serviços externos."""
 import argparse
 import json
+import math
 import os
 from pathlib import Path
 import shutil
@@ -318,7 +319,8 @@ def evidence(state):
     write("desafio1/ranking-carga.json", {"banco": "H2 2.3.232, modo PostgreSQL",
           "registros_semeados": 100000, "instituicao_carga": carga_tenant, "requisicoes_sequenciais": len(samples),
           "tamanho_resposta": 20, "p50_ms": round(statistics.median(samples), 2),
-          "p95_ms": round(sorted(samples)[int(len(samples)*0.95)-1], 2),
+          "p95_ms": round(sorted(samples)[math.ceil(len(samples)*0.95)-1], 2),
+          "metodo_p95": "nearest rank: amostra ordenada na posição ceil(0,95 * n), com posições a partir de 1",
           "amostras_ms": [round(v,2) for v in samples],
           "limite": "Mede tamanho de dados e resposta limitada no lab; não comprova 100 mil usuários concorrentes nem capacidade de produção PostgreSQL."})
     time.sleep(5)

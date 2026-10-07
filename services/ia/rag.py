@@ -1,7 +1,7 @@
 """Retrieval + resposta extrativa local. LLM externo é uma evolução documentada para AF."""
 DOCUMENTOS = [
     {"id": "ac1-us01", "texto": "Ao concluir um curso com média maior que 7,0, o aluno recebe três novos cursos. Média igual a 7,0 não recebe recompensa."},
-    {"id": "b1-conquistas", "texto": "A primeira conclusão aprovada concede o badge primeira-conclusao. Ao atingir 12 conclusões aprovadas, o plano torna-se Premium e são concedidas três moedas uma única vez."},
+    {"id": "b1-conquistas", "texto": "A primeira conclusão aprovada concede o badge primeira-conclusao. Ao atingir 12 conclusões, o plano torna-se Premium e são concedidas três moedas uma única vez."},
     {"id": "b1-iot", "texto": "Eventos IoT usam MQTT QoS 1, sessão persistente e identificadores estáveis para impedir recompensas duplicadas."},
 ]
 

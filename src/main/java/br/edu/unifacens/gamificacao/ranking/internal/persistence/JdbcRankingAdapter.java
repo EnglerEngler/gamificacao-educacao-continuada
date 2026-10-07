@@ -12,12 +12,11 @@ public class JdbcRankingAdapter implements RankingPort {
     public JdbcRankingAdapter(JdbcTemplate jdbc) { this.jdbc=jdbc; }
     public List<RankingEntry> listar(String instituicao, int limite, int offset) {
         return jdbc.query("""
-            select id, nome, cursos_concluidos, moedas, cursos_concluidos*100+moedas as pontos
+            select id, nome, cursos_concluidos, cursos_aprovados, moedas, cursos_aprovados*100+moedas as pontos
             from alunos where instituicao=?
             order by pontos desc, id asc limit ? offset ?
             """, (r,n) -> new RankingEntry(r.getLong("id"), r.getString("nome"),
-                r.getInt("cursos_concluidos"), r.getInt("moedas"), r.getInt("pontos")),
+                r.getInt("cursos_concluidos"), r.getInt("cursos_aprovados"), r.getInt("moedas"), r.getInt("pontos")),
             instituicao, limite, offset);
     }
 }
-

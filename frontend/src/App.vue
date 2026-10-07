@@ -60,12 +60,12 @@ onMounted(carregar)
         <button>Cadastrar</button>
       </form>
     </section>
-    <section class="rule"><b>Recompensa:</b> concluir um curso com média maior que 7,0 libera três novos cursos. Ao atingir 12 aprovações, o plano passa a Premium e recebe três moedas.</section>
+    <section class="rule"><b>Recompensa:</b> concluir um curso com média maior que 7,0 libera três novos cursos. Ao atingir 12 conclusões, o plano passa a Premium e recebe três moedas, independentemente da média.</section>
     <p v-if="mensagem" class="message" :class="tipoMensagem" role="status">{{ mensagem }}</p>
     <section class="grid">
       <article v-for="aluno in alunos" :key="aluno.id" class="card aluno">
         <h2>{{ aluno.nome }}</h2>
-        <div class="stats"><span><b>{{ aluno.cursosDisponiveis }}</b> cursos disponíveis</span><span><b>{{ aluno.pontos }}</b> pontos · {{ aluno.plano }}</span></div>
+        <div class="stats"><span><b>{{ aluno.cursosDisponiveis }}</b> cursos disponíveis</span><span><b>{{ aluno.cursosConcluidos }}</b> cursos concluídos</span><span><b>{{ aluno.moedas }}</b> moedas</span><span><b>{{ aluno.pontos }}</b> pontos · {{ aluno.plano }}</span></div>
         <p v-if="aluno.badges.length">Conquista: primeira conclusão aprovada 🏅</p>
         <form @submit.prevent="concluir(aluno)">
           <label>Código do curso<input v-model="cursosPorAluno[aluno.id]" placeholder="curso-1" maxlength="120"></label>

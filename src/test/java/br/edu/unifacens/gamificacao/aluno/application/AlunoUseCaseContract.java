@@ -19,7 +19,8 @@ abstract class AlunoUseCaseContract {
             new ConcluirCursoRequest(new BigDecimal("8"),true,"curso-1",UUID.randomUUID())).cursosDisponiveis());
         var limite=s.concluirCurso("ac1",aluno.id(),
             new ConcluirCursoRequest(new BigDecimal("7"),true,"curso-2",UUID.randomUUID()));
-        assertEquals(8,limite.cursosDisponiveis()); assertEquals(1,limite.cursosConcluidos());
+        assertEquals(8,limite.cursosDisponiveis()); assertEquals(2,limite.cursosConcluidos());
+        assertEquals(1,limite.cursosAprovados());
     }
     @Test void isolaInstituicoes() {
         var s=service();
@@ -29,4 +30,3 @@ abstract class AlunoUseCaseContract {
             new ConcluirCursoRequest(new BigDecimal("8"),true,"curso-1",UUID.randomUUID())));
     }
 }
-

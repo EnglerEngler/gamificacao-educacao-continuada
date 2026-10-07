@@ -14,15 +14,29 @@ class ConquistasTest {
         assertEquals(3,a.getMoedas()); assertEquals(13,a.getCursosConcluidos());
     }
     @Test void rejeitaEstadoInvalidoEMediasForaDoIntervalo() {
-        assertThrows(IllegalArgumentException.class,()->new Aluno(-1,0,0));
-        assertThrows(IllegalArgumentException.class,()->new Aluno(0,-1,0));
-        assertThrows(IllegalArgumentException.class,()->new Aluno(0,0,-1));
-        var a=new Aluno(0,0,0);
+        assertThrows(IllegalArgumentException.class,()->new Aluno(-1,0,"BASICO",0,0));
+        assertThrows(IllegalArgumentException.class,()->new Aluno(0,-1,"BASICO",0,0));
+        assertThrows(IllegalArgumentException.class,()->new Aluno(0,0,"BASICO",-1,0));
+        assertThrows(IllegalArgumentException.class,()->new Aluno(0,0,"BASICO",0,-1));
+        var a=new Aluno(0,0,"BASICO",0,0);
         assertThrows(IllegalArgumentException.class,()->a.concluirCurso(new BigDecimal("-1"),true));
         assertThrows(IllegalArgumentException.class,()->a.concluirCurso(new BigDecimal("10.1"),true));
         a.concluirCurso(BigDecimal.ZERO,true);
         a.concluirCurso(BigDecimal.TEN,false);
-        assertEquals(0,a.getCursosConcluidos());
+        assertEquals(1,a.getCursosConcluidos());
+        assertEquals(0,a.getCursosAprovados());
+    }
+    @Test void us03ContaConclusoesMesmoSemAprovacao() {
+        var a=new Aluno(5,11,"BASICO",0,0);
+        a.concluirCurso(new BigDecimal("7"),true);
+        assertEquals(12,a.getCursosConcluidos()); assertTrue(a.isPremium());
+        assertEquals(3,a.getMoedas()); assertEquals(5,a.getCursosDisponiveis());
+        assertEquals(0,a.getCursosAprovados()); assertFalse(a.possuiBadge()); assertEquals(3,a.getPontos());
+    }
+    @Test void preservaPlanoPremiumExistenteSemRecreditarMoedas() {
+        var a=new Aluno(5,12,"PREMIUM",3,2);
+        a.concluirCurso(new BigDecimal("8"),true);
+        assertEquals("PREMIUM",a.getPlano()); assertEquals(3,a.getMoedas());
+        assertEquals(13,a.getCursosConcluidos()); assertEquals(3,a.getCursosAprovados());
     }
 }
-

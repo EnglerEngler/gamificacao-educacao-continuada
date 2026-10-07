@@ -24,7 +24,7 @@ shutil.copyfile(ROOT / "target/site/jacoco/jacoco.xml", out / "jacoco.xml")
 shutil.copytree(ROOT / "target/site/jacoco", out / "cobertura", dirs_exist_ok=True)
 python = ET.parse(ROOT / ".runtime/python-tests.xml").getroot()
 pysuites = list(python) if python.tag == "testsuites" else [python]
-result = {"coletado_utc": datetime.now(timezone.utc).isoformat(), "comando_java": "mvn -B clean verify",
+result = {"coletado_utc": datetime.now(timezone.utc).isoformat(), "comando_java": "mvn -B verify",
           "java_testes": sum(s["testes"] for s in suites), "suites": suites,
           "cobertura_dominio": counters, "python_testes": sum(int(s.attrib["tests"]) for s in pysuites),
           "python_falhas": sum(int(s.attrib["failures"]) + int(s.attrib["errors"]) for s in pysuites)}
@@ -32,4 +32,3 @@ assert result["python_falhas"] == 0
 shutil.copyfile(ROOT / ".runtime/python-tests.xml", out / "python-tests.xml")
 (out / "testes.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
 print(f"Evidência: {result['java_testes']} testes Java e {result['python_testes']} Python; domínio 100% linhas/branches")
-

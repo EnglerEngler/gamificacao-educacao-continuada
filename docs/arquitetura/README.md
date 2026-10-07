@@ -2,9 +2,9 @@
 
 ## Entrega e equipe
 
-Repositório: https://github.com/EnglerEngler/gamificacao-educacao-continuada  
-Produto: Aprende+ — Gamificação para Educação Continuada.  
-Base AC1 preservada em `labs/desafio1/baseline/`, commit `b31abd3`.  
+Repositório: https://github.com/EnglerEngler/gamificacao-educacao-continuada
+Produto: Aprende+ — Gamificação para Educação Continuada.
+Baseline inicial da AC1 preservado em `labs/desafio1/baseline/`, commit `b31abd3`. A contribuição US03 da main (ef33fa7 / PR #1) também foi integrada ao módulo aluno, preservando testes e autoria.
 Enunciado e ZIPs recebidos: [fontes originais](../fontes/README.md).
 
 | Integrante | RA |
@@ -28,7 +28,7 @@ As evidências de operação foram produzidas com processos reais no WSL, usando
 | RF | Comportamento observado | Endpoint/fluxo |
 | --- | --- | --- |
 | RF01 | Ranking por instituição, 100 pontos por aprovação + moedas; leitura limitada e ordem estável | `GET /api/ranking?limite=20&pagina=0` |
-| RF02 | Recompensa AC1, badge de primeira aprovação e Premium/três moedas ao atingir 12 aprovações | `POST /api/alunos/{id}/cursos/conclusao` |
+| RF02 | Recompensa AC1, badge de primeira aprovação e Premium/três moedas ao atingir 12 conclusões | `POST /api/alunos/{id}/cursos/conclusao` |
 | RF03 | Recomendação por interesse, com catálogo local na falha de IA | `GET /api/ia/recomendacoes` |
 | RF04 | Assistente educacional com fontes locais e resposta de indisponibilidade | `POST /api/ia/assistente` |
 | RF05 | Notificação eventual de conclusão, sem bloquear o Core | Outbox → HTTP → consumidor idempotente |
@@ -136,3 +136,7 @@ Não levar por enquanto: microserviço de ranking, Kafka, RabbitMQ, banco vetori
 
 Em cada desafio, RF/RNF/ASR corresponde a 0,25; RPC/alternativas a 0,20; ADR a 0,20; C4 a 0,15; microsolução/evidência/Git a 0,20. Total: seis desafios de 1,0 ponto. Esta matriz liga cada item ao artefato que permite avaliação, sem prometer a nota.
 
+
+## Integração da main da equipe
+
+A atualização ef33fa7 trouxe a US03 de Khevyn. Sua regra conta toda conclusão para Premium, mesmo com média <= 7,0; a US01 concede novos cursos apenas com média > 7,0. O B1 preserva ambas usando cursosConcluidos e cursosAprovados separados, além do plano persistido. Não foi inferida aprovação de dados legados sem notas. Marcadores de conflito que já estavam no frontend/BDD da main foram resolvidos conservando os cenários de ambas as histórias.

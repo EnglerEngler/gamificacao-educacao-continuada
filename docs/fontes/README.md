@@ -20,3 +20,5 @@ Documentação primária consultada na implementação:
 
 As versões são do laboratório reproduzível, sem afirmação de serem as versões mais recentes.
 
+
+A evolução da main ef33fa7 (PR #1 de Khevyn) também foi integrada; cursos concluídos para Premium e aprovados para recompensa/ranking têm contadores distintos. A snapshot inicial b31abd3 continua intacta para comparação estrutural do D1.

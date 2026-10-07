@@ -4,7 +4,7 @@ Status: aceito para B1. Desafio 2. RF02. ASR-04/05/06.
 
 ## Contexto
 
-A AC1 já possui a regra pura Aluno.concluirCurso, mas AlunoService importa diretamente AlunoEntity e Spring Data repository. A evolução acrescenta badge, Premium/moedas, ranking e eventos; substituir a persistência não deve exigir reescrever regra de negócio.
+A AC1 já possui a regra pura Aluno.concluirCurso, mas AlunoService importa diretamente AlunoEntity e Spring Data repository. A contribuição US03 acrescenta Premium/moedas; o B1 acrescenta badge, ranking e eventos; substituir a persistência não deve exigir reescrever regra de negócio.
 
 RNFs: manutenibilidade, testabilidade, modificabilidade e facilidade de evolução. Selecionamos os três primeiros; evolução é consequência das fronteiras estabelecidas.
 
@@ -40,3 +40,7 @@ Concessão não é repetida quando a mesma instituição/aluno/curso reaparece. 
 
 Revisar mapeamentos/porta se novas invariantes exigirem outro agregado; evitar interfaces genéricas para toda classe sem necessidade.
 
+
+## Continuidade com US03
+
+A main ef33fa7 foi integrada preservando a contribuição de Khevyn: toda conclusão incrementa cursosConcluidos e pode atingir Premium, independentemente da média. CursosAprovados controla apenas novos cursos, badge e pontuação, mantendo > 7,0. Plano e moedas persistidos são reaproveitados, sem promover novamente quem já está Premium. Os testes originais de US03 foram movidos para o novo pacote e complementados com o limite de média 7 no décimo segundo curso.

@@ -285,8 +285,10 @@ def evidence(state):
     # Cenário 100 mil registros em H2. Não equivale a 100 mil acessos simultâneos.
     h2jar = Path.home() / ".m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar"
     carga_tenant = 'carga-' + uuid4().hex[:8]
-    sql = f"""INSERT INTO alunos(instituicao,nome,cursos_disponiveis,cursos_concluidos,moedas,versao)
-        SELECT '{carga_tenant}', CONCAT('Aluno ', X), 5, MOD(X,30), 0, 0 FROM SYSTEM_RANGE(1,100000)"""
+    sql = f"""INSERT INTO alunos(instituicao,nome,cursos_disponiveis,cursos_concluidos,cursos_aprovados,plano,moedas,versao)
+        SELECT '{carga_tenant}', CONCAT('Aluno ', X), 5, MOD(X,30), MOD(X,30),
+        CASE WHEN MOD(X,30)>=12 THEN 'PREMIUM' ELSE 'BASICO' END,
+        CASE WHEN MOD(X,30)>=12 THEN 3 ELSE 0 END, 0 FROM SYSTEM_RANGE(1,100000)"""
     subprocess.run(["java", "-Xmx128m", "-cp", str(h2jar), "org.h2.tools.Shell", "-url",
                     "jdbc:h2:file:" + state["data"] + "/core;MODE=PostgreSQL;AUTO_SERVER=TRUE",
                     "-user", "sa", "-password", "", "-sql", sql], check=True, capture_output=True)

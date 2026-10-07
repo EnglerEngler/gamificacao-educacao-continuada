@@ -28,13 +28,13 @@ public class JpaAlunoAdapter implements AlunoStore {
     }
     public void salvarConclusao(Registro r, String cursoId, UUID eventoId) {
         var e = alunos.buscarComBloqueio(r.instituicao(), r.id()).orElseThrow();
-        e.atualizar(r.aluno().getCursosDisponiveis(), r.aluno().getCursosConcluidos(), r.aluno().getMoedas());
+        e.atualizar(r.aluno().getCursosDisponiveis(), r.aluno().getCursosConcluidos(), r.aluno().getMoedas(),
+            r.aluno().getCursosAprovados(), r.aluno().getPlano());
         alunos.save(e);
         conclusoes.saveAndFlush(new ConclusaoEntity(r.instituicao(), r.id(), cursoId, eventoId));
     }
     private Registro map(AlunoEntity e) {
         return new Registro(e.getId(), e.getInstituicao(), e.getNome(),
-            new Aluno(e.getCursosDisponiveis(), e.getCursosConcluidos(), e.getMoedas()));
+            new Aluno(e.getCursosDisponiveis(), e.getCursosConcluidos(), e.getPlano(), e.getMoedas(), e.getCursosAprovados()));
     }
 }
-

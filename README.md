@@ -56,7 +56,7 @@ Critérios de aceitação (BDD), também disponíveis em [docs/gamificacao.featu
 2. A conclusão com média 7,0 ou menor não libera cursos.
 3. Um curso que ainda está em andamento não gera recompensa.
 
-**Escopo da AC1:** somente a US01. O B1 reaproveita essa regra e acrescenta conquistas/Premium, ranking e integrações. A recompensa de participação no fórum (US02) continua fora dos mini-labs; não foi apresentada como implementada.
+**Escopo da AC1 integrado:** US01 e a US03 implementada por Khevyn no PR #1. O B1 preserva a contagem de todas as conclusões para Premium e separa aprovações para recompensas/ranking. A US02 (fórum) continua fora dos mini-labs.
 
 ## BDD: cenários e responsáveis
 
@@ -66,7 +66,7 @@ Os cenários estão em [docs/gamificacao.feature](docs/gamificacao.feature). A i
 | --- | --- | --- |
 | João Victor Cardoso Engler Rizzi de Araujo — RA 236602 | US01 | Desbloqueio com média maior que 7; média igual a 7 não libera cursos; curso em andamento não libera cursos. |
 | Eduardo Bismara Nastri — RA 211466 | US02 | A redigir e implementar: premiação mensal para aluno mais participativo do fórum. |
-| Khevyn Henrique Guedes T. Alves — RA 223761 | US03 | A redigir e implementar: mudança para plano Premium ao atingir 12 cursos e crédito de três moedas. |
+| Khevyn Henrique Guedes T. Alves — RA 223761 | US03 | Implementado por Khevyn no PR #1; regras e testes preservados no módulo aluno do B1. |
 
 Exemplo do cenário principal (US01):
 
@@ -128,7 +128,7 @@ O relatório fica em `target/site/jacoco/index.html`. O JaCoCo exige 100% das li
 
 | Evidência exigida | Localização / Comprovação | Status |
 | --- | --- | --- |
-| **BDD** | Arquivo `docs/gamificacao.feature` e planilha anexada | US01 implementada; US02 e US03 aguardam os responsáveis |
+| **BDD** | Arquivo `docs/gamificacao.feature` e planilha anexada | US01 e US03 implementadas; US02 fora do escopo B1 |
 | **RED, GREEN e BLUE** | Histórico de commits/tags e screenshots abaixo | Concluído (US01) |
 | **Testes e cobertura** | Relatório JaCoCo (`target/site/jacoco/index.html`) | Validado: 100% do domínio atendido |
 
@@ -200,3 +200,7 @@ cd frontend
 npm install
 npm run dev
 ```
+
+## Contribuição US03 preservada
+
+A promoção automática após 12 cursos concluídos, independentemente da média, as três moedas concedidas uma única vez e os testes TDD de Khevyn foram integrados a partir do [PR #1](https://github.com/EnglerEngler/gamificacao-educacao-continuada/pull/1), commit ef33fa7. Os commits originais permanecem no histórico. O B1 separa cursosConcluidos (US03) de cursosAprovados (recompensa > 7,0 e ranking). O workflow GitHub Actions da contribuição foi mantido; Jenkins continua sendo a base de operação do B1.

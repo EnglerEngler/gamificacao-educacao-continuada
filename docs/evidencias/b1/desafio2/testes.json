@@ -1,7 +1,7 @@
 {
-  "coletado_utc": "2026-10-06T22:58:23.374113+00:00",
-  "comando_java": "mvn -B clean verify",
-  "java_testes": 20,
+  "coletado_utc": "2026-10-07T00:02:09.711417+00:00",
+  "comando_java": "mvn -B verify",
+  "java_testes": 25,
   "suites": [
     {
       "nome": "br.edu.unifacens.gamificacao.aluno.application.FakeAdapterContractTest",
@@ -27,27 +27,32 @@
     },
     {
       "nome": "br.edu.unifacens.gamificacao.aluno.domain.AlunoTest",
-      "testes": 5,
+      "testes": 8,
       "falhas": 0,
       "erros": 0,
       "ignorados": 0,
       "casos": [
+        "naoDuplicaMoedasQuandoAlunoJaEPremium",
         "desbloqueiaTresCursosQuandoConcluiComMediaMaiorQueSete",
+        "atualizaParaPremiumAoConcluirDecimoSegundoCurso",
         "naoProcessaCursoQueAindaEstaEmAndamento",
         "naoDesbloqueiaCursosQuandoMediaForMenorQueSete",
-        "rejeitaValoresNegativosEMediaNula",
+        "rejeitaValoresInvalidosEMediaNula",
+        "permaneceBasicoAntesDeDozeCursosConcluidos",
         "naoDesbloqueiaCursosQuandoMediaForIgualASete"
       ]
     },
     {
       "nome": "br.edu.unifacens.gamificacao.aluno.domain.ConquistasTest",
-      "testes": 2,
+      "testes": 4,
       "falhas": 0,
       "erros": 0,
       "ignorados": 0,
       "casos": [
         "rejeitaEstadoInvalidoEMediasForaDoIntervalo",
-        "premioPremiumAconteceUmaUnicaVez"
+        "us03ContaConclusoesMesmoSemAprovacao",
+        "premioPremiumAconteceUmaUnicaVez",
+        "preservaPlanoPremiumExistenteSemRecreditarMoedas"
       ]
     },
     {
@@ -98,23 +103,23 @@
   ],
   "cobertura_dominio": {
     "INSTRUCTION": {
-      "cobertos": 113,
+      "cobertos": 151,
       "perdidos": 0
     },
     "BRANCH": {
-      "cobertos": 20,
+      "cobertos": 22,
       "perdidos": 0
     },
     "LINE": {
-      "cobertos": 24,
+      "cobertos": 33,
       "perdidos": 0
     },
     "COMPLEXITY": {
-      "cobertos": 20,
+      "cobertos": 24,
       "perdidos": 0
     },
     "METHOD": {
-      "cobertos": 10,
+      "cobertos": 13,
       "perdidos": 0
     },
     "CLASS": {

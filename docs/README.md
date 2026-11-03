@@ -8,7 +8,7 @@ O **[documento único da entrega B1](arquitetura/README.md)** reúne equipe, req
 | ADRs | [adr/README.md](adr/README.md). |
 | C4 e SVGs | [arquitetura/diagramas/README.md](arquitetura/diagramas/README.md). |
 | Evidências | [evidencias/b1/README.md](evidencias/b1/README.md), separadas por desafio. |
-| Originais recebidos | [fontes/README.md](fontes/README.md): DOCX e dois ZIPs de referência. |
+| Originais recebidos | [fontes/README.md](fontes/README.md): dois DOCX (enunciado e exemplo de solução do desafio 1) e dois ZIPs de referência. |
 | Histórico da AC1 | [historico/ac1/README.md](historico/ac1/README.md): BDD, planilha, guias e imagens anteriores. |
 
 O [baseline AC1](../labs/desafio1/baseline) sustenta a comparação do desafio 1.

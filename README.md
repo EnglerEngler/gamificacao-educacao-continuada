@@ -4,6 +4,10 @@ Entrega B1: seis decisões evolutivas, Core modular, domínio com Ports & Adapte
 
 **Documento oficial: [registro arquitetural cumulativo](docs/arquitetura/README.md)**: identificação da equipe, RF/RNF/RPC, matriz de 18 ASRs (três por desafio), seis ADRs, C4 e síntese para a PoC da AF.
 
+Revisão de **03/11/2026**: código e entrega conferidos contra as [quatro fontes fornecidas](docs/fontes/README.md), incluindo o exemplo orientativo do desafio 1. Foram aprovados novamente 25 testes Java e quatro Python, com 100% de cobertura de linhas e branches do domínio `aluno`. O JAR com a interface foi testado com Core/FastAPI reais, fallback e recuperação de notificações. O Vite foi atualizado para 6.4.5 e a auditoria npm reportou zero vulnerabilidades.
+
+Os [resultados e a proveniência](docs/evidencias/b1/proveniencia.json) distinguem essa revisão local das evidências anteriores de Jenkins/MQTT/monitoramento. Docker permanece configurado e sem execução validada neste WSL. A análise completa continua no documento oficial acima.
+
 ## Entrega principal, desafios e evidências
 
 | Parte da atividade | Abra este arquivo | Conteúdo |
@@ -24,7 +28,7 @@ Entrega B1: seis decisões evolutivas, Core modular, domínio com Ports & Adapte
 | `docs/arquitetura/` | Registro cumulativo, matriz de ASRs e diagramas C4 com SVG. |
 | `docs/adr/` | As seis decisões arquiteturais. |
 | `docs/evidencias/b1/desafio1..6/` | Resultados reais, relatórios, logs e capturas por desafio. |
-| `docs/fontes/` | Os três arquivos originais do exercício. |
+| [docs/fontes](docs/fontes/README.md) | Quatro arquivos originais: enunciado, exemplo de solução do desafio 1 e dois ZIPs de referência. |
 | `labs/desafio1..6/` | Página de cada desafio e referências à sua microsolução; baseline AC1 preservado no desafio 1. |
 | `docs/historico/ac1/` | BDD, planilha, guias e evidências anteriores da AC1. |
 | [scripts](scripts/README.md) | Preparação, execução, validação e coleta de evidências. |

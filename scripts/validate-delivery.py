@@ -1,11 +1,21 @@
 """Valida rastreabilidade e arquivos operacionais. Não substitui execução dos serviços."""
 from pathlib import Path
 from urllib.parse import unquote
+from zipfile import ZipFile
 import json
 import re
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+for name in ('Exercicio_B1_Architecture_Lab_6_Desafios_Reavaliado.docx',
+             'Exemplo_Solucao_Desafio_1_Architecture_Lab_B1.docx',
+             'B1_Desafio1_Monolito_Camadas.zip', 'B1_Desafio1_Monolito_Modular.zip'):
+    source = ROOT / 'docs/fontes' / name
+    assert source.is_file(), f'Fonte original ausente: {name}'
+    with ZipFile(source) as archive:
+        assert archive.testzip() is None, f'Fonte original corrompida: {name}'
+        if source.suffix == '.docx':
+            assert 'word/document.xml' in archive.namelist(), f'DOCX inválido: {name}'
 docs = [ROOT / "README.md", ROOT / "CONTRIBUTING.md", ROOT / "labs/README.md",
         *sorted((ROOT / "docs").rglob("*.md")),
         *sorted((ROOT / "labs").glob("*/README.md")),
@@ -53,4 +63,4 @@ for name in ["docker-compose.yml", "docker-compose.b1.yml"]:
 dashboard = json.loads((ROOT / "ops/grafana/dashboards/b1.json").read_text())
 assert len(dashboard["panels"]) == 8 and dashboard["uid"] == "b1-architecture"
 assert (ROOT / "Jenkinsfile").exists()
-print("Entrega validada: seis ADRs/labs, oito etapas por desafio, três ASRs por desafio, evidências indexadas, links e configurações")
+print("Entrega validada: quatro fontes originais, seis ADRs/labs, oito etapas por desafio, três ASRs por desafio, evidências indexadas, links e configurações")

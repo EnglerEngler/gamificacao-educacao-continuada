@@ -1,14 +1,17 @@
 # Fontes e continuidade com a AC1
 
-Os três arquivos originais recebidos estão preservados nesta pasta:
+Os quatro arquivos originais recebidos estão preservados nesta pasta:
 
 - `Exercicio_B1_Architecture_Lab_6_Desafios_Reavaliado.docx`: enunciado e rubrica.
+- [Exemplo_Solucao_Desafio_1_Architecture_Lab_B1.docx](Exemplo_Solucao_Desafio_1_Architecture_Lab_B1.docx): exemplo orientativo de raciocínio do desafio 1, recebido na revisão de 03/11/2026.
 - `B1_Desafio1_Monolito_Camadas.zip`: exemplo de estrutura horizontal.
 - `B1_Desafio1_Monolito_Modular.zip`: exemplo de agrupamento por capacidade.
 
 A base de implementação é o próprio Aprende+ da AC1 (commit b31abd3), para cumprir reaproveitamento do legado. Os ZIPs contêm as mesmas 37 classes após desconsiderar package/import; a referência modular também tem quatro arquivos package-info.java para documentar os módulos; a versão modular ainda tem acesso direto à persistência de outros módulos e imports ausentes de Usuario/Curso em Matricula. Não foram tratados como arquitetura pronta.
 
 Diferença semântica preservada: a AC1 recompensa média **maior que 7,0**; o exemplo de matrícula recompensa >= 7,0. A regra do produto foi mantida e testada.
+
+O exemplo de solução declara que outras decisões são aceitas quando sustentadas por evidências e trade-offs coerentes. A entrega segue sua cadeia de raciocínio e a decisão de monólito modular, preservando o recorte do nosso legado. A justificativa das diferenças de ASRs e de agrupamento das capacidades está no [ADR-001](../adr/ADR-001-core-modular.md); a comparação estrutural está no [lab 1](../../labs/desafio1/README.md).
 
 Documentação primária consultada na implementação:
 

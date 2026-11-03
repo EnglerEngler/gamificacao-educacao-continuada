@@ -24,6 +24,14 @@ Adotar B: módulos aluno, ranking, ia, eventos e iot, com shared apenas para sup
 
 O ranking é uma leitura JDBC limitada a até 100 registros e ordenada por pontuação/id. Compartilha o schema de alunos por meio de SQL explícito; portanto permanece acoplado ao schema, mesmo sem importar entidade JPA. Esse trade-off está aceito no monólito e será revisto antes de extração.
 
+## Conferência com o exemplo orientativo
+
+O [exemplo de solução fornecido](../fontes/Exemplo_Solucao_Desafio_1_Architecture_Lab_B1.docx) adota monólito modular e prioriza manutenibilidade, escalabilidade e complexidade operacional. Concordamos com a decisão macro, o custo de manter um único deploy e o ranking como candidato a extração futura. O próprio exemplo admite outras seleções fundamentadas.
+
+Aqui, desempenho foi selecionado para orientar a estrutura da leitura do ranking: consulta específica e resposta limitada, sem carregar todos os alunos para calcular a classificação na API. As 30 consultas sobre 100 mil registros medem esse recorte; não demonstram gargalo de produção nem necessidade de escala independente. Escalabilidade continua analisada e será reavaliada com concorrência, throughput, PostgreSQL e frequência de deploy. A medição não é usada para justificar distribuição.
+
+Os nomes de pacotes do exemplo também não são um contrato obrigatório. A AC1 tem conclusão, aprovação e recompensa no mesmo agregado `Aluno`; separar cursos, conquistas e recompensas em módulos artificiais fragmentaria suas invariantes e ampliaria a refatoração sem hipótese que o exigisse. Mantemos essas regras coesas no módulo `aluno`, com `ranking` separado para leitura. IA, eventos e IoT são acréscimos cumulativos dos desafios seguintes. A fronteira pública, os testes e a direção das dependências sustentam a modularização.
+
 ## Consequências
 
 Maior coesão e redução de dependência técnica no caso de uso; nenhuma promessa de escala independente. Crescimento em número de usuários não é equivalente a simultaneidade. A leitura limitada melhora tamanho da resposta, mas ainda pode exigir sort; PostgreSQL recebe índice de expressão no script de migração.

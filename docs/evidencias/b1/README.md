@@ -4,6 +4,8 @@ Os arquivos são saídas dos testes e serviços executados, não exemplos de res
 
 Validação final: **25 testes Java + 4 testes Python**, sem falhas; domínio com **100% de linhas e ramificações** cobertas. A execução real do Jenkins valida os mesmos 29 testes; número do build e revisão completa estão registrados no resultado do desafio 6. Os resultados detalhados e o commit completo estão nos JSONs dos desafios 2 e 6.
 
+Na revisão de 03/11/2026, os testes locais e o build foram repetidos, e as dependências frontend foram auditadas após a atualização do Vite. Os relatórios do desafio 2 e a auditoria npm refletem essa revisão. Jenkins, MQTT, métricas e capturas preservam suas datas de execução anteriores; o detalhe das verificações novas está na [proveniência](proveniencia.json).
+
 | Desafio | Evidência | Resultado |
 | --- | --- | --- |
 | [Desafio 1](desafio1/README.md) | [Dependências antes/depois](desafio1/dependencias.json), [ranking/carga](desafio1/ranking-carga.json) | Caso de uso deixa de importar JPA; resposta limitada sobre 100 mil registros H2. |

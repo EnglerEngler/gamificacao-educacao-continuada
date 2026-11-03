@@ -30,6 +30,18 @@ O cenário cresce de mil para até 100 mil usuários; ranking e conquistas evolu
 | [ArchitectureTest.java](../../src/test/java/br/edu/unifacens/gamificacao/architecture/ArchitectureTest.java) | Fronteiras verificadas |
 | [baseline](../../labs/desafio1/baseline) | Snapshot AC1 b31abd3 |
 
+## Comparação antes/depois
+
+| Aspecto | AC1 preservada | Core atual |
+| --- | --- | --- |
+| Organização | `controller/`, `service/`, `repository/`, `entity/`, `domain/` por camada técnica | `aluno/` concentra conclusão e recompensas; `ranking/` concentra a leitura; cada capacidade contém suas camadas internas. |
+| Dependências da conclusão | `AlunoService` importa `AlunoEntity` e `AlunoRepository` diretamente | `AlunoService` usa a porta `AlunoStore`; o adapter JPA implementa a porta e converte a entidade. |
+| Relação entre capacidades | Não havia fronteira verificável de módulos | APIs públicas entre módulos; ArchUnit impede imports dos internos de outro módulo. SQL do ranking ainda depende do schema de alunos, concessão registrada no ADR. |
+| Preservação funcional | Regra AC1: três cursos quando a média é maior que 7,0 | Testes de domínio e o mesmo contrato em fake/JPA preservam a regra; testes adicionais cobrem Premium, duplicatas e concorrência. |
+| Extração futura | Exigiria localizar dependências espalhadas nas camadas | Ranking possui porta e adapter próprios, mas extrair ainda exigirá separar os dados/contrato e medir a necessidade. |
+
+O [exemplo orientativo](../../docs/fontes/Exemplo_Solucao_Desafio_1_Architecture_Lab_B1.docx) foi conferido junto ao enunciado. A [justificativa no ADR](../../docs/adr/ADR-001-core-modular.md#conferência-com-o-exemplo-orientativo) explica a seleção de ASRs e o agrupamento das capacidades do nosso produto. O resultado comprova fronteiras de código e preservação de comportamento; não comprova escala independente do ranking.
+
 ## Executar e conferir
 
 Execute na raiz do repositório. Prepare o ambiente com `bash scripts/bootstrap-lab.sh`. O comando `lab.py evidence` executa os cenários cumulativos e encerra/reinicia somente processos registrados pelo laboratório.

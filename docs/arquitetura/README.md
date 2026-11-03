@@ -7,7 +7,7 @@
 Repositório: https://github.com/EnglerEngler/gamificacao-educacao-continuada
 Produto: Aprende+ — Gamificação para Educação Continuada.
 Baseline inicial da AC1 preservado em `labs/desafio1/baseline/`, commit `b31abd3`. A contribuição US03 da main (ef33fa7 / PR #1) também foi integrada ao módulo aluno, preservando testes e autoria.
-Enunciado e ZIPs recebidos: [fontes originais](../fontes/README.md).
+Enunciado, exemplo de solução do desafio 1 e ZIPs recebidos: [fontes originais](../fontes/README.md).
 
 | Integrante | RA |
 | --- | --- |
@@ -143,6 +143,10 @@ Em cada desafio, RF/RNF/ASR corresponde a 0,25; RPC/alternativas a 0,20; ADR a 0
 Na revisão final de 07/10/2026, os seis desafios foram conferidos novamente contra o DOCX original: oito etapas por desafio, três ASRs prioritários por desafio, seis ADRs, diagramas C4, microsoluções e evidências. Os [testes](../evidencias/b1/desafio2/testes.json) registram 25 casos Java e quatro Python aprovados, com 100% de linhas e branches do domínio `aluno`. O [Jenkins](../evidencias/b1/desafio6/jenkins/jenkins.json) aprovou os 29 casos e arquivou o JAR com a interface Vue; as falhas e recuperações de IA, outbox e MQTT foram executadas novamente em serviços reais nativos. A [proveniência](../evidencias/b1/proveniencia.json) identifica a revisão validada e o [manifesto](../evidencias/b1/manifesto-sha256.json) permite verificar a integridade das evidências.
 
 Os containers e os stages Docker permanecem configurados, mas não foram executados porque a integração do Docker Desktop com este WSL estava indisponível. Esse limite está registrado nas evidências e na seleção de validações futuras para AF.
+
+Na revisão de 03/11/2026, o enunciado e os dois ZIPs foram novamente comparados com as cópias preservadas, e o [exemplo orientativo do desafio 1](../fontes/Exemplo_Solucao_Desafio_1_Architecture_Lab_B1.docx) passou a integrar as fontes da entrega. O [ADR-001](../adr/ADR-001-core-modular.md#conferência-com-o-exemplo-orientativo) explica a seleção de ASRs e a organização das capacidades do nosso legado; o [lab 1](../../labs/desafio1/README.md#comparação-antesdepois) apresenta a comparação estrutural. Os 29 testes locais passaram novamente e o frontend foi compilado/empacotado. O Vite foi atualizado de 6.4.3 para [6.4.5](https://github.com/vitejs/vite/releases/tag/v6.4.5), preservando a versão principal; a [auditoria npm](../evidencias/b1/desafio6/jenkins/npm-audit.json) passou a registrar zero vulnerabilidades. A proveniência separa esta revisão dos registros anteriores de Jenkins/MQTT/monitoramento.
+
+O JAR atualizado também foi iniciado com dados temporários isolados: interface HTTP e assets verificados, regras de média 7 e reenvio preservadas, ranking por instituição disponível, FastAPI ativo e fallback após sua parada, duas notificações recuperadas após iniciar o consumidor. Esses resultados estão em `revisao_2026_11_03` na [proveniência](../evidencias/b1/proveniencia.json). Não foi identificada outra implementação obrigatória ausente para os mini-labs do B1; os limites de Docker e de validação em produção permanecem explícitos.
 
 ## Integração da main da equipe
 

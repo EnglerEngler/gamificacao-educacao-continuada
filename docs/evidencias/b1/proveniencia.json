@@ -23,5 +23,54 @@
     "links_locais_validos": true
   },
   "docker_executado": false,
-  "observacao": "Core, frontend, serviços e pipeline correspondem à revisão validada pelo Jenkins. Evidências desta nova execução e ajustes de documentação são posteriores ao build. O p95 do script de coleta foi corrigido para nearest rank e recalculado a partir das mesmas 30 amostras preservadas, sem alterar os tempos medidos. Serviços reais executados nativamente; stages Docker não executados."
+  "observacao": "Os campos originais descrevem o código e os artefatos da execução Jenkins 4 e do laboratório de 07/10/2026. O p95 foi corrigido para nearest rank a partir das mesmas 30 amostras preservadas. A revisão de 03/11/2026 e a atualização do Vite estão discriminadas em revisao_2026_11_03; não representam uma nova execução Jenkins/MQTT/monitoramento.",
+  "revisao_2026_11_03": {
+    "executado_utc": "2026-11-03T18:41:13.553454+00:00",
+    "revisao_base": "f2066b36345ab52a8c8be102aa9a2ccfd5b784af",
+    "jar_sha256": "c1a3add07054e17960260d7b8300a22ecfde271cb3ec9d4c01553bfca9e4934c",
+    "interface_e_assets_no_jar": true,
+    "http_interface": 200,
+    "regra_media_7_preservada": true,
+    "reenvio_sem_duplicar_recompensa": true,
+    "ranking_por_instituicao": true,
+    "ia_http_real_ativa_e_fallback_apos_parada": true,
+    "notificacoes_recuperadas_apos_consumidor_iniciar": 2,
+    "dados_isolados_temporarios": true,
+    "conferido_utc": "2026-11-03T18:42:14.350408+00:00",
+    "fontes_sha256": {
+      "Exercicio_B1_Architecture_Lab_6_Desafios_Reavaliado.docx": "cb5b51138ad714b3f86d6bbaf6a47fbdbdf7b41d6ccbf32065714934972b1d7f",
+      "Exemplo_Solucao_Desafio_1_Architecture_Lab_B1.docx": "cf66e7834ab539a048291d720e9d73d06981054a879636e68d993e1b9769f310",
+      "B1_Desafio1_Monolito_Modular.zip": "0383e23425963f5eb1c6f198abfba9d4d00a15829222dd1f5b202ebc68b6eb5d",
+      "B1_Desafio1_Monolito_Camadas.zip": "f64c587e0ac2a75be2261c83473ea0010f53b9d0c36a1ebd23d23fedb567c5c6"
+    },
+    "comparacao_zips": {
+      "B1_Desafio1_Monolito_Modular.zip": {
+        "arquivos_java": 41,
+        "package_info": 4
+      },
+      "B1_Desafio1_Monolito_Camadas.zip": {
+        "arquivos_java": 37,
+        "package_info": 0
+      }
+    },
+    "classes_equivalentes_nos_zips": 37,
+    "java_testes": 25,
+    "python_testes": 4,
+    "falhas": 0,
+    "dominio_linhas_percentual": 100,
+    "dominio_branches_percentual": 100,
+    "vite_anterior": "6.4.3",
+    "vite_validado": "6.4.5",
+    "npm_audit_vulnerabilidades": 0,
+    "alteracoes_executaveis_sha256": {
+      "frontend/package.json": "85be0edb04b2001868401d0953819e3cdcd6777c54bfb49e09a8d5a05b40c7cb",
+      "frontend/package-lock.json": "64b76d58311d6b9de3c34b8b588ec9c66807ae434d3a0d24ce93e8d39300d36b",
+      "scripts/validate-delivery.py": "beeac0d7629237a9f1c33a0cea7ae74bafaa3de26110f1fb8daa9aa98f95ebb3"
+    },
+    "core_e_servicos_sem_alteracao_em_relacao_a_base": true,
+    "jenkins_mqtt_monitoramento_reexecutados_nesta_revisao": false,
+    "docker_executado": false,
+    "limite_docker_observado": "docker version: /usr/bin/docker: Input/output error",
+    "observacao": "Testes locais, build frontend, JAR com interface e smoke HTTP executados novamente com dados temporários isolados. Jenkins, MQTT e monitoramento anteriores preservam suas datas; os campos originais deste documento descrevem a execução de 07/10/2026."
+  }
 }

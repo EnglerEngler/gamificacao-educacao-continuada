@@ -17,7 +17,7 @@ if [ ! -x "$task_tools/prometheus-3.2.1.linux-amd64/prometheus" ]; then
     tar -xzf "$task_tools/prometheus.tar.gz" -C "$task_tools"
 fi
 if [ ! -x "$task_tools/grafana-v11.5.2/bin/grafana" ]; then
-    curl -fL https://dl.grafana.com/oss/release/grafana-v11.5.2.linux-amd64.tar.gz -o "$task_tools/grafana.tar.gz"
+    curl -fL https://dl.grafana.com/oss/release/grafana-11.5.2.linux-amd64.tar.gz -o "$task_tools/grafana.tar.gz"
     tar -xzf "$task_tools/grafana.tar.gz" -C "$task_tools"
 fi
 if [ ! -x "$task_tools/root/usr/sbin/mosquitto" ] || LD_LIBRARY_PATH="$task_tools/root/usr/lib/x86_64-linux-gnu" ldd "$task_tools/root/usr/sbin/mosquitto" | rg -q 'not found'; then

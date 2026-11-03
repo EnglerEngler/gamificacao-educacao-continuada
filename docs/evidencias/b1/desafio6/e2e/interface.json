@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "modo": "interface",
+  "executado_utc": "2026-11-03T19:03:02.334Z",
+  "revisao_base": "1a809ae9b0187a761b7491156e40653bfb80c402",
+  "navegador": "Chromium 134.0.6998.35",
+  "url": "http://127.0.0.1:8080",
+  "verificacoes": [
+    "interface servida pelo JAR, sem mock de rede",
+    "cadastro pelo formulário e média 7 sem liberar cursos",
+    "aprovação concede três cursos e badge; reenvio não duplica recompensa",
+    "Premium na 12ª conclusão, três moedas uma única vez e ranking com 103 pontos",
+    "recomendação e assistente com fonte via Core → FastAPI reais",
+    "troca de instituição isola alunos/ranking e rejeita acesso cruzado",
+    "interface móvel de 390 px sem rolagem horizontal e conclusão pelo formulário",
+    "nenhum erro JavaScript não tratado"
+  ],
+  "codigo_sha256": {
+    "frontend/package-lock.json": "64b76d58311d6b9de3c34b8b588ec9c66807ae434d3a0d24ce93e8d39300d36b",
+    "frontend/src/App.vue": "1a8387b194babeb5a12d61f7c90adcf71ed9ad285900e8c2352c3cd01d727f5b",
+    "frontend/src/style.css": "9eb94f81ea6c57faceb367fd83da915938e7ce8dba07574c9cf8202679b18401",
+    "scripts/e2e.cjs": "d75e7cfbf03af69ef06e2edabdac4042b458cb911f3bab3f448658f908abb13f"
+  }
+}

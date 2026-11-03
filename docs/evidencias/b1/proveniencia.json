@@ -72,5 +72,26 @@
     "docker_executado": false,
     "limite_docker_observado": "docker version: /usr/bin/docker: Input/output error",
     "observacao": "Testes locais, build frontend, JAR com interface e smoke HTTP executados novamente com dados temporários isolados. Jenkins, MQTT e monitoramento anteriores preservam suas datas; os campos originais deste documento descrevem a execução de 07/10/2026."
+  },
+  "e2e_2026_11_03": {
+    "fechado_utc": "2026-11-03T19:04:18.859648+00:00",
+    "revisao_base": "1a809ae9b0187a761b7491156e40653bfb80c402",
+    "interface": "desafio6/e2e/interface.json",
+    "fallback": "desafio6/e2e/fallback.json",
+    "repositorio": "desafio6/e2e/repositorio.json",
+    "testes_java": 25,
+    "testes_python": 4,
+    "resultado": "PASS",
+    "core_ia_notificacoes_mqtt_gateway_prometheus_grafana_reais": true,
+    "coleta_servicos_utc": "2026-11-03T19:00:51.041111+00:00",
+    "jenkins_reexecutado": false,
+    "docker_executado": false,
+    "correcao": "URL do Grafana corrigido; bootstrap completo validado com ferramentas reinstaladas. Seletor do novo teste de navegador corrigido após primeira tentativa; nenhum defeito funcional encontrado nos fluxos da aplicação.",
+    "jar_sha256": "f1b78ad6c10e59392091709102eaa7b6350a120ee1526b17d972fa0cf079d560",
+    "scripts_sha256": {
+      "scripts/bootstrap-lab.sh": "a8a26e725b763834d1a6c15e89ee2e0147e71cd97b18d5f1c4f3d81c6ae81d4b",
+      "scripts/e2e.cjs": "d75e7cfbf03af69ef06e2edabdac4042b458cb911f3bab3f448658f908abb13f",
+      "scripts/screenshots.cjs": "e31260dd8875325a88d9218e4b4fd865b7f7b2ede513b9a458f85f9988fac733"
+    }
   }
 }

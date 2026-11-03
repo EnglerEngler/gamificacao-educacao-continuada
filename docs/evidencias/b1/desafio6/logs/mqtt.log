@@ -1,19 +1,19 @@
-1791348754: Warning: File /home/engler/devops/gamificacao-educacao-continuada/ops/mqtt/acl has world readable permissions. Future versions will refuse to load this file.
+1793732321: Warning: File /home/engler/devops/gamificacao-educacao-continuada/ops/mqtt/acl has world readable permissions. Future versions will refuse to load this file.
 To fix this, use `chmod 0700 /home/engler/devops/gamificacao-educacao-continuada/ops/mqtt/acl`.
-1791348764: New connection from 127.0.0.1:34819 on port 1883.
-1791348764: New client connected from 127.0.0.1:34819 as b1-gateway (p2, c0, k30, u'gateway').
-1791348797: Client b1-gateway closed its connection.
-1791348797: New connection from 127.0.0.1:39427 on port 1883.
-1791348797: New client connected from 127.0.0.1:39427 as b1-simulador-37441b1f-1381-4c19-ac72-648c5abee929 (p2, c1, k30, u'lab01').
-1791348797: Client b1-simulador-37441b1f-1381-4c19-ac72-648c5abee929 disconnected.
-1791348797: New connection from 127.0.0.1:47959 on port 1883.
-1791348797: New client connected from 127.0.0.1:47959 as b1-gateway (p2, c0, k30, u'gateway').
-1791348797: New connection from 127.0.0.1:50001 on port 1883.
-1791348797: New client connected from 127.0.0.1:50001 as b1-simulador-aef977a4-2e6c-41c2-9469-2b9b6cd66141 (p2, c1, k30, u'lab01').
-1791348797: Client b1-simulador-aef977a4-2e6c-41c2-9469-2b9b6cd66141 disconnected.
-1791348806: New connection from 127.0.0.1:41661 on port 1883.
-1791348806: New client connected from 127.0.0.1:41661 as b1-simulador-7bf283f2-ddb3-431d-8300-2e6b73217d1d (p2, c1, k30, u'lab01').
-1791348806: Client b1-simulador-7bf283f2-ddb3-431d-8300-2e6b73217d1d disconnected.
-1791348806: New connection from 127.0.0.1:54889 on port 1883.
-1791348806: New client connected from 127.0.0.1:54889 as b1-simulador-3e0abd1c-d5b5-4e86-8add-28d7a779f7b5 (p2, c1, k30, u'lab01').
-1791348806: Client b1-simulador-3e0abd1c-d5b5-4e86-8add-28d7a779f7b5 disconnected.
+1793732385: New connection from 127.0.0.1:42461 on port 1883.
+1793732385: New client connected from 127.0.0.1:42461 as b1-gateway (p2, c0, k30, u'gateway').
+1793732424: Client b1-gateway closed its connection.
+1793732424: New connection from 127.0.0.1:50009 on port 1883.
+1793732424: New client connected from 127.0.0.1:50009 as b1-simulador-e8be75f9-a481-424a-bc12-b6cb66d2d4fc (p2, c1, k30, u'lab01').
+1793732424: Client b1-simulador-e8be75f9-a481-424a-bc12-b6cb66d2d4fc disconnected.
+1793732424: New connection from 127.0.0.1:45319 on port 1883.
+1793732424: New client connected from 127.0.0.1:45319 as b1-gateway (p2, c0, k30, u'gateway').
+1793732425: New connection from 127.0.0.1:50517 on port 1883.
+1793732425: New client connected from 127.0.0.1:50517 as b1-simulador-28d2ae29-0178-4f4c-aa87-2ca8db97450a (p2, c1, k30, u'lab01').
+1793732425: Client b1-simulador-28d2ae29-0178-4f4c-aa87-2ca8db97450a disconnected.
+1793732433: New connection from 127.0.0.1:47925 on port 1883.
+1793732433: New client connected from 127.0.0.1:47925 as b1-simulador-c551d9af-ffc6-49e3-8fff-ca82c47d1b7c (p2, c1, k30, u'lab01').
+1793732433: Client b1-simulador-c551d9af-ffc6-49e3-8fff-ca82c47d1b7c disconnected.
+1793732433: New connection from 127.0.0.1:49945 on port 1883.
+1793732433: New client connected from 127.0.0.1:49945 as b1-simulador-95494bcd-beb0-4f93-8c58-04f24da21fa6 (p2, c1, k30, u'lab01').
+1793732433: Client b1-simulador-95494bcd-beb0-4f93-8c58-04f24da21fa6 disconnected.

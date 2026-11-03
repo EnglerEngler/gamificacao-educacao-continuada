@@ -17,12 +17,16 @@ Sustenta ASR-16/17/18, selecionados na matriz cumulativa. As saídas pertencem a
 | [monitoramento/gateway-prometheus.txt](monitoramento/gateway-prometheus.txt) | Exportação bruta de métricas do gateway. |
 | [capturas/](capturas/) | Quatro capturas reais: aplicação, Jenkins, Prometheus e Grafana. |
 | [logs/](logs/) | Logs dos serviços da execução nativa. |
+| [e2e/interface.json](e2e/interface.json) | Fluxos completos no Chromium, incluindo Premium, isolamento entre instituições e formulário móvel. |
+| [e2e/fallback.json](e2e/fallback.json) | Catálogo e assistente degradados no navegador com o processo Python parado. |
+| [e2e/repositorio.json](e2e/repositorio.json) | Seis páginas da entrega acessadas por HTTP sem autenticação. |
+| [e2e/](e2e/) | Relatórios e capturas desktop, móvel e de fallback da revisão E2E. |
 
 ## Como interpretar
 
 Leia primeiro o resultado do Jenkins, depois as queries de fallback/falha/entrega/pendência e as capturas. Counters reiniciam com o processo; os números pertencem à execução registrada. A recuperação é comprovada pelo resultado combinado dos desafios 4/5 e das métricas. Dockerfiles/stages estão configurados; seu deploy não foi executado neste ambiente.
 
-A revisão de 03/11/2026 repetiu a validação local e o empacotamento, atualizou as evidências de testes do desafio 2 e auditou as dependências frontend. O build Jenkins, MQTT, consultas e capturas anteriores continuam com suas datas originais; não foram apresentados como uma nova execução nesta revisão. A [proveniência](../proveniencia.json) distingue os resultados anteriores dos novos testes locais e do smoke HTTP com Core/FastAPI/consumidor reais.
+A revisão inicial de 03/11/2026 repetiu testes locais, empacotamento e auditoria frontend. A revisão E2E subsequente reinstalou as ferramentas, corrigiu o URL de download do Grafana e repetiu IA/outbox/MQTT/monitoramento, além dos fluxos da interface em Chromium. As três capturas de aplicação/Prometheus/Grafana foram renovadas; o build e a captura Jenkins permanecem da execução original. A [proveniência](../proveniencia.json) identifica os horários e escopos de cada etapa. As métricas são coletadas antes dos testes de navegador, que acrescentam alunos e eventos próprios.
 
 ## Reproduzir
 

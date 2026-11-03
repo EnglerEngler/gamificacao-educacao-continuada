@@ -148,6 +148,8 @@ Na revisão de 03/11/2026, o enunciado e os dois ZIPs foram novamente comparados
 
 O JAR atualizado também foi iniciado com dados temporários isolados: interface HTTP e assets verificados, regras de média 7 e reenvio preservadas, ranking por instituição disponível, FastAPI ativo e fallback após sua parada, duas notificações recuperadas após iniciar o consumidor. Esses resultados estão em `revisao_2026_11_03` na [proveniência](../evidencias/b1/proveniencia.json). Não foi identificada outra implementação obrigatória ausente para os mini-labs do B1; os limites de Docker e de validação em produção permanecem explícitos.
 
+A revisão E2E posterior de 03/11/2026 validou também a interface em Chromium (desktop e 390 px), cadastro/conclusão/Premium, isolamento entre instituições e fallback visível com IA parada. IA, outbox, MQTT, Prometheus e Grafana foram executados novamente; os [relatórios E2E](../evidencias/b1/desafio6/e2e/) registram verificações e capturas. O preparo a partir das ferramentas reinstaladas revelou um URL incorreto do Grafana, corrigido em `scripts/bootstrap-lab.sh`. Os 29 testes passaram novamente. O registro Jenkins mantém a data original; Docker permanece fora do escopo executado.
+
 ## Integração da main da equipe
 
 A atualização ef33fa7 trouxe a US03 de Khevyn. Sua regra conta toda conclusão para Premium, mesmo com média <= 7,0; a US01 concede novos cursos apenas com média > 7,0. O B1 preserva ambas usando cursosConcluidos e cursosAprovados separados, além do plano persistido. Não foi inferida aprovação de dados legados sem notas. Marcadores de conflito que já estavam no frontend/BDD da main foram resolvidos conservando os cenários de ambas as histórias.

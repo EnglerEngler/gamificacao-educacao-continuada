@@ -1,20 +1,20 @@
-time=2026-10-07T04:52:45.818Z level=INFO source=main.go:640 msg="No time or size retention was set so using the default time retention" duration=15d
-time=2026-10-07T04:52:45.819Z level=INFO source=main.go:687 msg="Starting Prometheus Server" mode=server version="(version=3.2.1, branch=HEAD, revision=804c49d58f3f3784c77c9c8ec17c9062092cae27)"
-time=2026-10-07T04:52:45.819Z level=INFO source=main.go:692 msg="operational information" build_context="(go=go1.23.6, platform=linux/amd64, user=root@42fd9529152a, date=20250226-09:19:49, tags=netgo,builtinassets,stringlabels)" host_details="(Linux 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 Engler localdomain)" fd_limits="(soft=1048576, hard=1048576)" vm_limits="(soft=unlimited, hard=unlimited)"
-time=2026-10-07T04:52:45.832Z level=INFO source=main.go:768 msg="Leaving GOMAXPROCS=8: CPU quota undefined" component=automaxprocs
-time=2026-10-07T04:52:45.838Z level=INFO source=web.go:654 msg="Start listening for connections" component=web address=127.0.0.1:9090
-time=2026-10-07T04:52:45.841Z level=INFO source=main.go:1228 msg="Starting TSDB ..."
-time=2026-10-07T04:52:45.845Z level=INFO source=tls_config.go:347 msg="Listening on" component=web address=127.0.0.1:9090
-time=2026-10-07T04:52:45.845Z level=INFO source=tls_config.go:350 msg="TLS is disabled." component=web http2=false address=127.0.0.1:9090
-time=2026-10-07T04:52:45.847Z level=INFO source=head.go:628 msg="Replaying on-disk memory mappable chunks if any" component=tsdb
-time=2026-10-07T04:52:45.847Z level=INFO source=head.go:715 msg="On-disk memory mappable chunks replay completed" component=tsdb duration=382.388µs
-time=2026-10-07T04:52:45.848Z level=INFO source=head.go:723 msg="Replaying WAL, this may take a while" component=tsdb
-time=2026-10-07T04:52:45.854Z level=INFO source=head.go:795 msg="WAL segment loaded" component=tsdb segment=0 maxSegment=0
-time=2026-10-07T04:52:45.854Z level=INFO source=head.go:832 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=483.348µs wal_replay_duration=5.392097ms wbl_replay_duration=176ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=382.388µs total_replay_duration=6.963348ms
-time=2026-10-07T04:52:45.856Z level=INFO source=main.go:1249 msg="filesystem information" fs_type=EXT4_SUPER_MAGIC
-time=2026-10-07T04:52:45.856Z level=INFO source=main.go:1252 msg="TSDB started"
-time=2026-10-07T04:52:45.857Z level=INFO source=main.go:1437 msg="Loading configuration file" filename=/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261007T045233Z/prometheus.yml
-time=2026-10-07T04:52:45.862Z level=INFO source=main.go:1476 msg="updated GOGC" old=100 new=75
-time=2026-10-07T04:52:45.862Z level=INFO source=main.go:1486 msg="Completed loading of configuration file" db_storage=33.269µs remote_storage=72.39µs web_handler=1.041µs query_engine=19.301µs scrape=692.485µs scrape_sd=66.855µs notify=1.226µs notify_sd=934ns rules=2.044597ms tracing=733.119µs filename=/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261007T045233Z/prometheus.yml totalDuration=5.831453ms
-time=2026-10-07T04:52:45.862Z level=INFO source=main.go:1213 msg="Server is ready to receive web requests."
-time=2026-10-07T04:52:45.863Z level=INFO source=manager.go:175 msg="Starting rule manager..." component="rule manager"
+time=2026-11-03T18:59:47.776Z level=INFO source=main.go:640 msg="No time or size retention was set so using the default time retention" duration=15d
+time=2026-11-03T18:59:47.776Z level=INFO source=main.go:687 msg="Starting Prometheus Server" mode=server version="(version=3.2.1, branch=HEAD, revision=804c49d58f3f3784c77c9c8ec17c9062092cae27)"
+time=2026-11-03T18:59:47.776Z level=INFO source=main.go:692 msg="operational information" build_context="(go=go1.23.6, platform=linux/amd64, user=root@42fd9529152a, date=20250226-09:19:49, tags=netgo,builtinassets,stringlabels)" host_details="(Linux 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 Engler localdomain)" fd_limits="(soft=1048576, hard=1048576)" vm_limits="(soft=unlimited, hard=unlimited)"
+time=2026-11-03T18:59:47.782Z level=INFO source=main.go:768 msg="Leaving GOMAXPROCS=8: CPU quota undefined" component=automaxprocs
+time=2026-11-03T18:59:47.799Z level=INFO source=web.go:654 msg="Start listening for connections" component=web address=127.0.0.1:9090
+time=2026-11-03T18:59:47.807Z level=INFO source=main.go:1228 msg="Starting TSDB ..."
+time=2026-11-03T18:59:47.814Z level=INFO source=tls_config.go:347 msg="Listening on" component=web address=127.0.0.1:9090
+time=2026-11-03T18:59:47.814Z level=INFO source=tls_config.go:350 msg="TLS is disabled." component=web http2=false address=127.0.0.1:9090
+time=2026-11-03T18:59:47.865Z level=INFO source=head.go:628 msg="Replaying on-disk memory mappable chunks if any" component=tsdb
+time=2026-11-03T18:59:47.866Z level=INFO source=head.go:715 msg="On-disk memory mappable chunks replay completed" component=tsdb duration=2.391µs
+time=2026-11-03T18:59:47.868Z level=INFO source=head.go:723 msg="Replaying WAL, this may take a while" component=tsdb
+time=2026-11-03T18:59:47.872Z level=INFO source=head.go:795 msg="WAL segment loaded" component=tsdb segment=0 maxSegment=0
+time=2026-11-03T18:59:47.872Z level=INFO source=head.go:832 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=678.755µs wal_replay_duration=3.028762ms wbl_replay_duration=157ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=2.391µs total_replay_duration=5.484601ms
+time=2026-11-03T18:59:47.892Z level=INFO source=main.go:1249 msg="filesystem information" fs_type=EXT4_SUPER_MAGIC
+time=2026-11-03T18:59:47.892Z level=INFO source=main.go:1252 msg="TSDB started"
+time=2026-11-03T18:59:47.892Z level=INFO source=main.go:1437 msg="Loading configuration file" filename=/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261103T185840Z/prometheus.yml
+time=2026-11-03T18:59:47.901Z level=INFO source=main.go:1476 msg="updated GOGC" old=100 new=75
+time=2026-11-03T18:59:47.901Z level=INFO source=main.go:1486 msg="Completed loading of configuration file" db_storage=1.9µs remote_storage=1.733µs web_handler=805ns query_engine=1.688µs scrape=607.427µs scrape_sd=61.352µs notify=2.002µs notify_sd=697ns rules=5.813705ms tracing=11.37µs filename=/home/engler/devops/gamificacao-educacao-continuada/.runtime/run-20261103T185840Z/prometheus.yml totalDuration=9.058739ms
+time=2026-11-03T18:59:47.901Z level=INFO source=main.go:1213 msg="Server is ready to receive web requests."
+time=2026-11-03T18:59:47.901Z level=INFO source=manager.go:175 msg="Starting rule manager..." component="rule manager"

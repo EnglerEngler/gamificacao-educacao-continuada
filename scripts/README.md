@@ -13,6 +13,7 @@ Execute os comandos na raiz do repositório. Comece pelo [documento de entrega](
 | `bootstrap-jenkins.sh` | Prepara Jenkins local e plugins com versões fixadas; inicia a esteira. |
 | `jenkins-lab.py` | Gerencia o Jenkins do laboratório e coleta o build específico e seu commit. |
 | `screenshots.cjs` | Captura aplicação, Jenkins, Prometheus e Grafana em execução usando Playwright opcional. |
+| `e2e.cjs` | Percorre a interface real no Chromium: cadastro, notas, reenvio, Premium, ranking, instituições, IA e tela móvel; cria dois alunos de teste. |
 | `smoke.py` | Verifica saúde, ranking e métricas depois de uma implantação. |
 
 ## Reproduzir as evidências
@@ -40,6 +41,16 @@ Playwright pode ser instalado fora do produto: `npm install --prefix /tmp/b1-too
 ```bash
 B1_PLAYWRIGHT_MODULE=/tmp/b1-tools/browser/node_modules/playwright node scripts/screenshots.cjs
 ```
+
+Use `node scripts/screenshots.cjs --skip-jenkins` com a mesma variável de Playwright para renovar somente aplicação, Prometheus e Grafana quando o Jenkins não estiver ativo; a captura Jenkins existente é preservada.
+
+Com o laboratório ativo, execute os testes de navegador sem mocks de rede:
+
+```bash
+B1_PLAYWRIGHT_MODULE=/tmp/b1-tools/browser/node_modules/playwright node scripts/e2e.cjs
+```
+
+Os relatórios e capturas ficam em `.runtime/e2e/`. `B1_E2E_OUTPUT` altera o destino e `B1_E2E_URL` altera a URL da aplicação. O modo `node scripts/e2e.cjs --fallback` verifica os avisos de indisponibilidade no navegador e deve ser executado com a IA realmente parada; o modo normal espera IA disponível. Os cenários de interrupção/recuperação de Core, consumidor e MQTT continuam em `lab.py evidence`. Playwright permanece uma ferramenta opcional fora das dependências do produto.
 
 ## Encerrar
 

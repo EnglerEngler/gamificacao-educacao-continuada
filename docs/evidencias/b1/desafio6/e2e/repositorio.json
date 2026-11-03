@@ -1,0 +1,32 @@
+{
+  "executado_utc": "2026-11-03T18:55:00.984789+00:00",
+  "acesso": "HTTP sem autenticação",
+  "repositorio_publico": true,
+  "revisao_remota": "1a809ae9b0187a761b7491156e40653bfb80c402",
+  "paginas": [
+    {
+      "url": "https://github.com/EnglerEngler/gamificacao-educacao-continuada",
+      "http": 200
+    },
+    {
+      "url": "https://github.com/EnglerEngler/gamificacao-educacao-continuada/blob/main/README.md",
+      "http": 200
+    },
+    {
+      "url": "https://github.com/EnglerEngler/gamificacao-educacao-continuada/blob/main/docs/arquitetura/README.md",
+      "http": 200
+    },
+    {
+      "url": "https://github.com/EnglerEngler/gamificacao-educacao-continuada/tree/main/labs",
+      "http": 200
+    },
+    {
+      "url": "https://github.com/EnglerEngler/gamificacao-educacao-continuada/tree/main/docs/evidencias/b1",
+      "http": 200
+    },
+    {
+      "url": "https://github.com/EnglerEngler/gamificacao-educacao-continuada/tree/main/docs/fontes",
+      "http": 200
+    }
+  ]
+}

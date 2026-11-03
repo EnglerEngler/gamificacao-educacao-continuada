@@ -6,7 +6,7 @@ Entrega B1: seis decisões evolutivas, Core modular, domínio com Ports & Adapte
 
 Revisão de **03/11/2026**: código e entrega conferidos contra as [quatro fontes fornecidas](docs/fontes/README.md), incluindo o exemplo orientativo do desafio 1. Foram aprovados novamente 25 testes Java e quatro Python, com 100% de cobertura de linhas e branches do domínio `aluno`. O JAR com a interface foi testado com Core/FastAPI reais, fallback e recuperação de notificações. O Vite foi atualizado para 6.4.5 e a auditoria npm reportou zero vulnerabilidades.
 
-Os [resultados e a proveniência](docs/evidencias/b1/proveniencia.json) distinguem essa revisão local das evidências anteriores de Jenkins/MQTT/monitoramento. Docker permanece configurado e sem execução validada neste WSL. A análise completa continua no documento oficial acima.
+Na revisão E2E subsequente, os [testes de navegador](docs/evidencias/b1/desafio6/e2e/interface.json) percorreram cadastro, recompensas, Premium, ranking, instituições e tela móvel; o [teste de fallback](docs/evidencias/b1/desafio6/e2e/fallback.json) verificou a IA realmente parada. MQTT, outbox e monitoramento foram executados novamente. Foi corrigido o endereço de download do Grafana no preparo do laboratório. Os [resultados e a proveniência](docs/evidencias/b1/proveniencia.json) identificam cada execução; o registro Jenkins continua com sua data original. Docker permanece configurado e sem execução validada neste WSL.
 
 ## Entrega principal, desafios e evidências
 

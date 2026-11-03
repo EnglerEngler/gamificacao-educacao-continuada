@@ -24,6 +24,7 @@ const fs = require('fs');
   await page.getByRole('button', { name: 'Perguntar', exact: true }).click();
   await page.waitForTimeout(1000);
   await page.screenshot({ path: path.join(out, 'aprendemais.png'), fullPage: true });
+  if (!process.argv.includes('--skip-jenkins')) {
   const jenkinsPage = await browser.newPage({ locale: 'en-US', viewport: { width: 1500, height: 1100 } });
   await jenkinsPage.goto('http://127.0.0.1:8090/login');
   await jenkinsPage.locator('input[name="j_username"]').fill('b1');
@@ -32,6 +33,7 @@ const fs = require('fs');
   await jenkinsPage.goto('http://127.0.0.1:8090/job/b1-architecture/lastBuild/');
   await jenkinsPage.waitForTimeout(1500);
   await jenkinsPage.screenshot({ path: path.join(out, 'jenkins-build.png'), fullPage: true });
+  }
   await browser.close();
-  console.log('Quatro capturas reais salvas em ' + out);
+  console.log((process.argv.includes('--skip-jenkins') ? 'Três' : 'Quatro') + ' capturas reais salvas em ' + out);
 })().catch(error => { console.error(error); process.exit(1); });
